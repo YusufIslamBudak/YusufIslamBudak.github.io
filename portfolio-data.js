@@ -136,9 +136,14 @@ window.portfolioProfile = {
 		}
 	],
 	currentFocus: [
-		'Kendinizi tek bir proje tipine s\u0131n\u0131rlamadan farklı teknoloji alanlar\u0131nda geli\u015ftirme',
-		'HTML5 UP Editorial temas\u0131n\u0131 portfolyo ve ki\u015fisel site yap\u0131s\u0131na uyarlama',
-		'GitHub projelerini temiz bir katalog yap\u0131s\u0131yla sergileme'
+		'Programlama Dilleri: Python, C++, C, C#',
+		'G\u00f6m\u00fcl\u00fc AI & Otonom Sistemler: NVIDIA Jetson Nano, Orin Nano',
+		'IoT & G\u00f6m\u00fcl\u00fc Platformlar: G\u00f6m\u00fcl\u00fc Linux, Raspberry Pi, STM32, ESP32, Arduino',
+		'Donan\u0131m & Haberle\u015fme: I2C, SPI, UART tabanl\u0131 sens\u00f6r entegrasyonu',
+		'\u0130\u015fletim Sistemleri: Linux (WSL, Ubuntu/Debian), Windows',
+		'Ara\u00e7lar & Versiyon Kontrol: Git, GitHub, GitLab, Bitbucket',
+		'Dil Yetkinli\u011fi: \u0130ngilizce (B2)',
+		'\u0130lgi Alanlar\u0131: Yapay Zeka, Sens\u00f6r Tabanl\u0131 Sistemler, Veri Analizi'
 	],
 	contactText: 'Yeni proje fikirleri, i\u015f birlikleri veya teknik g\u00f6r\u00fc\u015f\u00fcmeler i\u00e7in GitHub ya da LinkedIn \u00fczerinden ula\u015f\u0131labilir.'
 };
