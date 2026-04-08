@@ -94,6 +94,38 @@ window.portfolioProfile = {
 			url: 'https://github.com/YusufIslamBudak/Emmbedded-codes'
 		}
 	],
+	certificates: [
+		{
+			title: 'Örnek Sertifika 1',
+			issuer: 'Udemy / Coursera',
+			date: '2024',
+			description: 'Bu eğitime dair yetkinliklerinizi ve projenizi açıklayabilirsiniz.',
+			url: '#'
+		},
+		{
+			title: 'Örnek Sertifika 2',
+			issuer: 'Üniversite / Kurum',
+			date: '2025',
+			description: 'İkinci sertifikaya ait detaylar buraya eklenecektir.',
+			url: '#'
+		}
+	],
+	articles: [
+		{
+			title: 'Örnek Makale Başlığı 1',
+			publisher: 'Medium / Blog',
+			date: '2025',
+			description: 'Yazılım ve mühendislik alanında edindiğim tecrübeleri anlattığım ilk makalem.',
+			url: '#'
+		},
+		{
+			title: 'Örnek Yayın 2',
+			publisher: 'IEEE / Dergi',
+			date: '2026',
+			description: 'Akademik veya profesyonel platformlarda yayımlanan bilimsel araştırmam.',
+			url: '#'
+		}
+	],
 	currentFocus: [
 		'Kendinizi tek bir proje tipine s\u0131n\u0131rlamadan farklı teknoloji alanlar\u0131nda geli\u015ftirme',
 		'HTML5 UP Editorial temas\u0131n\u0131 portfolyo ve ki\u015fisel site yap\u0131s\u0131na uyarlama',
