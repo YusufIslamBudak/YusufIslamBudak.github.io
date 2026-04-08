@@ -3,16 +3,16 @@ window.portfolioProfile = {
 	displayName: 'Yusuf İslam Budak',
 	headline: 'Yaz\u0131l\u0131m Geli\u015ftirme ve G\u00f6m\u00fcl\u00fc Sistemler',
 	intro: 'G\u00f6m\u00fcl\u00fc Sistemler, Yaz\u0131l\u0131m Geli\u015ftirme ve Yapay Zeka alanlarında çalışmalar.',
-	bio: 'Flutter, Python, C#, ASP.NET, HTML/CSS ve g\u00f6m\u00fcl\u00fc sistemler \u00fczerine yapt\u0131\u011f\u0131n\u0131z projeleri tek bir alanda sergilemek i\u00e7in d\u00fczenlendi.',
+	bio: 'IoT, otonom sistemler ve g\u00f6m\u00fcl\u00fc AI \u00fczerine odaklanan bir m\u00fchendis aday\u0131y\u0131m. Ar\u0131 Drones b\u00fcnyesinde a\u00e7\u0131k kaynak u\u00e7u\u015f yaz\u0131l\u0131mlar\u0131 ve veri analiz mod\u00fclleri \u00fczerinde aktif geli\u015ftirme yapm\u0131\u015f bulunmaktay\u0131m. Teknofest ve T\u00dcB\u0130TAK projelerinde aktif rol alarak C++, Python ve C# dillerinde sens\u00f6r verisi i\u015fleme ve u\u00e7u\u015f kontrol yaz\u0131l\u0131mlar\u0131 geli\u015ftirdim. Akademik ve g\u00f6n\u00fcll\u00fc projelerde edindi\u011fim tecr\u00fcbelerimi kullanarak alan\u0131mda yenilik\u00e7i \u00e7\u00f6z\u00fcmler \u00fcretmeyi hedeflemekteyim.',
 	avatar: 'https://avatars.githubusercontent.com/u/149049403?v=4',
 	githubUrl: 'https://github.com/YusufIslamBudak',
 	linkedinUrl: 'https://www.linkedin.com/in/yusuf-islam-budak-7bb3b2177/',
 	repositoryCount: 15,
 	contributionCount: 28,
 	summaryPoints: [
-		'GitHub profilinizde 15 repository g\u00f6r\u00fcl\u00fcyor.',
-		'Son y\u0131lda 28 contribution kay\u0131tl\u0131.',
-		'Profilde g\u00f6r\u00fcn\u00fcr odaklar: Python, Flutter, C#, ASP.NET, HTML/CSS ve embedded sistemler.'
+		'IoT, otonom sistemler ve g\u00f6m\u00fcl\u00fc AI \u00fczerine odaklanan bir m\u00fchendis aday\u0131y\u0131m.',
+		'Ar\u0131 Drones b\u00fcnyesinde a\u00e7\u0131k kaynak u\u00e7u\u015f yaz\u0131l\u0131mlar\u0131 ve veri analiz mod\u00fclleri geli\u015ftirme tecr\u00fcbesine sahibim.',
+		'Teknofest ve T\u00dcB\u0130TAK projelerinde C++, Python ve C# dilleriyle sens\u00f6r verisi i\u015fleme ve u\u00e7u\u015f kontrol yaz\u0131l\u0131mlar\u0131 geli\u015ftirdim.'
 	],
 	stats: [
 		{ value: '15', label: 'Repository' },

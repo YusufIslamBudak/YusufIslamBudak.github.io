@@ -140,6 +140,13 @@
 				border-radius: 0.95rem;
 				background: rgba(255, 255, 255, 0.7);
 				color: var(--text-soft);
+				border: 1px solid transparent;
+			}
+
+			[data-theme="dark"] .note-list li {
+				background: rgba(255, 255, 255, 0.05);
+				color: var(--text-strong);
+				border-color: var(--border-color);
 			}
 
 			@media (max-width: 980px) {
@@ -212,7 +219,6 @@
 										<header class="major">
 											<h2>Kısa Profil</h2>
 										</header>
-										<p id="sidebar-bio">GitHub ve LinkedIn bilgilerinden derlenen kamuya açık profil özetiniz.</p>
 										<ul class="note-list" id="summary-points"></ul>
 									</section>
 

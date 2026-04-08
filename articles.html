@@ -1,270 +1,301 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Makaleler ve Yayınlar | Yusuf İslam Budak</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-		<style>
-			:root {
-				--accent: #1f6feb;
-				--accent-2: #0f766e;
-				--accent-soft: rgba(31, 111, 235, 0.12);
-				--surface: rgba(255, 255, 255, 0.82);
-				--surface-strong: rgba(255, 255, 255, 0.95);
-				--text-strong: #14213d;
-				--text-soft: #5d6b82;
-				--bg-gradient: radial-gradient(circle at top left, rgba(31, 111, 235, 0.18), transparent 34%), radial-gradient(circle at top right, rgba(15, 118, 110, 0.16), transparent 28%), linear-gradient(180deg, #f6f8fc 0%, #edf2f7 100%);
-				--border-color: rgba(20, 33, 61, 0.08);
-				--shadow-color: rgba(20, 33, 61, 0.08);
-			}
 
-			[data-theme="dark"] {
-				--accent: #58a6ff;
-				--accent-2: #2dd4bf;
-				--accent-soft: rgba(88, 166, 255, 0.2);
-				--surface: rgba(30, 41, 59, 0.82);
-				--surface-strong: rgba(15, 23, 42, 0.95);
-				--text-strong: #f8fafc;
-				--text-soft: #94a3b8;
-				--bg-gradient: radial-gradient(circle at top left, rgba(88, 166, 255, 0.15), transparent 34%), radial-gradient(circle at top right, rgba(45, 212, 191, 0.12), transparent 28%), linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
-				--border-color: rgba(255, 255, 255, 0.1);
-				--shadow-color: rgba(0, 0, 0, 0.5);
-			}
+<head>
+	<title>Makaleler ve Yayınlar | Yusuf İslam Budak</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+	<style>
+		:root {
+			--accent: #1f6feb;
+			--accent-2: #0f766e;
+			--accent-soft: rgba(31, 111, 235, 0.12);
+			--surface: rgba(255, 255, 255, 0.82);
+			--surface-strong: rgba(255, 255, 255, 0.95);
+			--text-strong: #14213d;
+			--text-soft: #5d6b82;
+			--bg-gradient: radial-gradient(circle at top left, rgba(31, 111, 235, 0.18), transparent 34%), radial-gradient(circle at top right, rgba(15, 118, 110, 0.16), transparent 28%), linear-gradient(180deg, #f6f8fc 0%, #edf2f7 100%);
+			--border-color: rgba(20, 33, 61, 0.08);
+			--shadow-color: rgba(20, 33, 61, 0.08);
+		}
 
-			[data-theme="dark"] #sidebar,
-			[data-theme="dark"] #sidebar .inner {
-				background: var(--surface-strong);
-				background-color: #1e293b !important;
-			}
+		[data-theme="dark"] {
+			--accent: #58a6ff;
+			--accent-2: #2dd4bf;
+			--accent-soft: rgba(88, 166, 255, 0.2);
+			--surface: rgba(30, 41, 59, 0.82);
+			--surface-strong: rgba(15, 23, 42, 0.95);
+			--text-strong: #f8fafc;
+			--text-soft: #94a3b8;
+			--bg-gradient: radial-gradient(circle at top left, rgba(88, 166, 255, 0.15), transparent 34%), radial-gradient(circle at top right, rgba(45, 212, 191, 0.12), transparent 28%), linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+			--border-color: rgba(255, 255, 255, 0.1);
+			--shadow-color: rgba(0, 0, 0, 0.5);
+		}
 
-			[data-theme="dark"] #sidebar nav ul li a,
-			[data-theme="dark"] #sidebar header h2,
-			[data-theme="dark"] #sidebar .contact li,
-			[data-theme="dark"] #sidebar .contact li a {
-				color: var(--text-strong) !important;
-			}
+		[data-theme="dark"] #sidebar,
+		[data-theme="dark"] #sidebar .inner {
+			background: var(--surface-strong);
+			background-color: #1e293b !important;
+		}
 
-			::-webkit-scrollbar { width: 8px; }
-			::-webkit-scrollbar-track { background: transparent; }
-			::-webkit-scrollbar-thumb {
-				background-color: var(--text-soft);
-				border-radius: 20px;
-				border: 3px solid transparent;
-				background-clip: content-box;
-			}
-			::-webkit-scrollbar-thumb:hover { background-color: var(--accent); }
+		[data-theme="dark"] #sidebar nav ul li a,
+		[data-theme="dark"] #sidebar header h2,
+		[data-theme="dark"] #sidebar .contact li,
+		[data-theme="dark"] #sidebar .contact li a {
+			color: var(--text-strong) !important;
+		}
 
-			html { scroll-behavior: smooth; }
+		::-webkit-scrollbar {
+			width: 8px;
+		}
 
-			body {
-				font-family: 'Inter', sans-serif;
-				background: var(--bg-gradient);
-				color: var(--text-strong);
-				transition: background 0.4s ease, color 0.4s ease;
-			}
+		::-webkit-scrollbar-track {
+			background: transparent;
+		}
 
-			#header .logo strong {
-				color: var(--accent);
-			}
+		::-webkit-scrollbar-thumb {
+			background-color: var(--text-soft);
+			border-radius: 20px;
+			border: 3px solid transparent;
+			background-clip: content-box;
+		}
 
-			.article-tag {
-				display: inline-flex;
-				align-items: center;
-				gap: 0.4rem;
-				padding: 0.4rem 0.8rem;
-				border-radius: 999px;
-				background: var(--accent-soft);
-				color: var(--accent-2);
-				font-size: 0.78rem;
-				font-weight: 700;
-				letter-spacing: 0.02em;
-			}
+		::-webkit-scrollbar-thumb:hover {
+			background-color: var(--accent);
+		}
 
+		html {
+			scroll-behavior: smooth;
+		}
+
+		body {
+			font-family: 'Inter', sans-serif;
+			background: var(--bg-gradient);
+			color: var(--text-strong);
+			transition: background 0.4s ease, color 0.4s ease;
+		}
+
+		#header .logo strong {
+			color: var(--accent);
+		}
+
+		.article-tag {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.4rem;
+			padding: 0.4rem 0.8rem;
+			border-radius: 999px;
+			background: var(--accent-soft);
+			color: var(--accent-2);
+			font-size: 0.78rem;
+			font-weight: 700;
+			letter-spacing: 0.02em;
+		}
+
+		.article-grid {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 1.1rem;
+		}
+
+		.article-card {
+			background: var(--surface);
+			backdrop-filter: blur(14px);
+			border: 1px solid var(--border-color);
+			border-radius: 1.25rem;
+			box-shadow: 0 18px 40px var(--shadow-color);
+			padding: 1.25rem;
+			display: flex;
+			flex-direction: column;
+			gap: 0.9rem;
+			transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s ease, border-color 0.4s ease;
+		}
+
+		.article-card:hover {
+			transform: translateY(-5px) scale(1.01);
+			box-shadow: 0 24px 48px var(--shadow-color);
+		}
+
+		.article-card h3 {
+			margin-bottom: 0.4rem;
+			color: var(--text-strong);
+		}
+
+		.article-card .actions {
+			margin-top: auto;
+		}
+
+		.profile-card {
+			background: var(--surface);
+			backdrop-filter: blur(14px);
+			border: 1px solid var(--border-color);
+			border-radius: 1.25rem;
+			box-shadow: 0 18px 40px var(--shadow-color);
+			padding: 1.25rem;
+		}
+
+		.note-list {
+			display: flex;
+			flex-direction: column;
+			gap: 0.75rem;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.note-list li {
+			padding: 0.8rem 0.95rem;
+			border-radius: 0.95rem;
+			background: rgba(255, 255, 255, 0.7);
+			color: var(--text-soft);
+			border: 1px solid transparent;
+		}
+
+		[data-theme="dark"] .note-list li {
+			background: rgba(255, 255, 255, 0.05);
+			color: var(--text-strong);
+			border-color: var(--border-color);
+		}
+
+		@media (max-width: 980px) {
 			.article-grid {
-				display: grid;
 				grid-template-columns: repeat(2, minmax(0, 1fr));
-				gap: 1.1rem;
 			}
+		}
 
-			.article-card {
-				background: var(--surface);
-				backdrop-filter: blur(14px);
-				border: 1px solid var(--border-color);
-				border-radius: 1.25rem;
-				box-shadow: 0 18px 40px var(--shadow-color);
-				padding: 1.25rem;
-				display: flex;
-				flex-direction: column;
-				gap: 0.9rem;
-				transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s ease, border-color 0.4s ease;
+		@media (max-width: 736px) {
+			.article-grid {
+				grid-template-columns: 1fr;
 			}
+		}
 
-			.article-card:hover {
-				transform: translateY(-5px) scale(1.01);
-				box-shadow: 0 24px 48px var(--shadow-color);
-			}
+		.reveal {
+			opacity: 0;
+			transform: translateY(30px);
+			transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+		}
 
-			.article-card h3 {
-				margin-bottom: 0.4rem;
-				color: var(--text-strong);
-			}
+		.reveal.active {
+			opacity: 1;
+			transform: translateY(0);
+		}
 
-			.article-card .actions {
-				margin-top: auto;
-			}
+		#sidebar,
+		#header {
+			border-color: var(--border-color) !important;
+		}
 
-			.profile-card {
-				background: var(--surface);
-				backdrop-filter: blur(14px);
-				border: 1px solid var(--border-color);
-				border-radius: 1.25rem;
-				box-shadow: 0 18px 40px var(--shadow-color);
-				padding: 1.25rem;
-			}
-            
-			.note-list {
-				display: flex;
-				flex-direction: column;
-				gap: 0.75rem;
-				margin: 0;
-				padding: 0;
-				list-style: none;
-			}
+		#sidebar>.inner {
+			border-right: none !important;
+		}
+	</style>
+</head>
 
-			.note-list li {
-				padding: 0.8rem 0.95rem;
-				border-radius: 0.95rem;
-				background: rgba(255, 255, 255, 0.7);
-				color: var(--text-soft);
-			}
+<body class="is-preload">
 
-			@media (max-width: 980px) {
-				.article-grid {
-					grid-template-columns: repeat(2, minmax(0, 1fr));
-				}
-			}
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-			@media (max-width: 736px) {
-				.article-grid {
-					grid-template-columns: 1fr;
-				}
-			}
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
 
-			.reveal {
-				opacity: 0;
-				transform: translateY(30px);
-				transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-			}
-			.reveal.active {
-				opacity: 1;
-				transform: translateY(0);
-			}
-			
-			#sidebar, #header {
-				border-color: var(--border-color) !important;
-			}
-			#sidebar > .inner { border-right: none !important; }
-		</style>
-	</head>
-	<body class="is-preload">
+				<!-- Header -->
+				<header id="header">
+					<a href="index.html" class="logo"><strong>Yusuf İslam Budak</strong> Portfolio</a>
+					<ul class="icons">
+						<li><button id="theme-toggle" class="icon solid fa-moon" aria-label="Toggle dark mode"
+								style="border: none; background: transparent; cursor: pointer; color: var(--text-soft); box-shadow: none; min-width: auto; width: auto; height: auto; line-height: inherit; padding: 0 0.5rem;"></button>
+						</li>
+						<li><a href="https://github.com/YusufIslamBudak" class="icon brands fa-github"
+								style="color: var(--text-soft);"><span class="label">GitHub</span></a></li>
+						<li><a href="https://www.linkedin.com/in/yusuf-islam-budak-7bb3b2177/"
+								class="icon brands fa-linkedin-in" style="color: var(--text-soft);"><span
+									class="label">LinkedIn</span></a></li>
+					</ul>
+				</header>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo"><strong>Yusuf İslam Budak</strong> Portfolio</a>
-									<ul class="icons">
-										<li><button id="theme-toggle" class="icon solid fa-moon" aria-label="Toggle dark mode" style="border: none; background: transparent; cursor: pointer; color: var(--text-soft); box-shadow: none; min-width: auto; width: auto; height: auto; line-height: inherit; padding: 0 0.5rem;"></button></li>
-										<li><a href="https://github.com/YusufIslamBudak" class="icon brands fa-github" style="color: var(--text-soft);"><span class="label">GitHub</span></a></li>
-										<li><a href="https://www.linkedin.com/in/yusuf-islam-budak-7bb3b2177/" class="icon brands fa-linkedin-in" style="color: var(--text-soft);"><span class="label">LinkedIn</span></a></li>
-									</ul>
-								</header>
-
-							<!-- Section -->
-								<section id="articles" class="reveal" style="margin-top: 3rem;">
-									<header class="major">
-										<h2>Makaleler ve Yayınlar</h2>
-									</header>
-									<p>Blog yazıları, teknik dökümanlar ve yayımladığınız makaleler listesi. Detaylar ve tam metinler için bağlantıları inceleyebilirsiniz.</p>
-									<div class="article-grid" id="article-grid">
-                                        <!-- Javascript will populate this based on portfolio-data.js -->
-                                    </div>
-								</section>
-
-						</div>
+				<!-- Section -->
+				<section id="articles" class="reveal" style="margin-top: 3rem;">
+					<header class="major">
+						<h2>Makaleler ve Yayınlar</h2>
+					</header>
+					<p>Blog yazıları, teknik dökümanlar ve yayımladığınız makaleler listesi. Detaylar ve tam metinler
+						için bağlantıları inceleyebilirsiniz.</p>
+					<div class="article-grid" id="article-grid">
+						<!-- Javascript will populate this based on portfolio-data.js -->
 					</div>
-
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
-
-								<!-- Profile -->
-									<section id="profile" class="profile-card reveal">
-										<header class="major">
-											<h2>Kısa Profil</h2>
-										</header>
-										<p id="sidebar-bio">GitHub ve LinkedIn bilgilerinden derlenen kamuya açık profil özetiniz.</p>
-										<ul class="note-list" id="summary-points"></ul>
-									</section>
-
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Yusuf İslam Budak</a></li>
-										<li><a href="index.html#projects">Projeler</a></li>
-										<li><a href="certificates.html">Sertifikalar ve Belgeler</a></li>
-										<li><a href="articles.html">Makaleler ve Yayınlar</a></li>
-										<li><a href="teknofest.html">TEKNOFEST</a></li>
-									</ul>
-								</nav>
-
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; 2026 Yusuf İslam Budak. Public profile data from GitHub and LinkedIn. Theme adapted from <a href="https://html5up.net">HTML5 UP</a>.</p>
-								</footer>
-
-						</div>
-					</div>
+				</section>
 
 			</div>
+		</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-            <script src="portfolio-data.js"></script>
-            <script>
-                (function () {
-                    const profile = window.portfolioProfile;
-                    if (!profile) {
-                        return;
-                    }
-                    
-                    const summaryPoints = document.getElementById('summary-points');
-                    if (summaryPoints && profile.summaryPoints) {
-                        summaryPoints.innerHTML = profile.summaryPoints.map(function (point) {
-                            return '<li>' + point + '</li>';
-                        }).join('');
-                    }
+		<!-- Sidebar -->
+		<div id="sidebar">
+			<div class="inner">
 
-                    const articleGrid = document.getElementById('article-grid');
-                    if (articleGrid && profile.articles) {
-                        articleGrid.innerHTML = profile.articles.map(function(article) {
-                            return `
+				<!-- Profile -->
+				<section id="profile" class="profile-card reveal">
+					<header class="major">
+						<h2>Kısa Profil</h2>
+					</header>
+					<ul class="note-list" id="summary-points"></ul>
+				</section>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<header class="major">
+						<h2>Menu</h2>
+					</header>
+					<ul>
+						<li><a href="index.html">Yusuf İslam Budak</a></li>
+						<li><a href="index.html#projects">Projeler</a></li>
+						<li><a href="certificates.html">Sertifikalar ve Belgeler</a></li>
+						<li><a href="articles.html">Makaleler ve Yayınlar</a></li>
+						<li><a href="teknofest.html">TEKNOFEST</a></li>
+					</ul>
+				</nav>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<p class="copyright">&copy; 2026 Yusuf İslam Budak. Public profile data from GitHub and LinkedIn.
+						Theme adapted from <a href="https://html5up.net">HTML5 UP</a>.</p>
+				</footer>
+
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="portfolio-data.js"></script>
+	<script>
+		(function () {
+			const profile = window.portfolioProfile;
+			if (!profile) {
+				return;
+			}
+
+			const summaryPoints = document.getElementById('summary-points');
+			if (summaryPoints) {
+				summaryPoints.innerHTML = profile.summaryPoints.map(function (point) {
+					return '<li>' + point + '</li>';
+				}).join('');
+			}
+
+			const articleGrid = document.getElementById('article-grid');
+			if (articleGrid && profile.articles) {
+				articleGrid.innerHTML = profile.articles.map(function (article) {
+					return `
                             <article class="article-card">
                                 <span class="article-tag">${article.date} - ${article.publisher}</span>
                                 <h3>${article.title}</h3>
@@ -274,66 +305,67 @@
                                 </ul>
                             </article>
                             `;
-                        }).join('');
-                    }
-                })();
+				}).join('');
+			}
+		})();
 
-                // Theme Toggle functionality
-                const themeToggle = document.getElementById('theme-toggle');
-                const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+		// Theme Toggle functionality
+		const themeToggle = document.getElementById('theme-toggle');
+		const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 
-                if (currentTheme) {
-                    document.documentElement.setAttribute('data-theme', currentTheme);
-                    if (currentTheme === 'dark' && themeToggle) {
-                        themeToggle.classList.replace('fa-moon', 'fa-sun');
-                    }
-                } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                    if (themeToggle) themeToggle.classList.replace('fa-moon', 'fa-sun');
-                }
+		if (currentTheme) {
+			document.documentElement.setAttribute('data-theme', currentTheme);
+			if (currentTheme === 'dark' && themeToggle) {
+				themeToggle.classList.replace('fa-moon', 'fa-sun');
+			}
+		} else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			document.documentElement.setAttribute('data-theme', 'dark');
+			if (themeToggle) themeToggle.classList.replace('fa-moon', 'fa-sun');
+		}
 
-                if (themeToggle) {
-                    themeToggle.addEventListener('click', function (e) {
-                        let theme = 'light';
-                        if (document.documentElement.hasAttribute('data-theme')) {
-                            document.documentElement.removeAttribute('data-theme');
-                            themeToggle.classList.replace('fa-sun', 'fa-moon');
-                        } else {
-                            document.documentElement.setAttribute('data-theme', 'dark');
-                            themeToggle.classList.replace('fa-moon', 'fa-sun');
-                            theme = 'dark';
-                        }
-                        localStorage.setItem('theme', theme);
-                    });
-                }
+		if (themeToggle) {
+			themeToggle.addEventListener('click', function (e) {
+				let theme = 'light';
+				if (document.documentElement.hasAttribute('data-theme')) {
+					document.documentElement.removeAttribute('data-theme');
+					themeToggle.classList.replace('fa-sun', 'fa-moon');
+				} else {
+					document.documentElement.setAttribute('data-theme', 'dark');
+					themeToggle.classList.replace('fa-moon', 'fa-sun');
+					theme = 'dark';
+				}
+				localStorage.setItem('theme', theme);
+			});
+		}
 
-                // Scroll Reveal Logic
-                const observerOptions = {
-                    root: null,
-                    rootMargin: '0px',
-                    threshold: 0.1
-                };
-                const observer = new IntersectionObserver((entries, obs) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('active');
-                            obs.unobserve(entry.target);
-                        }
-                    });
-                }, observerOptions);
+		// Scroll Reveal Logic
+		const observerOptions = {
+			root: null,
+			rootMargin: '0px',
+			threshold: 0.1
+		};
+		const observer = new IntersectionObserver((entries, obs) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('active');
+					obs.unobserve(entry.target);
+				}
+			});
+		}, observerOptions);
 
-                document.addEventListener('DOMContentLoaded', () => {
-                    const reveals = document.querySelectorAll('section, .article-card, .profile-card');
-                    reveals.forEach((el, index) => {
-                        el.classList.add('reveal');
-                        if (el.classList.contains('article-card')) {
-                            el.style.transitionDelay = `${(index % 4) * 0.1}s`;
-                        }
-                        observer.observe(el);
-                    });
-                });
-            </script>
-            <script src="assets/js/dynamic-bg.js"></script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const reveals = document.querySelectorAll('section, .article-card, .profile-card');
+			reveals.forEach((el, index) => {
+				el.classList.add('reveal');
+				if (el.classList.contains('article-card')) {
+					el.style.transitionDelay = `${(index % 4) * 0.1}s`;
+				}
+				observer.observe(el);
+			});
+		});
+	</script>
+	<script src="assets/js/dynamic-bg.js"></script>
 
-	</body>
+</body>
+
 </html>
