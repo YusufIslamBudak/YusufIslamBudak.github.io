@@ -1,8 +1,8 @@
 window.portfolioProfile = {
 	name: 'Yusuf İslam Budak',
 	displayName: 'Yusuf İslam Budak',
-	headline: 'Bilgisayar M\u00fchendisli\u011fi odakl\u0131 geli\u015ftirici',
-	intro: 'GitHub ve LinkedIn profilinden toplanan kamuya a\u00e7\u0131k bilgilerle haz\u0131rlanm\u0131\u015f ki\u015fisel portfolyo alan\u0131.',
+	headline: 'Yaz\u0131l\u0131m Geli\u015ftirme ve G\u00f6m\u00fcl\u00fc Sistemler',
+	intro: 'G\u00f6m\u00fcl\u00fc Sistemler, Yaz\u0131l\u0131m Geli\u015ftirme ve Yapay Zeka alanlarında çalışmalar.',
 	bio: 'Flutter, Python, C#, ASP.NET, HTML/CSS ve g\u00f6m\u00fcl\u00fc sistemler \u00fczerine yapt\u0131\u011f\u0131n\u0131z projeleri tek bir alanda sergilemek i\u00e7in d\u00fczenlendi.',
 	avatar: 'https://avatars.githubusercontent.com/u/149049403?v=4',
 	githubUrl: 'https://github.com/YusufIslamBudak',
