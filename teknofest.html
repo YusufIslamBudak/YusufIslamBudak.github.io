@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Sertifikalar ve Belgeler | Yusuf İslam Budak</title>
+		<title>TEKNOFEST | Yusuf İslam Budak</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -58,7 +58,7 @@
 				color: var(--accent);
 			}
 
-			.cert-tag {
+			.tekno-tag {
 				display: inline-flex;
 				align-items: center;
 				gap: 0.4rem;
@@ -71,13 +71,13 @@
 				letter-spacing: 0.02em;
 			}
 
-			.cert-grid {
+			.tekno-grid {
 				display: grid;
 				grid-template-columns: repeat(2, minmax(0, 1fr));
 				gap: 1.1rem;
 			}
 
-			.cert-card {
+			.tekno-card {
 				background: var(--surface);
 				backdrop-filter: blur(14px);
 				border: 1px solid var(--border-color);
@@ -90,17 +90,17 @@
 				transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s ease, border-color 0.4s ease;
 			}
 
-			.cert-card:hover {
+			.tekno-card:hover {
 				transform: translateY(-5px) scale(1.01);
 				box-shadow: 0 24px 48px var(--shadow-color);
 			}
 
-			.cert-card h3 {
+			.tekno-card h3 {
 				margin-bottom: 0.4rem;
 				color: var(--text-strong);
 			}
 
-			.cert-card .actions {
+			.tekno-card .actions {
 				margin-top: auto;
 			}
 
@@ -130,13 +130,13 @@
 			}
 
 			@media (max-width: 980px) {
-				.cert-grid {
+				.tekno-grid {
 					grid-template-columns: repeat(2, minmax(0, 1fr));
 				}
 			}
 
 			@media (max-width: 736px) {
-				.cert-grid {
+				.tekno-grid {
 					grid-template-columns: 1fr;
 				}
 			}
@@ -177,12 +177,12 @@
 								</header>
 
 							<!-- Section -->
-								<section id="certificates" class="reveal" style="margin-top: 3rem;">
+								<section id="teknofest" class="reveal" style="margin-top: 3rem;">
 									<header class="major">
-										<h2>Sertifikalar ve Belgeler</h2>
+										<h2>TEKNOFEST Geçmişim</h2>
 									</header>
-									<p>Alınan eğitimler, kazanılan yetkinlikler ve sertifikaların bulunduğu alan. Belge detayları ve doğrulama linklerine ilgili kart içerisinden ulaşılabilir.</p>
-									<div class="cert-grid" id="cert-grid">
+									<p>Teknofest kapsamında katıldığım projeler, projelerde üstlendiğim görevler ve takım çalışmalarının detayları bu alanda yer almaktadır.</p>
+									<div class="tekno-grid" id="tekno-grid">
                                         <!-- Javascript will populate this based on portfolio-data.js -->
                                     </div>
 								</section>
@@ -248,16 +248,16 @@
                         }).join('');
                     }
 
-                    const certGrid = document.getElementById('cert-grid');
-                    if (certGrid && profile.certificates) {
-                        certGrid.innerHTML = profile.certificates.map(function(cert) {
+                    const teknoGrid = document.getElementById('tekno-grid');
+                    if (teknoGrid && profile.teknofest) {
+                        teknoGrid.innerHTML = profile.teknofest.map(function(item) {
                             return `
-                            <article class="cert-card">
-                                <span class="cert-tag">${cert.date} - ${cert.issuer}</span>
-                                <h3>${cert.title}</h3>
-                                <p>${cert.description}</p>
+                            <article class="tekno-card">
+                                <span class="tekno-tag">${item.date} - ${item.category}</span>
+                                <h3>${item.title}</h3>
+                                <p>${item.description}</p>
                                 <ul class="actions">
-                                    <li><a class="button" href="${cert.url}" target="_blank" rel="noopener noreferrer">Belgeyi Gör</a></li>
+                                    <li><a class="button" href="${item.url}" target="_blank" rel="noopener noreferrer">Projeyi İncele</a></li>
                                 </ul>
                             </article>
                             `;
@@ -310,10 +310,10 @@
                 }, observerOptions);
 
                 document.addEventListener('DOMContentLoaded', () => {
-                    const reveals = document.querySelectorAll('section, .cert-card, .profile-card');
+                    const reveals = document.querySelectorAll('section, .tekno-card, .profile-card');
                     reveals.forEach((el, index) => {
                         el.classList.add('reveal');
-                        if (el.classList.contains('cert-card')) {
+                        if (el.classList.contains('tekno-card')) {
                             el.style.transitionDelay = `${(index % 4) * 0.1}s`;
                         }
                         observer.observe(el);

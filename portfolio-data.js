@@ -126,6 +126,15 @@ window.portfolioProfile = {
 			url: '#'
 		}
 	],
+	teknofest: [
+		{
+			title: 'Örnek Teknofest Projesi',
+			category: 'İnsansız Sualtı Sistemleri',
+			date: '2023',
+			description: 'Teknofest yarışmasında takımımızla birlikte geliştirdiğimiz otonom sistem ve elde ettiğimiz dereceler.',
+			url: '#'
+		}
+	],
 	currentFocus: [
 		'Kendinizi tek bir proje tipine s\u0131n\u0131rlamadan farklı teknoloji alanlar\u0131nda geli\u015ftirme',
 		'HTML5 UP Editorial temas\u0131n\u0131 portfolyo ve ki\u015fisel site yap\u0131s\u0131na uyarlama',
