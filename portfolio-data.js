@@ -180,6 +180,7 @@ window.portfolioProfile = {
 	careerHistory: [
 		{
 			company: 'Arı Drones',
+			logo: 'images/ari-drones.png',
 			role: 'Yazılım ve IoT Stajyeri / Aday Mühendis',
 			date: 'Mayıs 2025 - Günümüz',
 			location: 'İstanbul, Türkiye',
@@ -187,6 +188,7 @@ window.portfolioProfile = {
 		},
 		{
 			company: 'Gedik Robotics Team',
+			logo: 'images/gedik-robotics.png',
 			role: 'Takım Kaptanı',
 			date: 'Ocak 2025 - Günümüz',
 			location: 'İstanbul, Türkiye',
@@ -194,6 +196,7 @@ window.portfolioProfile = {
 		},
 		{
 			company: 'TeamNameless (Nova)',
+			logo: 'images/team-nameless.png',
 			role: 'Uçuş Yazılımı Geliştiricisi – Alt Ekip Kaptanı',
 			date: 'Eylül 2022 - Ekim 2024',
 			location: 'İstanbul, Türkiye',
@@ -201,6 +204,7 @@ window.portfolioProfile = {
 		},
 		{
 			company: 'İstanbul Gedik Üniversitesi - TÖMER',
+			logo: 'images/gedik-uni.png',
 			role: 'Türkçe Öğretimi Uygulama ve Araştırma Merkezi Görevlisi',
 			date: 'Mayıs 2024 - Şubat 2025',
 			location: 'İstanbul, Türkiye',
@@ -208,6 +212,7 @@ window.portfolioProfile = {
 		},
 		{
 			company: 'Yükseköğretim Kalite Kurulu (YÖKAK)',
+			logo: 'images/yokak.png',
 			role: 'Mühendislik Fakültesi Temsilcisi',
 			date: 'Haziran 2023 - Günümüz',
 			location: 'İstanbul, Türkiye',
@@ -215,6 +220,7 @@ window.portfolioProfile = {
 		},
 		{
 			company: 'Bilişim Teknolojileri Kulübü',
+			logo: 'images/bilisim-klubucu.png',
 			role: 'Yönetim Kurulu Başkanı',
 			date: 'Şubat 2023 - Günümüz',
 			location: 'İstanbul, Türkiye',
@@ -222,6 +228,7 @@ window.portfolioProfile = {
 		},
 		{
 			company: 'McDonald\'s',
+			logo: 'images/mcdonalds.png',
 			role: 'Ekip Üyesi → Ekip Lideri → Bölüm Müdürü',
 			date: 'Haziran 2022 - Ocak 2024',
 			location: 'İstanbul, Türkiye',
