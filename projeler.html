@@ -127,9 +127,31 @@
 				grid-template-columns: 1fr 1fr;
 				gap: 3rem;
 				align-items: start;
+				display: none;
+			}
+			
+			.featured-body.expanded {
+				display: grid;
 			}
 
-			.project-visuals {
+			.expand-icon {
+				position: absolute;
+				top: 3.5rem;
+				right: 3rem;
+				font-size: 1.5rem;
+				color: var(--accent);
+				transition: transform 0.3s ease;
+			}
+
+			.featured-project.expanded .expand-icon {
+				transform: rotate(180deg);
+			}
+
+			.featured-header {
+				padding: 3rem 3rem 1.5rem 3rem;
+				position: relative;
+				cursor: pointer;
+			}
 				display: flex;
 				flex-direction: column;
 				gap: 1.5rem;
@@ -248,9 +270,10 @@
 									</header>
 
 									<!-- Featured Project: Akıllı Sera Sistemi -->
-									<article class="featured-project reveal">
-										<div class="featured-header">
+									<article class="featured-project reveal" id="akilli-sera">
+										<div class="featured-header" onclick="toggleProject('akilli-sera')">
 											<h2>Bitirme Tezi - Akıllı Sera Sistemi</h2>
+											<i class="fas fa-chevron-down expand-icon"></i>
 											<div class="project-tags">
 												<span class="tag">Machine Learning</span>
 												<span class="tag">IoT & LoRa</span>
@@ -385,7 +408,30 @@
                     reveals.forEach((el) => {
                         observer.observe(el);
                     });
+
+                    // Check URL hash for auto-expanding
+                    if (window.location.hash) {
+                        const targetId = window.location.hash.substring(1);
+                        toggleProject(targetId, true);
+                    }
                 });
+
+                window.toggleProject = function(id, forceOpen = false) {
+                    const project = document.getElementById(id);
+                    if (project) {
+                        const body = project.querySelector('.featured-body');
+                        if (forceOpen || !project.classList.contains('expanded')) {
+                            project.classList.add('expanded');
+                            body.classList.add('expanded');
+                            if (forceOpen) {
+                                setTimeout(() => project.scrollIntoView({ behavior: 'smooth', block: 'center' }), 300);
+                            }
+                        } else {
+                            project.classList.remove('expanded');
+                            body.classList.remove('expanded');
+                        }
+                    }
+                };
             </script>
             <script src="assets/js/dynamic-bg.js"></script>
 

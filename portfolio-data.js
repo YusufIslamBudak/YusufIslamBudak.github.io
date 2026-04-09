@@ -237,18 +237,11 @@ window.portfolioProfile = {
 	],
 	articles: [
 		{
-			title: 'Örnek Makale Başlığı 1',
-			publisher: 'Medium / Blog',
-			date: '2025',
-			description: 'Yazılım ve mühendislik alanında edindiğim tecrübeleri anlattığım ilk makalem.',
-			url: '#'
-		},
-		{
-			title: 'Örnek Yayın 2',
-			publisher: 'IEEE / Dergi',
+			title: 'Machine Learning-Based Smart Agriculture System',
+			publisher: 'ETSC\'26 (1st International Energy Transition and Sustainability Conference)',
 			date: '2026',
-			description: 'Akademik veya profesyonel platformlarda yayımlanan bilimsel araştırmam.',
-			url: '#'
+			description: 'Tarımsal üretimde kaynak verimliliğini sağlamak amacıyla IoT, Kalman Filtresi ve Makine Öğrenmesi (Karar Ağacı) entegreli Akıllı Sera Sistemi üzerine sunulan Full Paper ve Abstract çalışması.',
+			url: 'projeler.html#akilli-sera'
 		}
 	],
 	teknofest: [
