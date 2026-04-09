@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>TEKNOFEST | Yusuf İslam Budak</title>
+		<title>Projeler | Yusuf İslam Budak</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -58,107 +58,142 @@
 			}
 			::-webkit-scrollbar-thumb:hover { background-color: var(--accent); }
 
-			html { scroll-behavior: smooth; }
-
 			body {
 				font-family: 'Inter', sans-serif;
 				background: var(--bg-gradient);
 				color: var(--text-strong);
 				transition: background 0.4s ease, color 0.4s ease;
 			}
+			
+			h1, h2, h3, h4, h5, h6 { color: var(--text-strong); }
+			#header .logo strong { color: var(--accent); }
+			#sidebar, #header { border-color: var(--border-color) !important; }
+			#sidebar > .inner { border-right: none !important; }
 
-			#header .logo strong {
-				color: var(--accent);
+			/* Featured Project Card Styling */
+			.featured-project {
+				background: var(--surface);
+				backdrop-filter: blur(14px);
+				border: 1px solid var(--border-color);
+				border-radius: 1.5rem;
+				box-shadow: 0 18px 40px var(--shadow-color);
+				overflow: hidden;
+				margin-bottom: 3rem;
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
 			}
 
-			.tekno-tag {
-				display: inline-flex;
-				align-items: center;
-				gap: 0.4rem;
-				padding: 0.4rem 0.8rem;
-				border-radius: 999px;
-				background: var(--accent-soft);
-				color: var(--accent-2);
-				font-size: 0.78rem;
+			.featured-project:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 25px 50px var(--shadow-color);
+			}
+
+			.featured-header {
+				padding: 3rem 3rem 1.5rem 3rem;
+				position: relative;
+			}
+
+			.featured-header h2 {
+				font-size: 2.2rem;
+				margin-bottom: 0.5rem;
 				font-weight: 700;
-				letter-spacing: 0.02em;
+				color: var(--text-strong);
 			}
 
-			.tekno-grid {
+			.project-tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5rem;
+				margin-bottom: 1.5rem;
+			}
+
+			.tag {
+				background: rgba(15, 118, 110, 0.1);
+				color: var(--accent-2);
+				padding: 0.4rem 1rem;
+				border-radius: 999px;
+				font-size: 0.85rem;
+				font-weight: 600;
+				border: 1px solid rgba(15, 118, 110, 0.2);
+			}
+			
+			[data-theme="dark"] .tag {
+				background: rgba(45, 212, 191, 0.15);
+				border-color: rgba(45, 212, 191, 0.25);
+			}
+
+			.featured-body {
+				padding: 0 3rem 3rem 3rem;
 				display: grid;
-				grid-template-columns: repeat(2, minmax(0, 1fr));
-				gap: 1.1rem;
+				grid-template-columns: 1fr 1fr;
+				gap: 3rem;
+				align-items: start;
 			}
 
-			.tekno-card {
-				background: var(--surface);
-				backdrop-filter: blur(14px);
-				border: 1px solid var(--border-color);
-				border-radius: 1.25rem;
-				box-shadow: 0 18px 40px var(--shadow-color);
-				padding: 1.25rem;
+			.project-visuals {
 				display: flex;
 				flex-direction: column;
-				gap: 0.9rem;
-				transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s ease, border-color 0.4s ease;
+				gap: 1.5rem;
 			}
 
-			.tekno-card:hover {
-				transform: translateY(-5px) scale(1.01);
-				box-shadow: 0 24px 48px var(--shadow-color);
-			}
-
-			.tekno-card h3 {
-				margin-bottom: 0.4rem;
-				color: var(--text-strong);
-			}
-
-			.tekno-card .actions {
-				margin-top: auto;
-			}
-
-			.profile-card {
-				background: var(--surface);
-				backdrop-filter: blur(14px);
+			.project-img-wrapper {
+				border-radius: 1rem;
+				overflow: hidden;
 				border: 1px solid var(--border-color);
-				border-radius: 1.25rem;
-				box-shadow: 0 18px 40px var(--shadow-color);
-				padding: 1.25rem;
-			}
-            
-			.note-list {
-				display: flex;
-				flex-direction: column;
-				gap: 0.75rem;
-				margin: 0;
-				padding: 0;
-				list-style: none;
+				box-shadow: 0 10px 20px var(--shadow-color);
 			}
 
-			.note-list li {
-				padding: 0.8rem 0.95rem;
-				border-radius: 0.95rem;
-				background: rgba(255, 255, 255, 0.7);
+			.project-img-wrapper img {
+				width: 100%;
+				height: auto;
+				display: block;
+				transition: transform 0.5s ease;
+			}
+
+			.project-img-wrapper:hover img {
+				transform: scale(1.03);
+			}
+
+			.project-details p {
 				color: var(--text-soft);
-				border: 1px solid transparent;
+				line-height: 1.8;
+				margin-bottom: 1.2rem;
+			}
+			
+			.project-details h3 {
+				font-size: 1.3rem;
+				color: var(--accent);
+				margin-bottom: 0.75rem;
+				margin-top: 1.5rem;
 			}
 
-			[data-theme="dark"] .note-list li {
-				background: rgba(255, 255, 255, 0.05);
+			.project-stats {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1rem;
+				margin-top: 2rem;
+				padding-top: 2rem;
+				border-top: 1px solid var(--border-color);
+			}
+
+			.stat-box {
+				background: var(--bg-gradient);
+				padding: 1rem;
+				border-radius: 0.75rem;
+				border: 1px solid var(--border-color);
+				text-align: center;
+			}
+			
+			.stat-box .icon {
+				font-size: 1.5rem;
+				color: var(--accent);
+				margin-bottom: 0.5rem;
+			}
+
+			.stat-box span {
+				display: block;
+				font-weight: 700;
 				color: var(--text-strong);
-				border-color: var(--border-color);
-			}
-
-			@media (max-width: 980px) {
-				.tekno-grid {
-					grid-template-columns: repeat(2, minmax(0, 1fr));
-				}
-			}
-
-			@media (max-width: 736px) {
-				.tekno-grid {
-					grid-template-columns: 1fr;
-				}
+				font-size: 0.9rem;
 			}
 
 			.reveal {
@@ -170,11 +205,21 @@
 				opacity: 1;
 				transform: translateY(0);
 			}
-			
-			#sidebar, #header {
-				border-color: var(--border-color) !important;
+
+			@media (max-width: 980px) {
+				.featured-body {
+					grid-template-columns: 1fr;
+					gap: 2rem;
+				}
+				.featured-header, .featured-body {
+					padding: 2rem;
+				}
 			}
-			#sidebar > .inner { border-right: none !important; }
+			@media (max-width: 736px) {
+				.featured-header, .featured-body {
+					padding: 1.5rem;
+				}
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -197,31 +242,68 @@
 								</header>
 
 							<!-- Section -->
-								<section id="teknofest" class="reveal" style="margin-top: 3rem;">
+								<section id="projects" class="reveal" style="margin-top: 3rem;">
 									<header class="major">
-										<h2>TEKNOFEST Geçmişim</h2>
+										<h2>Projeler</h2>
 									</header>
-									<p>Teknofest kapsamında katıldığım projeler, projelerde üstlendiğim görevler ve takım çalışmalarının detayları bu alanda yer almaktadır.</p>
-									<div class="tekno-grid" id="tekno-grid">
-                                        <!-- Javascript will populate this based on portfolio-data.js -->
-                                    </div>
-								</section>
 
+									<!-- Featured Project: Akıllı Sera Sistemi -->
+									<article class="featured-project reveal">
+										<div class="featured-header">
+											<h2>Bitirme Tezi - Akıllı Sera Sistemi</h2>
+											<div class="project-tags">
+												<span class="tag">Machine Learning</span>
+												<span class="tag">IoT & LoRa</span>
+												<span class="tag">Kalman Filtresi</span>
+												<span class="tag">Karar Ağacı (Decision Tree)</span>
+												<span class="tag">Arduino</span>
+											</div>
+											<p style="font-weight: 600; color: var(--text-soft); margin-bottom: 0;"><strong>Ekip:</strong> Arda Can Baysal, Yusuf İslam Budak, Kaan Özdemir<br><strong>Danışman:</strong> Dr. Öğr. Üyesi Aytaç Uğur Yerden</p>
+										</div>
+										<div class="featured-body">
+											<div class="project-details">
+												<p>Küresel iklim değişikliği ve azalan su kaynakları, tarımsal kaynak verimliliğini bir zorunluluk haline getirmiştir. <strong>Akıllı Tarım Asistanı (Akıllı Sera Sistemi)</strong> projesinde, bitkisel üretimi optimize edebilmek amacıyla nesnelerin interneti (IoT) altyapısı ve makine öğrenmesi algoritmalarını harmanlayan hibrit bir kontrol mekanizması geliştirdik.</p>
+												
+												<h3>Problemin Tanımı ve Donanım Sapmaları</h3>
+												<p>Modern tarım sistemlerinde kullanılan bütçe dostu çevresel sensörlerden elde edilen ham veriler; nem, aşırı donanım sapmaları ve radyo iletim (LoRa) sekintilerinden dolayı hatalı okunabilmektedir. Projemizdeki asıl amaç, veriyi yalnızca sunucuya basmak değil, Arduino tabanlı düğümlerden gelen sinyalleri <strong>dinamik olarak iyileştirmektir.</strong></p>
+
+												<h3>Geliştirilen Hibrit Çözüm (Kalman Filtresi & Karar Ağacı)</h3>
+												<p>Sensör verilerindeki gürültü ve hataların önüne geçmek için <strong>Kalman Filtresi (Kalman Filter)</strong> adaptasyonunu kullandık. Bu filtreleme katmanından geçirildikten sonra düzeltilmiş (rafine) edilen sıcaklık, nem, ışık ve CO2 verileri; sulama, havalandırma ve aydınlatma eylemlerine karar vermesi için bir <strong>Karar Ağacı (Decision Tree)</strong> makine öğrenmesi modeline beslenmektedir. Bu yaklaşımla bitki stresini minimize edip su/enerji kullanımını maksimize etmeyi amaçladık.</p>
+
+												<div class="project-stats">
+													<div class="stat-box">
+														<i class="icon solid fa-award"></i>
+														<span>ETSC'26 Konferansı</span>
+														<small style="color:var(--text-soft)">Kabul Edilmiş Bildiri / Full Paper</small>
+													</div>
+													<div class="stat-box">
+														<i class="icon solid fa-seedling"></i>
+														<span>Düşük Hata Payı</span>
+														<small style="color:var(--text-soft)">Gürültü Baskılama & Otonom Karar</small>
+													</div>
+												</div>
+											</div>
+											
+											<div class="project-visuals">
+												<div class="project-img-wrapper" title="Sera web izleme paneli">
+													<img src="images/projects/web-arayuz.jpeg" alt="Akıllı Sera Sistemi Web Arayüzü">
+												</div>
+												<div class="project-img-wrapper" title="Sistem Mimari Şeması ve LoRa">
+													<img src="images/projects/Figure_1.png" alt="IoT ve Karar Verme Algoritması Akış Şeması">
+												</div>
+											</div>
+										</div>
+									</article>
+
+                                    <!-- Future dynamically loaded projects could go here -->
+                                    <div id="additional-projects"></div>
+								</section>
 						</div>
 					</div>
 
 				<!-- Sidebar -->
 					<div id="sidebar">
 						<div class="inner">
-
-								<!-- Profile -->
-									<section id="profile" class="profile-card reveal">
-										<header class="major">
-											<h2>Kısa Profil</h2>
-										</header>
-										<ul class="note-list" id="summary-points"></ul>
-									</section>
-
 							<!-- Menu -->
 								<nav id="menu">
 									<header class="major">
@@ -253,38 +335,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-            <script src="portfolio-data.js"></script>
             <script>
-                (function () {
-                    const profile = window.portfolioProfile;
-                    if (!profile) {
-                        return;
-                    }
-                    
-                    const summaryPoints = document.getElementById('summary-points');
-                    if (summaryPoints && profile.summaryPoints) {
-                        summaryPoints.innerHTML = profile.summaryPoints.map(function (point) {
-                            return '<li>' + point + '</li>';
-                        }).join('');
-                    }
-
-                    const teknoGrid = document.getElementById('tekno-grid');
-                    if (teknoGrid && profile.teknofest) {
-                        teknoGrid.innerHTML = profile.teknofest.map(function(item) {
-                            return `
-                            <article class="tekno-card">
-                                <span class="tekno-tag">${item.date} - ${item.category}</span>
-                                <h3>${item.title}</h3>
-                                <p>${item.description}</p>
-                                <ul class="actions">
-                                    <li><a class="button" href="${item.url}" target="_blank" rel="noopener noreferrer">Projeyi İncele</a></li>
-                                </ul>
-                            </article>
-                            `;
-                        }).join('');
-                    }
-                })();
-
                 // Theme Toggle functionality
                 const themeToggle = document.getElementById('theme-toggle');
                 const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
@@ -330,12 +381,8 @@
                 }, observerOptions);
 
                 document.addEventListener('DOMContentLoaded', () => {
-                    const reveals = document.querySelectorAll('section, .tekno-card, .profile-card');
-                    reveals.forEach((el, index) => {
-                        el.classList.add('reveal');
-                        if (el.classList.contains('tekno-card')) {
-                            el.style.transitionDelay = `${(index % 4) * 0.1}s`;
-                        }
+                    const reveals = document.querySelectorAll('.reveal');
+                    reveals.forEach((el) => {
                         observer.observe(el);
                     });
                 });
