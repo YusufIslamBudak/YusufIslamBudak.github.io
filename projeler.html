@@ -8,46 +8,8 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/premium.css" />
 		<style>
-			:root {
-				--accent: #1f6feb;
-				--accent-2: #0f766e;
-				--accent-soft: rgba(31, 111, 235, 0.12);
-				--surface: rgba(255, 255, 255, 0.82);
-				--surface-strong: rgba(255, 255, 255, 0.95);
-				--text-strong: #14213d;
-				--text-soft: #5d6b82;
-				--bg-gradient: radial-gradient(circle at top left, rgba(31, 111, 235, 0.18), transparent 34%), radial-gradient(circle at top right, rgba(15, 118, 110, 0.16), transparent 28%), linear-gradient(180deg, #f6f8fc 0%, #edf2f7 100%);
-				--border-color: rgba(20, 33, 61, 0.08);
-				--shadow-color: rgba(20, 33, 61, 0.08);
-			}
-
-			[data-theme="dark"] {
-				--accent: #58a6ff;
-				--accent-2: #2dd4bf;
-				--accent-soft: rgba(88, 166, 255, 0.2);
-				--surface: rgba(30, 41, 59, 0.82);
-				--surface-strong: rgba(15, 23, 42, 0.95);
-				--text-strong: #f8fafc;
-				--text-soft: #94a3b8;
-				--bg-gradient: radial-gradient(circle at top left, rgba(88, 166, 255, 0.15), transparent 34%), radial-gradient(circle at top right, rgba(45, 212, 191, 0.12), transparent 28%), linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
-				--border-color: rgba(255, 255, 255, 0.1);
-				--shadow-color: rgba(0, 0, 0, 0.5);
-			}
-
-			[data-theme="dark"] #sidebar,
-			[data-theme="dark"] #sidebar .inner {
-				background: var(--surface-strong);
-				background-color: #1e293b !important;
-			}
-
-			[data-theme="dark"] #sidebar nav ul li a,
-			[data-theme="dark"] #sidebar header h2,
-			[data-theme="dark"] #sidebar .contact li,
-			[data-theme="dark"] #sidebar .contact li a {
-				color: var(--text-strong) !important;
-			}
-
 			::-webkit-scrollbar { width: 8px; }
 			::-webkit-scrollbar-track { background: transparent; }
 			::-webkit-scrollbar-thumb {
@@ -57,18 +19,6 @@
 				background-clip: content-box;
 			}
 			::-webkit-scrollbar-thumb:hover { background-color: var(--accent); }
-
-			body {
-				font-family: 'Inter', sans-serif;
-				background: var(--bg-gradient);
-				color: var(--text-strong);
-				transition: background 0.4s ease, color 0.4s ease;
-			}
-			
-			h1, h2, h3, h4, h5, h6 { color: var(--text-strong); }
-			#header .logo strong { color: var(--accent); }
-			#sidebar, #header { border-color: var(--border-color) !important; }
-			#sidebar > .inner { border-right: none !important; }
 
 			/* Featured Project Card Styling */
 			.featured-project {
@@ -237,11 +187,6 @@
 					padding: 2rem;
 				}
 			}
-			@media (max-width: 736px) {
-				.featured-header, .featured-body {
-					padding: 1.5rem;
-				}
-			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -258,9 +203,10 @@
 									<a href="index.html" class="logo"><strong data-tr="Yusuf İslam Budak" data-en="Yusuf Islam Budak">Yusuf İslam Budak</strong> <span data-tr="Portfolio" data-en="Portfolio">Portfolio</span></a>
 									<ul class="icons">
 										<li><a href="Yusuf_İslam_Budak_CV.pdf" class="cv-button" target="_blank"><i class="fas fa-file-pdf"></i> <span data-tr="CV İndir" data-en="Download CV">CV İndir</span></a></li>
-										<li><button id="theme-toggle" class="icon solid fa-moon" aria-label="Toggle dark mode" style="border: none; background: transparent; cursor: pointer; color: var(--text-soft); box-shadow: none; min-width: auto; width: auto; height: auto; line-height: inherit; padding: 0 0.5rem;"></button></li>
-										<li><a href="https://github.com/YusufIslamBudak" class="icon brands fa-github" style="color: var(--text-soft);"><span class="label">GitHub</span></a></li>
-										<li><a href="https://www.linkedin.com/in/yusuf-islam-budak/" class="icon brands fa-linkedin-in" style="color: var(--text-soft);"><span class="label">LinkedIn</span></a></li>
+										<li><button id="lang-toggle" aria-label="Toggle language">TR</button></li>
+										<li><button id="theme-toggle" class="icon solid fa-moon" aria-label="Toggle dark mode"></button></li>
+										<li><a href="https://github.com/YusufIslamBudak" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+										<li><a href="https://www.linkedin.com/in/yusuf-islam-budak/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 									</ul>
 								</header>
 
@@ -271,83 +217,97 @@
 									</header>
 									<p data-tr="Detaylı dokümantasyon, bitirme tezleri ve kişisel girişimlerim." data-en="Detailed documentation, graduation theses, and personal initiatives.">Detaylı dokümantasyon, bitirme tezleri ve kişisel girişimlerim.</p>
 
-									<div class="case-study-grid">
-										<!-- Case Study: Akıllı Sera Sistemi -->
-										<article class="case-study-card reveal" id="akilli-sera">
-											<div class="case-study-header">
-												<h2 data-tr="Bitirme Tezi - Akıllı Sera Sistemi" data-en="Graduation Thesis - Smart Greenhouse System">Bitirme Tezi - Akıllı Sera Sistemi</h2>
-												<div class="tag-list">
-													<span class="case-tag">Machine Learning</span>
-													<span class="case-tag">IoT & LoRa</span>
-													<span class="case-tag" data-tr="Kalman Filtresi" data-en="Kalman Filter">Kalman Filtresi</span>
-													<span class="case-tag">Arduino</span>
-												</div>
-											</div>
-											<div class="case-study-content">
-												<div class="case-details">
-													<section class="case-section">
-														<h3><i class="fas fa-exclamation-circle"></i> <span data-tr="Problem" data-en="Problem">Problem</span></h3>
-														<p data-tr="Küresel iklim değişikliği ve azalan su kaynakları, tarımsal kaynak verimliliğini bir zorunluluk haline getirmiştir. Manuel takip ve kontrol sistemleri bitki verimliliğini düşürmektedir." data-en="Global climate change and diminishing water resources have made agricultural resource efficiency a necessity. Manual monitoring and control systems reduce plant productivity.">Küresel iklim değişikliği ve azalan su kaynakları, tarımsal kaynak verimliliğini bir zorunluluk haline getirmiştir. Manuel takip ve kontrol sistemleri bitki verimliliğini düşürmektedir.</p>
-													</section>
-													<section class="case-section">
-														<h3><i class="fas fa-code"></i> <span data-tr="Tech Stack" data-en="Tech Stack">Tech Stack</span></h3>
-														<div class="tag-list">
-															<span class="case-tag">Arduino Mega</span>
-															<span class="case-tag">ESP8266</span>
-															<span class="case-tag">LoRa E32</span>
-															<span class="case-tag">Kalman Filter</span>
-															<span class="case-tag">Firebase</span>
-														</div>
-													</section>
-													<ul class="actions small">
-														<li><a href="https://github.com/YusufIslamBudak/Bitirme-Projesi-Ak-ll-Tar-m-" class="button primary small icon brands fa-github" target="_blank">Repo 1</a></li>
-														<li><a href="https://github.com/YusufIslamBudak/Akilli-Tarim-Yonetim-" class="button small icon brands fa-github" target="_blank">Repo 2</a></li>
-													</ul>
-												</div>
-												<div class="case-visuals">
-													<div class="case-section">
-														<h3><i class="fas fa-project-diagram"></i> Architecture</h3>
-														<div class="case-visual">
-															<img src="images/projects/Figure_1.png" alt="Architecture" loading="lazy" style="width:100%; height:auto;">
-														</div>
-													</div>
-												</div>
-											</div>
-										</article>
 
-										<!-- Case Study: GPS Kalman -->
-										<article class="case-study-card reveal" id="gps-kalman">
-											<div class="case-study-header">
-												<h2 data-tr="GPS Veri Senkronizasyonu (Kalman Filtresi)" data-en="GPS Data Synchronisation Using Kalman Filter">GPS Data Synchronisation Using Kalman Filter</h2>
-												<div class="tag-list">
-													<span class="case-tag">Mathematics</span>
-													<span class="case-tag">Sensor Fusion</span>
-													<span class="case-tag">Academic Paper</span>
-												</div>
+									<!-- Featured Project: Akıllı Sera Sistemi -->
+									<article class="featured-project reveal" id="akilli-sera">
+										<div class="featured-header" onclick="toggleProject('akilli-sera')">
+											<h2 data-tr="Bitirme Tezi - Akıllı Sera Sistemi" data-en="Graduation Thesis - Smart Greenhouse System">Bitirme Tezi - Akıllı Sera Sistemi</h2>
+											<i class="fas fa-chevron-down expand-icon"></i>
+											<div class="project-tags">
+												<span class="tag">Machine Learning</span>
+												<span class="tag">IoT & LoRa</span>
+												<span class="tag" data-tr="Kalman Filtresi" data-en="Kalman Filter">Kalman Filtresi</span>
+												<span class="tag" data-tr="Karar Ağacı (Decision Tree)" data-en="Decision Tree">Karar Ağacı (Decision Tree)</span>
+												<span class="tag">Arduino</span>
 											</div>
-											<div class="case-study-content">
-												<div class="case-details">
-													<section class="case-section">
-														<h3><i class="fas fa-exclamation-circle"></i> <span data-tr="Problem" data-en="Problem">Problem</span></h3>
-														<p data-tr="GPS sistemleri yüksek irtifa ve ekstrem basınç değişimlerinde yüksek oranda veri bozulmasına uğramaktadır." data-en="GPS systems suffer from high data degradation at high altitudes and extreme pressure changes.">GPS sistemleri yüksek irtifa ve ekstrem basınç değişimlerinde yüksek oranda veri bozulmasına uğramaktadır.</p>
-													</section>
-													<section class="case-section">
-														<h3><i class="fas fa-laptop-code"></i> <span data-tr="Çözüm" data-en="Solution">Solution</span></h3>
-														<p data-tr="Arduino tabanlı maliyet-etkin modüllere entegre edilen Kalman Filtresi yazılımı ile veri stabilizasyonu sağlanmıştır." data-en="Data stabilization was achieved with Kalman Filter software integrated into Arduino-based cost-effective modules.">Arduino tabanlı maliyet-etkin modüllere entegre edilen Kalman Filtresi yazılımı ile veri stabilizasyonu sağlanmıştır.</p>
-													</section>
-													<ul class="actions small">
-														<li><a href="https://www.researchgate.net/profile/Zafer-Oeztuerk-2/publication/384551048_A_Dynamic_Approach_to_the_Fractional_Order_Prey-Predator_Population_Model/links/66fcf391869f1104c6c348a8/A-Dynamic-Approach-to-the-Fractional-Order-Prey-Predator-Population-Model.pdf#page=140" class="button primary small" target="_blank">Read Paper</a></li>
-													</ul>
-												</div>
-												<div class="case-visuals">
-													<div class="case-visual">
-														<i class="fas fa-file-alt" style="font-size: 3rem; opacity: 0.3;"></i>
-														<p>Academic Paper Visual</p>
+											<p style="font-weight: 600; color: var(--text-soft); margin-bottom: 0;"><strong data-tr="Ekip:" data-en="Team:">Ekip:</strong> Yusuf İslam Budak, Arda Can Baysal, Kaan Özdemir<br><strong data-tr="Danışman:" data-en="Advisor:">Danışman:</strong> Dr. Öğr. Üyesi Aytaç Uğur Yerden</p>
+										</div>
+										<div class="featured-body">
+											<div class="project-details">
+												<p data-tr="Küresel iklim değişikliği ve azalan su kaynakları, tarımsal kaynak verimliliğini bir zorunluluk haline getirmiştir. Akıllı Tarım Asistanı (Akıllı Sera Sistemi) projesinde, bitkisel üretimi optimize edebilmek amacıyla nesnelerin interneti (IoT) altyapısı ve makine öğrenmesi algoritmalarını harmanlayan hibrit bir kontrol mekanizması geliştirdik." data-en="Global climate change and diminishing water resources have made agricultural resource efficiency a necessity. In the Smart Agriculture Assistant (Smart Greenhouse System) project, we developed a hybrid control mechanism blending Internet of Things (IoT) infrastructure and machine learning algorithms to optimize crop production.">Küresel iklim değişikliği ve azalan su kaynakları, tarımsal kaynak verimliliğini bir zorunluluk haline getirmiştir. Akıllı Tarım Asistanı (Akıllı Sera Sistemi) projesinde, bitkisel üretimi optimize edebilmek amacıyla nesnelerin interneti (IoT) altyapısı ve makine öğrenmesi algoritmalarını harmanlayan hibrit bir kontrol mekanizması geliştirdik.</p>
+												
+												<h3 data-tr="Problemin Tanımı ve Donanım Sapmaları" data-en="Problem Definition and Hardware Deviations">Problemin Tanımı ve Donanım Sapmaları</h3>
+												<p data-tr="Modern tarım sistemlerinde kullanılan bütçe dostu çevresel sensörlerden elde edilen ham veriler; nem, aşırı donanım sapmaları ve radyo iletim (LoRa) sekintilerinden dolayı hatalı okunabilmektedir. Projemizdeki asıl amaç, veriyi yalnızca sunucuya basmak değil, Arduino tabanlı düğümlerden gelen sinyalleri dinamik olarak iyileştirmektir." data-en="Raw data obtained from budget-friendly environmental sensors used in modern agricultural systems can be misread due to humidity, extreme hardware deviations, and radio transmission (LoRa) interruptions. The main goal in our project is not just to push data to the server, but to dynamically improve signals coming from Arduino-based nodes.">Modern tarım sistemlerinde kullanılan bütçe dostu çevresel sensörlerden elde edilen ham veriler; nem, aşırı donanım sapmaları ve radyo iletim (LoRa) sekintilerinden dolayı hatalı okunabilmektedir. Projemizdeki asıl amaç, veriyi yalnızca sunucuya basmak değil, Arduino tabanlı düğümlerden gelen sinyalleri dinamik olarak iyileştirmektir.</p>
+
+												<h3 data-tr="Geliştirilen Hibrit Çözüm (Kalman Filtresi & Karar Ağacı)" data-en="Developed Hybrid Solution (Kalman Filter & Decision Tree)">Geliştirilen Hibrit Çözüm (Kalman Filtresi & Karar Ağacı)</h3>
+												<p data-tr="Sensör verilerindeki gürültü ve hataların önüne geçmek için Kalman Filtresi (Kalman Filter) adaptasyonunu kullandık. Bu filtreleme katmanından geçirildikten sonra düzeltilmiş (rafine) edilen sıcaklık, nem, ışık ve CO2 verileri; sulama, havalandırma ve aydınlatma eylemlerine karar vermesi için bir Karar Ağacı (Decision Tree) makine öğrenmesi modeline beslenmektedir. Bu yaklaşımla bitki stresini minimize edip su/enerji kullanımını maksimize etmeyi amaçladık." data-en="We used Kalman Filter adaptation to prevent noise and errors in sensor data. The temperature, humidity, light, and CO2 data, corrected (refined) after passing through this filtering layer, are fed into a Decision Tree machine learning model to decide on irrigation, ventilation, and lighting actions. With this approach, we aimed to minimize plant stress and maximize water/energy usage.">Sensör verilerindeki gürültü ve hataların önüne geçmek için <strong>Kalman Filtresi (Kalman Filter)</strong> adaptasyonunu kullandık. Bu filtreleme katmanından geçirildikten sonra düzeltilmiş (rafine) edilen sıcaklık, nem, ışık ve CO2 verileri; sulama, havalandırma ve aydınlatma eylemlerine karar vermesi için bir <strong>Karar Ağacı (Decision Tree)</strong> makine öğrenmesi modeline beslenmektedir. Bu yaklaşımla bitki stresini minimize edip su/enerji kullanımını maksimize etmeyi amaçladık.</p>
+
+												<div class="project-stats">
+													<div class="stat-box">
+														<i class="icon solid fa-award"></i>
+														<span data-tr="ETSC'25 Konferansı" data-en="ETSC'25 Conference">ETSC'25 Konferansı</span>
+														<small style="color:var(--text-soft)" data-tr="Sunum Yapıldı / Full Paper" data-en="Presented / Full Paper">Sunum Yapıldı / Full Paper</small>
+													</div>
+													<div class="stat-box">
+														<i class="icon solid fa-code-branch"></i>
+														<span data-tr="Açık Kaynak" data-en="Open Source">Açık Kaynak</span>
+														<small style="color:var(--text-soft)" data-tr="Geliştirmeye Açık Repo" data-en="Repository Open for Dev">Geliştirmeye Açık Repo</small>
 													</div>
 												</div>
+
+												<ul class="actions small" style="margin-top: 2rem;">
+													<li><a href="https://github.com/YusufIslamBudak/Bitirme-Projesi-Ak-ll-Tar-m-" class="button primary small icon brands fa-github" target="_blank">Repo 1 (Core/ML)</a></li>
+													<li><a href="https://github.com/YusufIslamBudak/Akilli-Tarim-Yonetim-" class="button small icon brands fa-github" target="_blank">Repo 2 (Cloud)</a></li>
+												</ul>
 											</div>
-										</article>
-									</div>
+											
+											<div class="project-visuals">
+												<div class="project-img-wrapper" title="Sera web izleme paneli">
+													<img src="images/projects/web-arayuz.jpeg" alt="Akıllı Sera Sistemi Web Arayüzü">
+												</div>
+												<div class="project-img-wrapper" title="Sistem Mimari Şeması ve LoRa">
+													<img src="images/projects/Figure_1.png" alt="IoT ve Karar Verme Algoritması Akış Şeması">
+												</div>
+											</div>
+										</div>
+									</article>
+
+
+									<!-- Featured Project: GPS Kalman -->
+									<article class="featured-project reveal" id="gps-kalman">
+										<div class="featured-header" onclick="toggleProject('gps-kalman')">
+											<h2 data-tr="GPS Veri Senkronizasyonu (Kalman Filtresi)" data-en="GPS Data Synchronisation Using Kalman Filter">GPS Veri Senkronizasyonu (Kalman Filtresi)</h2>
+											<i class="fas fa-chevron-down expand-icon"></i>
+											<div class="project-tags">
+												<span class="tag">Mathematics</span>
+												<span class="tag">Sensor Fusion</span>
+												<span class="tag" data-tr="Akademik Bildiri" data-en="Academic Paper">Akademik Bildiri</span>
+												<span class="tag">Arduino</span>
+											</div>
+										</div>
+										<div class="featured-body">
+											<div class="project-details">
+												<p data-tr="GPS sistemleri yüksek irtifa ve ekstrem basınç değişimlerinde (özellikle İHA ve Roket sistemlerinde) yüksek oranda veri bozulmasına uğramaktadır. Bu çalışma, düşük maliyetli sensörlerin ürettiği gürültülü veriyi Kalman Filtresi kullanarak nasıl stabilize edebileceğimizi ele almaktadır." data-en="GPS systems suffer from significant data degradation at high altitudes and extreme pressure changes (especially in UAV and Rocket systems). This study addresses how we can stabilize noisy data produced by low-cost sensors using the Kalman Filter.">GPS sistemleri yüksek irtifa ve ekstrem basınç değişimlerinde (özellikle İHA ve Roket sistemlerinde) yüksek oranda veri bozulmasına uğramaktadır. Bu çalışma, düşük maliyetli sensörlerin ürettiği gürültülü veriyi Kalman Filtresi kullanarak nasıl stabilize edebileceğimizi ele almaktadır.</p>
+												
+												<h3 data-tr="Problemin Tanımı" data-en="Problem Definition">Problemin Tanımı</h3>
+												<p data-tr="GPS modülleri sinyal kaybı veya atmosferik gürültü nedeniyle anlık sapmalar yapabilir. Bu durum otonom sistemlerde rotadan sapmaya veya kaza riskine yol açar." data-en="GPS modules can make instantaneous deviations due to signal loss or atmospheric noise. This situation leads to deviations from the route or risk of accidents in autonomous systems.">GPS modülleri sinyal kaybı veya atmosferik gürültü nedeniyle anlık sapmalar yapabilir. Bu durum otonom sistemlerde rotadan sapmaya veya kaza riskine yol açar.</p>
+
+												<h3 data-tr="Matematiksel Filtreleme ve Sonuç" data-en="Mathematical Filtering and Result">Matematiksel Filtreleme ve Sonuç</h3>
+												<p data-tr="Arduino tabanlı modüllere entegre edilen özelleştirilmiş Kalman Filtresi algoritması ile sensör gürültüsü %80 oranında baskılanmış ve konum verisindeki kararlılık artırılmıştır. Çalışma, 10th International IFS konferansında sunulmuştur." data-en="With the customized Kalman Filter algorithm integrated into Arduino-based modules, sensor noise was suppressed by 80% and the stability of position data was increased. The study was presented at the 10th International IFS conference.">Arduino tabanlı modüllere entegre edilen özelleştirilmiş Kalman Filtresi algoritması ile sensör gürültüsü %80 oranında baskılanmış ve konum verisindeki kararlılık artırılmıştır. Çalışma, 10th International IFS konferansında sunulmuştur.</p>
+
+												<ul class="actions small">
+													<li><a href="https://www.researchgate.net/profile/Zafer-Oeztuerk-2/publication/384551048_A_Dynamic_Approach_to_the_Fractional_Order_Prey-Predator_Population_Model/links/66fcf391869f1104c6c348a8/A-Dynamic-Approach-to-the-Fractional-Order-Prey-Predator-Population-Model.pdf#page=140" class="button primary small icon solid fa-file-pdf" target="_blank" data-tr="Bildiriyi Oku" data-en="Read Paper">Bildiriyi Oku</a></li>
+												</ul>
+											</div>
+											<div class="project-visuals">
+												<div class="case-visual" style="border: 1px solid var(--border-color); background: var(--surface); min-height: 200px;">
+													<i class="fas fa-file-alt" style="font-size: 5rem; color: #1f6feb; margin-bottom: 1.5rem;"></i>
+													<h4 data-tr="Yayınlanmış Bildiri" data-en="Published Paper">Yayınlanmış Bildiri</h4>
+													<p style="font-size: 0.8em; margin:0;">10th International IFS Conference</p>
+												</div>
+											</div>
+										</div>
+									</article>
 
 									<!-- Featured Project: TUBITAK 2209A -->
 									<article class="featured-project reveal" id="gps-tubitak">
@@ -409,12 +369,12 @@
 										<h2 data-tr="Menü" data-en="Menu">Menu</h2>
 									</header>
 									<ul>
-										<li><a href="index.html" data-tr="Ana Sayfa" data-en="Home">Yusuf İslam Budak</a></li>
-										<li><a href="projeler.html" data-tr="Projeler" data-en="Projects">Projeler</a></li>
-										<li><a href="kariyer.html" data-tr="Kariyer Geçmişi" data-en="Career">Kariyer Geçmişi</a></li>
-										<li><a href="certificates.html" data-tr="Sertifikalar ve Belgeler" data-en="Certificates">Sertifikalar ve Belgeler</a></li>
-										<li><a href="articles.html" data-tr="Makaleler ve Yayınlar" data-en="Publications">Makaleler ve Yayınlar</a></li>
-										<li><a href="teknofest.html" data-tr="TEKNOFEST" data-en="TEKNOFEST">TEKNOFEST</a></li>
+										<li><a href="index.html"><i class="fas fa-home"></i> <span data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</span></a></li>
+										<li><a href="projeler.html" class="active"><i class="fas fa-project-diagram"></i> <span data-tr="Projeler" data-en="Projects">Projeler</span></a></li>
+										<li><a href="kariyer.html"><i class="fas fa-briefcase"></i> <span data-tr="Kariyer Geçmişi" data-en="Career">Kariyer Geçmişi</span></a></li>
+										<li><a href="certificates.html"><i class="fas fa-certificate"></i> <span data-tr="Sertifikalar ve Belgeler" data-en="Certificates">Sertifikalar ve Belgeler</span></a></li>
+										<li><a href="articles.html"><i class="fas fa-file-alt"></i> <span data-tr="Makaleler ve Yayınlar" data-en="Publications">Makaleler ve Yayınlar</span></a></li>
+										<li><a href="teknofest.html"><i class="fas fa-rocket"></i> <span data-tr="TEKNOFEST" data-en="TEKNOFEST">TEKNOFEST</span></a></li>
 									</ul>
 								</nav>
 

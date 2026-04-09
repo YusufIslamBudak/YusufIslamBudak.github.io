@@ -225,8 +225,8 @@ window.portfolioProfile = {
 	articles: [
 		{
 			title: 'Machine Learning-Based Smart Agriculture System',
-			publisher: 'ETSC\'26 (1st International Energy Transition and Sustainability Conference)',
-			date: '2026',
+			publisher: 'ETSC\'25 (1st International Energy Transition and Sustainability Conference)',
+			date: '2025',
 			description: 'Tarımsal üretimde kaynak verimliliğini sağlamak amacıyla IoT, Kalman Filtresi ve Makine Öğrenmesi (Karar Ağacı) entegreli Akıllı Sera Sistemi üzerine sunulan Full Paper ve Abstract çalışması.',
 			descriptionEn: 'Full Paper and Abstract presentation on a Smart Agriculture System integrating IoT, Kalman Filter, and Machine Learning (Decision Tree) to ensure resource efficiency in agricultural production.',
 			url: 'projeler.html#akilli-sera'

@@ -29,26 +29,7 @@
         if (!headerIcons) return;
 
         const li = document.createElement('li');
-        li.innerHTML = `<button
-            id="lang-toggle"
-            aria-label="Toggle language"
-            style="
-                border: none;
-                background: transparent;
-                cursor: pointer;
-                color: var(--text-soft);
-                font-weight: 700;
-                font-family: 'Inter', sans-serif;
-                box-shadow: none;
-                min-width: auto;
-                width: auto;
-                height: auto;
-                line-height: inherit;
-                padding: 0 0.5rem;
-                font-size: 0.85rem;
-                letter-spacing: 0.05em;
-            "
-        >${currentLang === 'tr' ? 'EN' : 'TR'}</button>`;
+        li.innerHTML = `<button id="lang-toggle" aria-label="Toggle language">${currentLang === 'tr' ? 'EN' : 'TR'}</button>`;
 
         // Insert before theme toggle so order is: [LANG] [🌙] [GitHub] [LinkedIn]
         const themeLi = document.querySelector('#theme-toggle')?.closest('li');
