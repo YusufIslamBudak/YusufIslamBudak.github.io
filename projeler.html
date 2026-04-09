@@ -257,6 +257,7 @@
 								<header id="header">
 									<a href="index.html" class="logo"><strong data-tr="Yusuf İslam Budak" data-en="Yusuf Islam Budak">Yusuf İslam Budak</strong> <span data-tr="Portfolio" data-en="Portfolio">Portfolio</span></a>
 									<ul class="icons">
+										<li><a href="Yusuf_İslam_Budak_CV.pdf" class="cv-button" target="_blank"><i class="fas fa-file-pdf"></i> <span data-tr="CV İndir" data-en="Download CV">CV İndir</span></a></li>
 										<li><button id="theme-toggle" class="icon solid fa-moon" aria-label="Toggle dark mode" style="border: none; background: transparent; cursor: pointer; color: var(--text-soft); box-shadow: none; min-width: auto; width: auto; height: auto; line-height: inherit; padding: 0 0.5rem;"></button></li>
 										<li><a href="https://github.com/YusufIslamBudak" class="icon brands fa-github" style="color: var(--text-soft);"><span class="label">GitHub</span></a></li>
 										<li><a href="https://www.linkedin.com/in/yusuf-islam-budak/" class="icon brands fa-linkedin-in" style="color: var(--text-soft);"><span class="label">LinkedIn</span></a></li>
@@ -270,103 +271,83 @@
 									</header>
 									<p data-tr="Detaylı dokümantasyon, bitirme tezleri ve kişisel girişimlerim." data-en="Detailed documentation, graduation theses, and personal initiatives.">Detaylı dokümantasyon, bitirme tezleri ve kişisel girişimlerim.</p>
 
-									<!-- Featured Project: Akıllı Sera Sistemi -->
-									<article class="featured-project reveal" id="akilli-sera">
-										<div class="featured-header" onclick="toggleProject('akilli-sera')">
-											<h2 data-tr="Bitirme Tezi - Akıllı Sera Sistemi" data-en="Graduation Thesis - Smart Greenhouse System">Bitirme Tezi - Akıllı Sera Sistemi</h2>
-											<i class="fas fa-chevron-down expand-icon"></i>
-											<div class="project-tags">
-												<span class="tag">Machine Learning</span>
-												<span class="tag">IoT & LoRa</span>
-												<span class="tag" data-tr="Kalman Filtresi" data-en="Kalman Filter">Kalman Filtresi</span>
-												<span class="tag" data-tr="Karar Ağacı" data-en="Decision Tree">Karar Ağacı (Decision Tree)</span>
-												<span class="tag">Arduino</span>
-											</div>
-											<p style="font-weight: 600; color: var(--text-soft); margin-bottom: 0;"><strong data-tr="Ekip:" data-en="Team:">Ekip:</strong> Yusuf İslam Budak, Arda Can Baysal, Kaan Özdemir<br><strong data-tr="Danışman:" data-en="Advisor:">Danışman:</strong> Dr. Öğr. Üyesi Aytaç Uğur Yerden</p>
-										</div>
-										<div class="featured-body">
-											<div class="project-details">
-												<p data-tr="Küresel iklim değişikliği ve azalan su kaynakları, tarımsal kaynak verimliliğini bir zorunluluk haline getirmiştir. Akıllı Tarım Asistanı projesinde, bitkisel üretimi optimize edebilmek amacıyla nesnelerin interneti (IoT) altyapısı ve makine öğrenmesi algoritmalarını harmanlayan hibrit bir kontrol mekanizması geliştirdik." data-en="Global climate change and diminishing water resources have made agricultural resource efficiency a necessity. In the Smart Agriculture Assistant project, we developed a hybrid control mechanism that blends IoT infrastructure and machine learning algorithms to optimize plant production.">Küresel iklim değişikliği ve azalan su kaynakları, tarımsal kaynak verimliliğini bir zorunluluk haline getirmiştir. <strong>Akıllı Tarım Asistanı (Akıllı Sera Sistemi)</strong> projesinde, bitkisel üretimi optimize edebilmek amacıyla nesnelerin interneti (IoT) altyapısı ve makine öğrenmesi algoritmalarını harmanlayan hibrit bir kontrol mekanizması geliştirdik.</p>
-												
-												<h3 data-tr="Teknik Mimari ve Algoritmalar" data-en="Technical Architecture and Algorithms">Teknik Mimari ve Algoritmalar</h3>
-												<p data-tr="Sistem, iki katmanlı bir mimari üzerine kuruludur: Veri toplama katmanında Arduino Mega 2560 kullanılırken, Karar Verme ve Bulut katmanında NodeMCU ESP8266 görev yapar. Tüm sensör akışlarına uygulanan Kalman Filtresi sayesinde hassas veriler elde edilir. Bu veriler, Karar Ağacı (Decision Tree) algoritması tarafından işlenerek tavan havalandırması, sulama, fan ve aydınlatma sistemlerini tam otonom olarak yönetir." data-en="The system is built on a two-layered architecture: Arduino Mega 2560 is used in the data collection layer, while NodeMCU ESP8266 operates in the Decision-Making and Cloud layer. Precise data is obtained thanks to the Kalman Filter applied to all sensor streams. This data is processed by the Decision Tree algorithm to fully autonomously manage roof ventilation, irrigation, fan, and lighting systems.">Sistem, **iki katmanlı bir mimari** üzerine kuruludur: Veri toplama katmanında (Arduino Mega 2560) BME680, MH-Z14A (CO2) ve BH1750 (Lux) sensörlerinden gelen veriler **Kalman Filtresi** ile stabilize edilir. Karar verme katmanında (NodeMCU) ise bu veriler **Karar Ağacı (Decision Tree)** algoritması ile işlenerek sera bileşenlerini tam otonom olarak yönetir.</p>
-
-												<div class="project-stats">
-													<div class="stat-box">
-														<i class="icon solid fa-award"></i>
-														<span>ETSC'26 Konferansı</span>
-														<small style="color:var(--text-soft)" data-tr="Kabul Edilmiş Bildiri / Full Paper" data-en="Accepted Paper / Full Paper">Kabul Edilmiş Bildiri / Full Paper</small>
-													</div>
-													<div class="stat-box">
-														<i class="icon solid fa-cloud"></i>
-														<span data-tr="IoT ve Haberleşme" data-en="IoT and Communication">IoT ve Haberleşme</span>
-														<small style="color:var(--text-soft)" data-tr="Firebase & LoRa (3km Mesafe)" data-en="Firebase & LoRa (3km Range)">Firebase & LoRa (3km Mesafe)</small>
-													</div>
+									<div class="case-study-grid">
+										<!-- Case Study: Akıllı Sera Sistemi -->
+										<article class="case-study-card reveal" id="akilli-sera">
+											<div class="case-study-header">
+												<h2 data-tr="Bitirme Tezi - Akıllı Sera Sistemi" data-en="Graduation Thesis - Smart Greenhouse System">Bitirme Tezi - Akıllı Sera Sistemi</h2>
+												<div class="tag-list">
+													<span class="case-tag">Machine Learning</span>
+													<span class="case-tag">IoT & LoRa</span>
+													<span class="case-tag" data-tr="Kalman Filtresi" data-en="Kalman Filter">Kalman Filtresi</span>
+													<span class="case-tag">Arduino</span>
 												</div>
-
-												<div style="margin-top: 2rem;">
-													<h3 data-tr="Kaynak Kodlar (GitHub)" data-en="Source Codes (GitHub)">Kaynak Kodlar (GitHub)</h3>
+											</div>
+											<div class="case-study-content">
+												<div class="case-details">
+													<section class="case-section">
+														<h3><i class="fas fa-exclamation-circle"></i> <span data-tr="Problem" data-en="Problem">Problem</span></h3>
+														<p data-tr="Küresel iklim değişikliği ve azalan su kaynakları, tarımsal kaynak verimliliğini bir zorunluluk haline getirmiştir. Manuel takip ve kontrol sistemleri bitki verimliliğini düşürmektedir." data-en="Global climate change and diminishing water resources have made agricultural resource efficiency a necessity. Manual monitoring and control systems reduce plant productivity.">Küresel iklim değişikliği ve azalan su kaynakları, tarımsal kaynak verimliliğini bir zorunluluk haline getirmiştir. Manuel takip ve kontrol sistemleri bitki verimliliğini düşürmektedir.</p>
+													</section>
+													<section class="case-section">
+														<h3><i class="fas fa-code"></i> <span data-tr="Tech Stack" data-en="Tech Stack">Tech Stack</span></h3>
+														<div class="tag-list">
+															<span class="case-tag">Arduino Mega</span>
+															<span class="case-tag">ESP8266</span>
+															<span class="case-tag">LoRa E32</span>
+															<span class="case-tag">Kalman Filter</span>
+															<span class="case-tag">Firebase</span>
+														</div>
+													</section>
 													<ul class="actions small">
-														<li><a href="https://github.com/YusufIslamBudak/Bitirme-Projesi-Ak-ll-Tar-m-" class="button small icon brands fa-github" target="_blank">Core System & ML</a></li>
-														<li><a href="https://github.com/YusufIslamBudak/Akilli-Tarim-Yonetim-" class="button small icon brands fa-github" target="_blank">Cloud Management</a></li>
+														<li><a href="https://github.com/YusufIslamBudak/Bitirme-Projesi-Ak-ll-Tar-m-" class="button primary small icon brands fa-github" target="_blank">Repo 1</a></li>
+														<li><a href="https://github.com/YusufIslamBudak/Akilli-Tarim-Yonetim-" class="button small icon brands fa-github" target="_blank">Repo 2</a></li>
 													</ul>
 												</div>
-											</div>
-											
-											<div class="project-visuals">
-												<div class="project-img-wrapper" title="Sera web izleme paneli">
-													<img src="images/projects/web-arayuz.jpeg" alt="Akıllı Sera Sistemi Web Arayüzü">
-												</div>
-												<div class="project-img-wrapper" title="Sistem Mimari Şeması ve LoRa">
-													<img src="images/projects/Figure_1.png" alt="IoT ve Karar Verme Algoritması Akış Şeması">
-												</div>
-											</div>
-										</div>
-									</article>
-
-									<!-- Featured Project: GPS Kalman -->
-									<article class="featured-project reveal" id="gps-kalman">
-										<div class="featured-header" onclick="toggleProject('gps-kalman')">
-											<h2 data-tr="GPS Veri Senkronizasyonu (Kalman Filtresi)" data-en="GPS Data Synchronisation Using Kalman Filter">GPS Data Synchronisation Using Kalman Filter</h2>
-											<i class="fas fa-chevron-down expand-icon"></i>
-											<div class="project-tags">
-												<span class="tag" data-tr="Kalman Filtresi" data-en="Kalman Filter">Kalman Filtresi</span>
-												<span class="tag" data-tr="Veri Senkronizasyonu" data-en="Data Synchronisation">Data Synchronisation</span>
-												<span class="tag" data-tr="Matematik & Mühendislik" data-en="Mathematics & Engineering">Mathematics & Engineering</span>
-												<span class="tag" data-tr="Uluslararası Konferans Yayını" data-en="International Conference Publication">Uluslararası Konferans Yayını</span>
-											</div>
-											<p style="font-weight: 600; color: var(--text-soft); margin-bottom: 0;"><strong data-tr="Yazarlar:" data-en="Authors:">Yazarlar:</strong> Yusuf İslam Budak, Ali Köse, Pegah Mutlu<br><strong data-tr="Yayın Yeri:" data-en="Publication Venue:">Yayın Yeri:</strong> IFSCOM-E 2024, Mersin, Türkiye (04-07 Eylül 2024)</p>
-										</div>
-										<div class="featured-body">
-											<div class="project-details">
-												<p data-tr="Küresel Konumlandırma Sistemleri (GPS); askeri projelerden ticari havacılığa, balıkçılıktan ulaşım sektörüne kadar sayısız alanda kritik rol oynamaktadır. Ancak sistem, özellikle yüksek irtifa ve ekstrem basınç değişimlerinin yaşandığı çevresel koşullarda yüksek oranda veri bozulmasına (degradation) uğramaktadır." data-en="Global Positioning Systems (GPS) play a critical role in countless fields, from military projects to commercial aviation, fishing, and the transportation sector. However, the system suffers from a high rate of data degradation, especially in environmental conditions with high altitude and extreme pressure changes.">Küresel Konumlandırma Sistemleri (GPS); askeri projelerden ticari havacılığa, balıkçılıktan ulaşım sektörüne kadar sayısız alanda kritik rol oynamaktadır. Ancak sistem, özellikle <strong>yüksek irtifa ve ekstrem basınç değişimlerinin</strong> yaşandığı çevresel koşullarda yüksek oranda veri bozulmasına (degradation) uğramaktadır.</p>
-												
-												<h3 data-tr="IoT ve Kalman Filtresi Entegrasyonu" data-en="IoT and Kalman Filter Integration">IoT ve Kalman Filtresi Entegrasyonu</h3>
-												<p data-tr="Bu uluslararası araştırma makalesinde, Nesnelerin İnterneti (IoT) uygulamalarında yaygın olarak kullanılan maliyet-etkin GPS modüllerindeki anlık konum hatalarını gidermek hedeflenmiştir. Sinyal bozulmalarını minimuma indirmek amacıyla, Arduino programlama dili yardımıyla gelişmiş bir yazılım mimarisi olan Kalman Filtresi sisteme entegre edilmiş, dinamik sensör veri senkronizasyonu ve sistem doğruluğu artırılmıştır." data-en="In this international research paper, the aim was to eliminate instantaneous location errors in cost-effective GPS modules commonly used in IoT applications. To minimize signal distortions, a Kalman Filter, an advanced software architecture, was integrated into the system using the Arduino programming language, improving dynamic sensor data synchronization and system accuracy.">Bu uluslararası araştırma makalesinde, Nesnelerin İnterneti (IoT) uygulamalarında yaygın olarak kullanılan maliyet-etkin GPS modüllerindeki anlık konum hatalarını gidermek hedeflenmiştir. Sinyal bozulmalarını minimuma indirmek amacıyla, Arduino programlama dili yardımıyla gelişmiş bir yazılım mimarisi olan <strong>Kalman Filtresi (Software Filtering Method)</strong> sisteme entegre edilmiş, dinamik sensör veri senkronizasyonu ve sistem doğruluğu artırılmıştır.</p>
-
-												<div class="project-stats">
-													<div class="stat-box">
-														<i class="icon solid fa-book-open"></i>
-														<span>Sayfa 125-126 (ISBN: 978-625-97923-0-9)</span>
-														<small style="color:var(--text-soft)" data-tr="10th IFS Konferans Bildiri Kitabı" data-en="10th IFS Conference Proceedings">10th IFS Conference Bildiri Kitabı</small>
-													</div>
-													<div class="stat-box">
-														<i class="icon solid fa-external-link-alt"></i>
-														<span><a href="https://www.researchgate.net/profile/Zafer-Oeztuerk-2/publication/384551048_A_Dynamic_Approach_to_the_Fractional_Order_Prey-Predator_Population_Model/links/66fcf391869f1104c6c348a8/A-Dynamic-Approach-to-the-Fractional-Order-Prey-Predator-Population-Model.pdf#page=140" target="_blank" rel="noopener noreferrer" data-tr="Araştırmayı Görüntüle" data-en="View Research">Araştırmayı Görüntüle</a></span>
-														<small style="color:var(--text-soft)" data-tr="ResearchGate Üzerinden Oku" data-en="Read via ResearchGate">ResearchGate Üzerinden Oku</small>
+												<div class="case-visuals">
+													<div class="case-section">
+														<h3><i class="fas fa-project-diagram"></i> Architecture</h3>
+														<div class="case-visual">
+															<img src="images/projects/Figure_1.png" alt="Architecture" loading="lazy" style="width:100%; height:auto;">
+														</div>
 													</div>
 												</div>
 											</div>
-											
-											<div class="project-visuals" style="justify-content: center; align-items: center; background: rgba(31, 111, 235, 0.05); border-radius: 1rem; border: 1px dashed var(--border-color);">
-												<div style="text-align: center; padding: 3rem;">
-													<i class="fas fa-file-pdf" style="font-size: 5rem; color: #e63946; margin-bottom: 1.5rem;"></i>
-													<h4 style="margin:0;" data-tr="Uluslararası Akademik Bildiri" data-en="International Academic Paper">Uluslararası Akademik Bildiri</h4>
-													<p style="font-size: 0.9rem; color: var(--text-soft); margin-top: 0.5rem;" data-tr="IFSCOM-E 2024 Konferansı Tam Metin Yayını" data-en="IFSCOM-E 2024 Conference Full Paper Publication">IFSCOM-E 2024 Konferansı<br>Tam Metin (Full Paper) Yayını</p>
+										</article>
+
+										<!-- Case Study: GPS Kalman -->
+										<article class="case-study-card reveal" id="gps-kalman">
+											<div class="case-study-header">
+												<h2 data-tr="GPS Veri Senkronizasyonu (Kalman Filtresi)" data-en="GPS Data Synchronisation Using Kalman Filter">GPS Data Synchronisation Using Kalman Filter</h2>
+												<div class="tag-list">
+													<span class="case-tag">Mathematics</span>
+													<span class="case-tag">Sensor Fusion</span>
+													<span class="case-tag">Academic Paper</span>
 												</div>
 											</div>
-										</div>
-									</article>
+											<div class="case-study-content">
+												<div class="case-details">
+													<section class="case-section">
+														<h3><i class="fas fa-exclamation-circle"></i> <span data-tr="Problem" data-en="Problem">Problem</span></h3>
+														<p data-tr="GPS sistemleri yüksek irtifa ve ekstrem basınç değişimlerinde yüksek oranda veri bozulmasına uğramaktadır." data-en="GPS systems suffer from high data degradation at high altitudes and extreme pressure changes.">GPS sistemleri yüksek irtifa ve ekstrem basınç değişimlerinde yüksek oranda veri bozulmasına uğramaktadır.</p>
+													</section>
+													<section class="case-section">
+														<h3><i class="fas fa-laptop-code"></i> <span data-tr="Çözüm" data-en="Solution">Solution</span></h3>
+														<p data-tr="Arduino tabanlı maliyet-etkin modüllere entegre edilen Kalman Filtresi yazılımı ile veri stabilizasyonu sağlanmıştır." data-en="Data stabilization was achieved with Kalman Filter software integrated into Arduino-based cost-effective modules.">Arduino tabanlı maliyet-etkin modüllere entegre edilen Kalman Filtresi yazılımı ile veri stabilizasyonu sağlanmıştır.</p>
+													</section>
+													<ul class="actions small">
+														<li><a href="https://www.researchgate.net/profile/Zafer-Oeztuerk-2/publication/384551048_A_Dynamic_Approach_to_the_Fractional_Order_Prey-Predator_Population_Model/links/66fcf391869f1104c6c348a8/A-Dynamic-Approach-to-the-Fractional-Order-Prey-Predator-Population-Model.pdf#page=140" class="button primary small" target="_blank">Read Paper</a></li>
+													</ul>
+												</div>
+												<div class="case-visuals">
+													<div class="case-visual">
+														<i class="fas fa-file-alt" style="font-size: 3rem; opacity: 0.3;"></i>
+														<p>Academic Paper Visual</p>
+													</div>
+												</div>
+											</div>
+										</article>
+									</div>
 
 									<!-- Featured Project: TUBITAK 2209A -->
 									<article class="featured-project reveal" id="gps-tubitak">
