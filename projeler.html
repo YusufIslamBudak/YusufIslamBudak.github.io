@@ -288,11 +288,8 @@
 											<div class="project-details">
 												<p data-tr="Küresel iklim değişikliği ve azalan su kaynakları, tarımsal kaynak verimliliğini bir zorunluluk haline getirmiştir. Akıllı Tarım Asistanı projesinde, bitkisel üretimi optimize edebilmek amacıyla nesnelerin interneti (IoT) altyapısı ve makine öğrenmesi algoritmalarını harmanlayan hibrit bir kontrol mekanizması geliştirdik." data-en="Global climate change and diminishing water resources have made agricultural resource efficiency a necessity. In the Smart Agriculture Assistant project, we developed a hybrid control mechanism that blends IoT infrastructure and machine learning algorithms to optimize plant production.">Küresel iklim değişikliği ve azalan su kaynakları, tarımsal kaynak verimliliğini bir zorunluluk haline getirmiştir. <strong>Akıllı Tarım Asistanı (Akıllı Sera Sistemi)</strong> projesinde, bitkisel üretimi optimize edebilmek amacıyla nesnelerin interneti (IoT) altyapısı ve makine öğrenmesi algoritmalarını harmanlayan hibrit bir kontrol mekanizması geliştirdik.</p>
 												
-												<h3 data-tr="Problemin Tanımı ve Donanım Sapmaları" data-en="Problem Definition and Hardware Deviations">Problemin Tanımı ve Donanım Sapmaları</h3>
-												<p data-tr="Modern tarım sistemlerinde kullanılan bütçe dostu çevresel sensörlerden elde edilen ham veriler; nem, aşırı donanım sapmaları ve radyo iletim (LoRa) sekintilerinden dolayı hatalı okunabilmektedir. Projemizdeki asıl amaç, veriyi yalnızca sunucuya basmak değil, Arduino tabanlı düğümlerden gelen sinyalleri dinamik olarak iyileştirmektir." data-en="Raw data obtained from budget-friendly environmental sensors used in modern agricultural systems can be read incorrectly due to humidity, excessive hardware deviations, and radio transmission (LoRa) jitters. The main goal of our project is not just to push data to the server, but to dynamically improve the signals coming from Arduino-based nodes.">Modern tarım sistemlerinde kullanılan bütçe dostu çevresel sensörlerden elde edilen ham veriler; nem, aşırı donanım sapmaları ve radyo iletim (LoRa) sekintilerinden dolayı hatalı okunabilmektedir. Projemizdeki asıl amaç, veriyi yalnızca sunucuya basmak değil, Arduino tabanlı düğümlerden gelen sinyalleri <strong>dinamik olarak iyileştirmektir.</strong></p>
-
-												<h3 data-tr="Geliştirilen Hibrit Çözüm (Kalman Filtresi & Karar Ağacı)" data-en="Developed Hybrid Solution (Kalman Filter & Decision Tree)">Geliştirilen Hibrit Çözüm (Kalman Filtresi & Karar Ağacı)</h3>
-												<p data-tr="Sensör verilerindeki gürültü ve hataların önüne geçmek için Kalman Filtresi adaptasyonunu kullandık. Bu filtreleme katmanından geçirildikten sonra düzeltilmiş veriler; sulama, havalandırma ve aydınlatma eylemlerine karar vermesi için bir Karar Ağacı makine öğrenmesi modeline beslenmektedir." data-en="To prevent noise and errors in sensor data, we used a Kalman Filter adaptation. After passing through this filtering layer, the corrected data is fed into a Decision Tree machine learning model to decide on irrigation, ventilation, and lighting actions.">Sensör verilerindeki gürültü ve hataların önüne geçmek için <strong>Kalman Filtresi (Kalman Filter)</strong> adaptasyonunu kullandık. Bu filtreleme katmanından geçirildikten sonra düzeltilmiş (rafine) edilen sıcaklık, nem, ışık ve CO2 verileri; sulama, havalandırma ve aydınlatma eylemlerine karar vermesi için bir <strong>Karar Ağacı (Decision Tree)</strong> makine öğrenmesi modeline beslenmektedir. Bu yaklaşımla bitki stresini minimize edip su/enerji kullanımını maksimize etmeyi amaçladık.</p>
+												<h3 data-tr="Teknik Mimari ve Algoritmalar" data-en="Technical Architecture and Algorithms">Teknik Mimari ve Algoritmalar</h3>
+												<p data-tr="Sistem, iki katmanlı bir mimari üzerine kuruludur: Veri toplama katmanında Arduino Mega 2560 kullanılırken, Karar Verme ve Bulut katmanında NodeMCU ESP8266 görev yapar. Tüm sensör akışlarına uygulanan Kalman Filtresi sayesinde hassas veriler elde edilir. Bu veriler, Karar Ağacı (Decision Tree) algoritması tarafından işlenerek tavan havalandırması, sulama, fan ve aydınlatma sistemlerini tam otonom olarak yönetir." data-en="The system is built on a two-layered architecture: Arduino Mega 2560 is used in the data collection layer, while NodeMCU ESP8266 operates in the Decision-Making and Cloud layer. Precise data is obtained thanks to the Kalman Filter applied to all sensor streams. This data is processed by the Decision Tree algorithm to fully autonomously manage roof ventilation, irrigation, fan, and lighting systems.">Sistem, **iki katmanlı bir mimari** üzerine kuruludur: Veri toplama katmanında (Arduino Mega 2560) BME680, MH-Z14A (CO2) ve BH1750 (Lux) sensörlerinden gelen veriler **Kalman Filtresi** ile stabilize edilir. Karar verme katmanında (NodeMCU) ise bu veriler **Karar Ağacı (Decision Tree)** algoritması ile işlenerek sera bileşenlerini tam otonom olarak yönetir.</p>
 
 												<div class="project-stats">
 													<div class="stat-box">
@@ -301,10 +298,18 @@
 														<small style="color:var(--text-soft)" data-tr="Kabul Edilmiş Bildiri / Full Paper" data-en="Accepted Paper / Full Paper">Kabul Edilmiş Bildiri / Full Paper</small>
 													</div>
 													<div class="stat-box">
-														<i class="icon solid fa-seedling"></i>
-														<span data-tr="Düşük Hata Payı" data-en="Low Error Margin">Düşük Hata Payı</span>
-														<small style="color:var(--text-soft)" data-tr="Gürültü Baskılama & Otonom Karar" data-en="Noise Suppression & Autonomous Decision">Gürültü Baskılama & Otonom Karar</small>
+														<i class="icon solid fa-cloud"></i>
+														<span data-tr="IoT ve Haberleşme" data-en="IoT and Communication">IoT ve Haberleşme</span>
+														<small style="color:var(--text-soft)" data-tr="Firebase & LoRa (3km Mesafe)" data-en="Firebase & LoRa (3km Range)">Firebase & LoRa (3km Mesafe)</small>
 													</div>
+												</div>
+
+												<div style="margin-top: 2rem;">
+													<h3 data-tr="Kaynak Kodlar (GitHub)" data-en="Source Codes (GitHub)">Kaynak Kodlar (GitHub)</h3>
+													<ul class="actions small">
+														<li><a href="https://github.com/YusufIslamBudak/Bitirme-Projesi-Ak-ll-Tar-m-" class="button small icon brands fa-github" target="_blank">Core System & ML</a></li>
+														<li><a href="https://github.com/YusufIslamBudak/Akilli-Tarim-Yonetim-" class="button small icon brands fa-github" target="_blank">Cloud Management</a></li>
+													</ul>
 												</div>
 											</div>
 											

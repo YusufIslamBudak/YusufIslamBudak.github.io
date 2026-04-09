@@ -48,7 +48,23 @@ window.portfolioProfile = {
 			meta: 'ASP.NET', url: 'https://github.com/YusufIslamBudak/KitapY-netim'
 		}
 	],
-	projects: [],
+	projects: [
+		{
+			id: 'akilli-sera',
+			title: 'Akıllı Sera Sistemi (Bitirme Tezi)',
+			titleEn: 'Smart Greenhouse System (Graduation Thesis)',
+			category: 'IoT & Machine Learning',
+			description: 'İleri seviye sensör füzyonu (Kalman Filtresi) ve Makine Öğrenmesi (Karar Ağaçları) algoritmaları kullanan, NodeMCU ve Arduino Mega tabanlı tam otonom sera kontrol sistemi. BME680, BH1750, MH-Z14A gibi hassas sensörlerden gelen verileri işleyerek Firebase üzerinden gerçek zamanlı izleme ve LoRa ile uzun mesafe haberleşme sağlar.',
+			descriptionEn: 'A fully autonomous greenhouse control system based on NodeMCU and Arduino Mega, utilizing advanced sensor fusion (Kalman Filter) and Machine Learning (Decision Tree) algorithms. It processes data from high-precision sensors like BME680, BH1750, and MH-Z14A, providing real-time monitoring via Firebase and long-range communication using LoRa.',
+			technologies: ['Arduino (Mega/NodeMCU)', 'Firebase', 'LoRa E32', 'Kalman Filter', 'Machine Learning (Decision Tree)', 'BME680'],
+			team: ['Yusuf İslam Budak', 'Arda Can Baysal', 'Kaan Özdemir'],
+			advisor: 'Dr. Öğr. Üyesi Aytaç Uğur Yerden',
+			githubUrls: [
+				{ label: 'Core System & ML', url: 'https://github.com/YusufIslamBudak/Bitirme-Projesi-Ak-ll-Tar-m-' },
+				{ label: 'Cloud Management', url: 'https://github.com/YusufIslamBudak/Akilli-Tarim-Yonetim-' }
+			]
+		}
+	],
 	certificates: [
 		{
 			title: 'B2 Seviye İngilizce Eğitimi',
