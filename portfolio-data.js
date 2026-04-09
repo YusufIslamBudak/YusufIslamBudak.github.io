@@ -96,18 +96,85 @@ window.portfolioProfile = {
 	],
 	certificates: [
 		{
-			title: 'Örnek Sertifika 1',
-			issuer: 'Udemy / Coursera',
-			date: '2024',
-			description: 'Bu eğitime dair yetkinliklerinizi ve projenizi açıklayabilirsiniz.',
-			url: '#'
+			title: 'B2 Seviye İngilizce Eğitimi',
+			titleEn: 'B2 Level English Training',
+			issuer: 'İstanbul Gedik Üniversitesi',
+			date: '20.09.2024',
+			description: '42 saatlik eğitim sonucunda B2 Seviyesinde İngilizce Gramer, Okuma ve İletişim becerileri sertifikası.',
+			urlTr: 'Sertifikalar/B2 Seviye İngilizce Eğitimi.pdf',
+			urlEn: 'Sertifikalar/B2 Level English Training.pdf'
 		},
 		{
-			title: 'Örnek Sertifika 2',
-			issuer: 'Üniversite / Kurum',
-			date: '2025',
-			description: 'İkinci sertifikaya ait detaylar buraya eklenecektir.',
-			url: '#'
+			title: 'Bilgi Güvenliği Sorumlusu Eğitimi',
+			titleEn: 'Information Security Officer Training',
+			issuer: 'İstanbul Gedik Üniversitesi',
+			date: '19.09.2024',
+			description: '60 saatlik eğitim sonucunda, ISO 27001, KVKK, Stratejik Planlama ve Toplam Kalite Yönetimi uzmanlık sertifikası.',
+			urlTr: 'Sertifikalar/Bilgi Güvenliği Sorumlusu Eğitimi.pdf',
+			urlEn: 'Sertifikalar/Information Security Officer Training.pdf'
+		},
+		{
+			title: 'Python ile Veri Bilimi ve Makine Öğrenmesi Eğitimi',
+			titleEn: 'Data Science and Machine Learning Training with Python',
+			issuer: 'İstanbul Gedik Üniversitesi',
+			date: '20.09.2024',
+			description: '60 saatlik kapsamlı eğitimle temel Python programlama, veri yapıları ve makine öğrenmesi algoritmaları eğitimi.',
+			urlTr: 'Sertifikalar/Python ile Veri Bilimi ve Makine Öğrenmesi Eğitimi.pdf',
+			urlEn: 'Sertifikalar/Data Science and Machine Learning Training with Python.pdf'
+		},
+		{
+			title: 'ISO 27001 Bilgi Güvenliği Yönetim Sistemi Eğitimi',
+			titleEn: 'ISO 27001 Information Security Management System Training',
+			issuer: 'İstanbul Gedik Üniversitesi',
+			date: '10.09.2024',
+			description: '10 saatlik eğitim sonucunda ISO 27001 standartlarında bilgi güvenliği süreçlerinin yönetimi ve uygulanması.',
+			urlTr: 'Sertifikalar/ISO 27001 Bilgi Güvenliği Yönetim Sistemi Eğitimi.pdf',
+			urlEn: 'Sertifikalar/ISO 27001 Information Security Management System Training.pdf'
+		},
+		{
+			title: 'Beden Dili Eğitimi',
+			titleEn: '',
+			issuer: 'İstanbul Gedik Üniversitesi',
+			date: '20.09.2024',
+			description: 'Sürekli Eğitim Uygulama ve Araştırma Merkezi tarafından verilen 45 saatlik iletişim ve beden dili eğitim programı.',
+			urlTr: 'Sertifikalar/Beden Dili Eğitimi.pdf',
+			urlEn: ''
+		},
+		{
+			title: 'Liderlik ve Takım Çalışması Eğitimi',
+			titleEn: '',
+			issuer: 'İstanbul Gedik Üniversitesi',
+			date: '20.09.2024',
+			description: 'Grup sinerjisi, takım kurma aşamaları ve motivasyon odaklı 97 saatlik liderlik eğitimi.',
+			urlTr: 'Sertifikalar/Liderlik ve Takım Çalışması Eğitimi.pdf',
+			urlEn: ''
+		},
+		{
+			title: 'Toplantı Yönetimi ve Toplantılarda Sunum Eğitimi',
+			titleEn: '',
+			issuer: 'İstanbul Gedik Üniversitesi',
+			date: '20.09.2024',
+			description: 'Kurum içi ve dışı toplantı dinamikleri, planlama ve roller üzerine 90 saatlik sunum ve yönetim eğitimi.',
+			urlTr: 'Sertifikalar/Toplantı Yönetimi ve Toplantılarda Sunum Eğitimi.pdf',
+			urlEn: ''
+		},
+		{
+			title: 'İletişim Teknikleri Eğitimi',
+			titleEn: '',
+			issuer: 'İstanbul Gedik Üniversitesi',
+			date: '20.09.2024',
+			description: 'Kişilerarası, örgütsel, kitle ve uluslararası iletişim dinamiklerini kapsayan 96 saatlik kapsamlı eğitim.',
+			urlTr: 'Sertifikalar/İletişim Teknikleri Eğitim.pdf',
+			urlEn: ''
+		},
+		{
+			title: 'TS EN ISO 9001:2015 Eğitimi',
+			titleEn: '',
+			issuer: 'İstanbul Gedik Üniversitesi',
+			date: '30.05.2023',
+			description: '6 saatlik uygulamalı eğitim sonucunda ISO 9001:2015 Kalite Yönetim Sistemi standardında verilen katılım belgesi.',
+			urlTr: 'Sertifikalar/TS EN ISO 90012015 EĞİTİMİ.pdf',
+			urlEn: ''
 		}
 	],
 	articles: [
