@@ -71,50 +71,131 @@
 				color: var(--accent);
 			}
 
-			.tekno-tag {
-				display: inline-flex;
-				align-items: center;
-				gap: 0.4rem;
-				padding: 0.4rem 0.8rem;
-				border-radius: 999px;
-				background: var(--accent-soft);
-				color: var(--accent-2);
-				font-size: 0.78rem;
-				font-weight: 700;
-				letter-spacing: 0.02em;
-			}
-
-			.tekno-grid {
-				display: grid;
-				grid-template-columns: repeat(2, minmax(0, 1fr));
-				gap: 1.1rem;
-			}
-
-			.tekno-card {
+			/* Featured Project Card Styling (Accordion Layout) */
+			.featured-project {
 				background: var(--surface);
 				backdrop-filter: blur(14px);
 				border: 1px solid var(--border-color);
-				border-radius: 1.25rem;
+				border-radius: 1.5rem;
 				box-shadow: 0 18px 40px var(--shadow-color);
-				padding: 1.25rem;
-				display: flex;
-				flex-direction: column;
-				gap: 0.9rem;
-				transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s ease, border-color 0.4s ease;
+				overflow: hidden;
+				margin-bottom: 3rem;
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
 			}
 
-			.tekno-card:hover {
-				transform: translateY(-5px) scale(1.01);
-				box-shadow: 0 24px 48px var(--shadow-color);
+			.featured-project:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 25px 50px var(--shadow-color);
 			}
 
-			.tekno-card h3 {
-				margin-bottom: 0.4rem;
+			.featured-header {
+				padding: 3rem 3rem 1.5rem 3rem;
+				position: relative;
+				cursor: pointer;
+			}
+
+			.featured-header h2 {
+				font-size: 2.2rem;
+				margin-bottom: 0.5rem;
+				font-weight: 700;
 				color: var(--text-strong);
 			}
 
-			.tekno-card .actions {
-				margin-top: auto;
+			.project-tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5rem;
+				margin-bottom: 1.5rem;
+			}
+
+			.tag {
+				background: rgba(15, 118, 110, 0.1);
+				color: var(--accent-2);
+				padding: 0.4rem 1rem;
+				border-radius: 999px;
+				font-size: 0.85rem;
+				font-weight: 600;
+				border: 1px solid rgba(15, 118, 110, 0.2);
+			}
+			
+			[data-theme="dark"] .tag {
+				background: rgba(45, 212, 191, 0.15);
+				border-color: rgba(45, 212, 191, 0.25);
+			}
+
+			.featured-body {
+				padding: 0 3rem 3rem 3rem;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 3rem;
+				align-items: start;
+				display: none;
+			}
+			
+			.featured-body.expanded {
+				display: grid;
+			}
+
+			.expand-icon {
+				position: absolute;
+				top: 3.5rem;
+				right: 3rem;
+				font-size: 1.5rem;
+				color: var(--accent);
+				transition: transform 0.3s ease;
+			}
+
+			.featured-project.expanded .expand-icon {
+				transform: rotate(180deg);
+			}
+
+			.project-visuals {
+				display: flex;
+				flex-direction: column;
+				gap: 1.5rem;
+			}
+
+			.project-details p {
+				color: var(--text-soft);
+				line-height: 1.8;
+				margin-bottom: 1.2rem;
+			}
+			
+			.project-details h3 {
+				font-size: 1.3rem;
+				color: var(--accent);
+				margin-bottom: 0.75rem;
+				margin-top: 1.5rem;
+			}
+
+			.project-stats {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1rem;
+				margin-top: 2rem;
+				padding-top: 2rem;
+				border-top: 1px solid var(--border-color);
+			}
+
+			.stat-box {
+				background: var(--bg-gradient);
+				padding: 1rem;
+				border-radius: 0.75rem;
+				border: 1px solid var(--border-color);
+				text-align: center;
+			}
+			
+			.stat-box .icon {
+				font-size: 1.5rem;
+				color: var(--accent);
+				margin-bottom: 0.5rem;
+			}
+
+			.stat-box span {
+				display: block;
+				font-weight: 700;
+				color: var(--text-strong);
+				font-size: 0.9rem;
 			}
 
 			.profile-card {
@@ -150,14 +231,18 @@
 			}
 
 			@media (max-width: 980px) {
-				.tekno-grid {
-					grid-template-columns: repeat(2, minmax(0, 1fr));
+				.featured-body {
+					grid-template-columns: 1fr;
+					gap: 2rem;
+				}
+				.featured-header, .featured-body {
+					padding: 2rem;
 				}
 			}
 
 			@media (max-width: 736px) {
-				.tekno-grid {
-					grid-template-columns: 1fr;
+				.featured-header, .featured-body {
+					padding: 1.5rem;
 				}
 			}
 
@@ -196,15 +281,99 @@
 									</ul>
 								</header>
 
-							<!-- Section -->
 								<section id="teknofest" class="reveal" style="margin-top: 3rem;">
 									<header class="major">
 										<h2>TEKNOFEST Geçmişim</h2>
 									</header>
 									<p>Teknofest kapsamında katıldığım projeler, projelerde üstlendiğim görevler ve takım çalışmalarının detayları bu alanda yer almaktadır.</p>
-									<div class="tekno-grid" id="tekno-grid">
-                                        <!-- Javascript will populate this based on portfolio-data.js -->
-                                    </div>
+									
+									<!-- Featured Project: Team Nameless -->
+									<article class="featured-project reveal" id="team-nameless">
+										<div class="featured-header" onclick="toggleProject('team-nameless')">
+											<h2>TeamNameless (Nova) - TEKNOFEST 2023</h2>
+											<i class="fas fa-chevron-down expand-icon"></i>
+											<div class="project-tags">
+												<span class="tag">Teknofest 2023</span>
+												<span class="tag">Uçuş Kontrol Yazılımları</span>
+												<span class="tag">IoT & Elektronik</span>
+												<span class="tag">Derece: Türkiye 7'nciliği</span>
+											</div>
+											<p style="font-weight: 600; color: var(--text-soft); margin-bottom: 0;"><strong>Görev:</strong> Uçuş Yazılımı Geliştiricisi & Alt Ekip Kaptanı</p>
+										</div>
+										<div class="featured-body">
+											<div class="project-details">
+												<p>Modern savunma sanayii ve otonom sistemler vizyonuyla katıldığımız Türkiye'nin en büyük teknoloji festivali TEKNOFEST 2023 kapsamında geliştirdiğimiz projedir. Geniş bir teknik altyapı gerektiren bu yarışmada, elektronik entegrasyonlar ve uçuş dinamiklerinin anlık algoritmalarla yönetilmesine odaklandık.</p>
+												
+												<h3>Geliştirme Süreci ve IoT Altyapısı</h3>
+												<p>Bu projede, uçuş kontrol yazılımlarının otonom bir şekilde çalışabilmesi adına nesnelerin interneti (IoT) tabanlı çeşitli iletişim protokollerini entegre ettim. Araç üzerindeki telemetri ve komuta sistemleri optimize edilerek, elektronik alt sistemlerin sorunsuz birbiriyle haberleşmesi sağlandı. Ekip krizleri yönetilerek tüm yarışma senaryolarına simülasyon ortamlarında hazırlık yapıldı.</p>
+
+												<div class="project-stats">
+													<div class="stat-box">
+														<i class="icon solid fa-trophy"></i>
+														<span>Türkiye Genelinde 7.lik</span>
+														<small style="color:var(--text-soft)">Kendi kategorisinde büyük bir başarı</small>
+													</div>
+													<div class="stat-box">
+														<i class="icon solid fa-users"></i>
+														<span>Eğitim & Liderlik</span>
+														<small style="color:var(--text-soft)">Ekip içi mesleki donanım eğitimleri verildi</small>
+													</div>
+												</div>
+											</div>
+											
+											<div class="project-visuals" style="justify-content: center; align-items: center; background: rgba(31, 111, 235, 0.05); border-radius: 1rem; border: 1px dashed var(--border-color);">
+												<div style="text-align: center; padding: 3rem;">
+													<i class="fas fa-fighter-jet" style="font-size: 5rem; color: #1f6feb; margin-bottom: 1.5rem;"></i>
+													<h4 style="margin:0;">TEKNOFEST 2023</h4>
+													<p style="font-size: 0.9rem; color: var(--text-soft); margin-top: 0.5rem;">TeamNameless (Nova)</p>
+												</div>
+											</div>
+										</div>
+									</article>
+
+									<!-- Featured Project: Gedik Robotics Team -->
+									<article class="featured-project reveal" id="gedik-robotics">
+										<div class="featured-header" onclick="toggleProject('gedik-robotics')">
+											<h2>Gedik Robotics Team</h2>
+											<i class="fas fa-chevron-down expand-icon"></i>
+											<div class="project-tags">
+												<span class="tag">İnsansız Kara Aracı (İKA)</span>
+												<span class="tag">İnsansız Sualtı Aracı (İSA)</span>
+												<span class="tag">Otonom Sistemler</span>
+												<span class="tag">Takım Kaptanı</span>
+											</div>
+											<p style="font-weight: 600; color: var(--text-soft); margin-bottom: 0;"><strong>Görev:</strong> Takım Kaptanı (Ocak 2025 - Günümüz)</p>
+										</div>
+										<div class="featured-body">
+											<div class="project-details">
+												<p>Gedik Üniversitesi bünyesinde, gelişmiş İnsansız Kara Araçları (İKA) ve İnsansız Sualtı Araçları (İSA) tasarlamak üzere kurulan teknik proje takımıdır. Takım faaliyetleri kapsamında ulusal otonomi ve tasarım yarışmalarına hazırlık yapılmaktadır.</p>
+												
+												<h3>Görev Kapsamı ve Proje Yönetimi</h3>
+												<p>Ekip lideri sıfatıyla mekanik, yazılım ve elektronik alt birimlerinin entegre bir biçimde çalışmasından sorumluyum. Projenin sistem tasarımı süreçlerini, bütçe yönetimi ve görev dağılımlarını üstlenerek, aracın otonom yazılım fonksiyonlarını destekliyorum. Hem karada hem suda zorlu şartlarda çalışabilecek donanımların geliştirilmesi amaçlanmaktadır.</p>
+
+												<div class="project-stats">
+													<div class="stat-box">
+														<i class="icon solid fa-robot"></i>
+														<span>Gelişmiş Otonomi</span>
+														<small style="color:var(--text-soft)">İKA ve İSA sistem tasarımı</small>
+													</div>
+													<div class="stat-box">
+														<i class="icon solid fa-project-diagram"></i>
+														<span>Çok Disiplinli</span>
+														<small style="color:var(--text-soft)">Yazılım, Mekanik ve Elektronik koordinasyonu</small>
+													</div>
+												</div>
+											</div>
+											
+											<div class="project-visuals" style="justify-content: center; align-items: center; background: rgba(15, 118, 110, 0.05); border-radius: 1rem; border: 1px dashed var(--border-color);">
+												<div style="text-align: center; padding: 3rem;">
+													<i class="fas fa-water" style="font-size: 5rem; color: #0f766e; margin-bottom: 1.5rem;"></i>
+													<h4 style="margin:0;">Teknoloji Projeleri</h4>
+													<p style="font-size: 0.9rem; color: var(--text-soft); margin-top: 0.5rem;">İnsansız Sistemler Geliştirme Takımı</p>
+												</div>
+											</div>
+										</div>
+									</article>
 								</section>
 
 						</div>
@@ -270,20 +439,26 @@
 
                     const teknoGrid = document.getElementById('tekno-grid');
                     if (teknoGrid && profile.teknofest) {
-                        teknoGrid.innerHTML = profile.teknofest.map(function(item) {
-                            return `
-                            <article class="tekno-card">
-                                <span class="tekno-tag">${item.date} - ${item.category}</span>
-                                <h3>${item.title}</h3>
-                                <p>${item.description}</p>
-                                <ul class="actions">
-                                    <li><a class="button" href="${item.url}" target="_blank" rel="noopener noreferrer">Projeyi İncele</a></li>
-                                </ul>
-                            </article>
-                            `;
-                        }).join('');
+                        // Dynamically generated structure removed to use hardcoded accordion in HTML
                     }
                 })();
+
+                window.toggleProject = function(id, forceOpen = false) {
+                    const project = document.getElementById(id);
+                    if (project) {
+                        const body = project.querySelector('.featured-body');
+                        if (forceOpen || !project.classList.contains('expanded')) {
+                            project.classList.add('expanded');
+                            body.classList.add('expanded');
+                            if (forceOpen) {
+                                setTimeout(() => project.scrollIntoView({ behavior: 'smooth', block: 'center' }), 300);
+                            }
+                        } else {
+                            project.classList.remove('expanded');
+                            body.classList.remove('expanded');
+                        }
+                    }
+                };
 
                 // Theme Toggle functionality
                 const themeToggle = document.getElementById('theme-toggle');
@@ -330,10 +505,10 @@
                 }, observerOptions);
 
                 document.addEventListener('DOMContentLoaded', () => {
-                    const reveals = document.querySelectorAll('section, .tekno-card, .profile-card');
+                    const reveals = document.querySelectorAll('section, .tekno-card, .profile-card, .featured-project');
                     reveals.forEach((el, index) => {
                         el.classList.add('reveal');
-                        if (el.classList.contains('tekno-card')) {
+                        if (el.classList.contains('tekno-card') || el.classList.contains('featured-project')) {
                             el.style.transitionDelay = `${(index % 4) * 0.1}s`;
                         }
                         observer.observe(el);

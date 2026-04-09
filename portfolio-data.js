@@ -260,11 +260,18 @@ window.portfolioProfile = {
 	],
 	teknofest: [
 		{
-			title: 'Örnek Teknofest Projesi',
-			category: 'İnsansız Sualtı Sistemleri',
+			title: 'TeamNameless (Nova)',
+			category: 'TEKNOFEST 2023',
 			date: '2023',
-			description: 'Teknofest yarışmasında takımımızla birlikte geliştirdiğimiz otonom sistem ve elde ettiğimiz dereceler.',
-			url: '#'
+			description: 'Türkiye genelinde 7. olan takımımızda geliştirdiğimiz IoT tabanlı uçuş kontrol yazılımları ve elektronik alt sistemleri.',
+			url: 'projeler.html#team-nameless'
+		},
+		{
+			title: 'Gedik Robotics Team',
+			category: 'İnsansız Kara ve Sualtı Aracı',
+			date: '2025',
+			description: 'Takım kaptanı olarak yürüttüğüm İnsansız Kara ve Sualtı Aracı yarışma projelerinin otonom sistem tasarımı ve ekip koordinasyonu.',
+			url: 'projeler.html#gedik-robotics'
 		}
 	],
 	currentFocus: [
