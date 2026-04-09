@@ -56,28 +56,17 @@
 			color: var(--text-strong) !important;
 		}
 
-		::-webkit-scrollbar {
-			width: 8px;
-		}
-
-		::-webkit-scrollbar-track {
-			background: transparent;
-		}
-
+		::-webkit-scrollbar { width: 8px; }
+		::-webkit-scrollbar-track { background: transparent; }
 		::-webkit-scrollbar-thumb {
 			background-color: var(--text-soft);
 			border-radius: 20px;
 			border: 3px solid transparent;
 			background-clip: content-box;
 		}
+		::-webkit-scrollbar-thumb:hover { background-color: var(--accent); }
 
-		::-webkit-scrollbar-thumb:hover {
-			background-color: var(--accent);
-		}
-
-		html {
-			scroll-behavior: smooth;
-		}
+		html { scroll-behavior: smooth; }
 
 		body {
 			font-family: 'Inter', sans-serif;
@@ -86,9 +75,7 @@
 			transition: background 0.4s ease, color 0.4s ease;
 		}
 
-		#header .logo strong {
-			color: var(--accent);
-		}
+		#header .logo strong { color: var(--accent); }
 
 		#banner .content {
 			display: flex;
@@ -150,20 +137,9 @@
 			box-shadow: 0 24px 48px var(--shadow-color);
 		}
 
-		.stat-card {
-			padding: 1rem 1.1rem;
-		}
-
-		.stat-card strong {
-			display: block;
-			font-size: 1.45rem;
-			color: var(--text-strong);
-		}
-
-		.stat-card span {
-			font-size: 0.82rem;
-			color: var(--text-soft);
-		}
+		.stat-card { padding: 1rem 1.1rem; }
+		.stat-card strong { display: block; font-size: 1.45rem; color: var(--text-strong); }
+		.stat-card span { font-size: 0.82rem; color: var(--text-soft); }
 
 		.feature-grid,
 		.project-grid,
@@ -176,45 +152,25 @@
 		.feature-grid article,
 		.project-card,
 		.focus-card,
-		.profile-card {
-			padding: 1.25rem;
-		}
+		.profile-card { padding: 1.25rem; }
 
 		.feature-grid article h3,
 		.project-card h3,
 		.focus-card h3,
-		.profile-card h3 {
-			margin-bottom: 0.4rem;
-			color: var(--text-strong);
-		}
+		.profile-card h3 { margin-bottom: 0.4rem; color: var(--text-strong); }
 
-		.project-card {
-			display: flex;
-			flex-direction: column;
-			gap: 0.9rem;
-		}
-
+		.project-card { display: flex; flex-direction: column; gap: 0.9rem; }
 		.project-card .actions,
-		.profile-card .actions {
-			margin-top: auto;
-		}
+		.profile-card .actions { margin-top: auto; }
 
 		.profile-frame {
 			padding: 0.85rem;
 			border-radius: 1.4rem;
 			background: linear-gradient(145deg, rgba(31, 111, 235, 0.12), rgba(15, 118, 110, 0.1));
 		}
+		.profile-frame img { border-radius: 1rem; object-fit: cover; }
 
-		.profile-frame img {
-			border-radius: 1rem;
-			object-fit: cover;
-		}
-
-		.note-list {
-			flex-direction: column;
-			gap: 0.75rem;
-		}
-
+		.note-list { flex-direction: column; gap: 0.75rem; }
 		.note-list li {
 			padding: 0.8rem 0.95rem;
 			border-radius: 0.95rem;
@@ -222,46 +178,26 @@
 			color: var(--text-soft);
 			border: 1px solid transparent;
 		}
-
 		[data-theme="dark"] .note-list li {
 			background: rgba(255, 255, 255, 0.05);
 			color: var(--text-strong);
 			border-color: var(--border-color);
 		}
 
-		.sidebar-links {
-			display: flex;
-			flex-direction: column;
-			gap: 0.75rem;
-		}
-
-		.sidebar-links a {
-			color: var(--text-strong);
-			font-weight: 700;
-		}
+		.sidebar-links { display: flex; flex-direction: column; gap: 0.75rem; }
+		.sidebar-links a { color: var(--text-strong); font-weight: 700; }
 
 		@media (max-width: 980px) {
-
-			.stat-grid,
-			.feature-grid,
-			.project-grid,
-			.focus-grid {
+			.stat-grid, .feature-grid, .project-grid, .focus-grid {
 				grid-template-columns: repeat(2, minmax(0, 1fr));
 			}
 		}
 
 		@media (max-width: 736px) {
-
-			.stat-grid,
-			.feature-grid,
-			.project-grid,
-			.focus-grid {
+			.stat-grid, .feature-grid, .project-grid, .focus-grid {
 				grid-template-columns: 1fr;
 			}
-
-			#banner .content {
-				gap: 1rem;
-			}
+			#banner .content { gap: 1rem; }
 		}
 
 		.reveal {
@@ -269,21 +205,14 @@
 			transform: translateY(30px);
 			transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
 		}
-
 		.reveal.active {
 			opacity: 1;
 			transform: translateY(0);
 		}
 
-		/* Adding a subtle border-left to blockquotes, pre, and headers if they need dark-mode */
 		#sidebar,
-		#header {
-			border-color: var(--border-color) !important;
-		}
-
-		#sidebar>.inner {
-			border-right: none !important;
-		}
+		#header { border-color: var(--border-color) !important; }
+		#sidebar>.inner { border-right: none !important; }
 	</style>
 </head>
 
@@ -298,7 +227,7 @@
 
 				<!-- Header -->
 				<header id="header">
-					<a href="index.html" class="logo"><strong>Yusuf İslam Budak</strong> Portfolio</a>
+					<a href="index.html" class="logo"><strong data-tr="Yusuf İslam Budak" data-en="Yusuf Islam Budak">Yusuf İslam Budak</strong> <span data-tr="Portfolio" data-en="Portfolio">Portfolio</span></a>
 					<ul class="icons">
 						<li><button id="theme-toggle" class="icon solid fa-moon" aria-label="Toggle dark mode"
 								style="border: none; background: transparent; cursor: pointer; color: var(--text-soft); box-shadow: none; min-width: auto; width: auto; height: auto; line-height: inherit; padding: 0 0.5rem;"></button>
@@ -315,20 +244,17 @@
 				<section id="banner">
 					<div class="content">
 						<header>
-							<span class="hero-pill">Bilgisayar Mühendisi</span>
+							<span class="hero-pill" data-tr="Bilgisayar Mühendisi" data-en="Computer Engineer">Bilgisayar Mühendisi</span>
 							<h1 id="hero-name">Yusuf İslam Budak<br />
 								<span id="hero-headline">Yazılım Geliştirme ve Gömülü Sistemler</span>
 							</h1>
-							<p id="hero-intro">Gömülü sistemler, yazılım geliştirme ve yapay zeka alanlarında
-								çalışmalar.</p>
-
+							<p id="hero-intro">Gömülü sistemler, yazılım geliştirme ve yapay zeka alanlarında çalışmalar.</p>
 						</header>
-						<p id="hero-bio">Flutter, Python, C#, ASP.NET, HTML/CSS ve gömülü sistemler tarafında üretildiği
-							görünen projeler tek yerde toplandı.</p>
+						<p id="hero-bio">IoT, otonom sistemler ve gömülü AI üzerine odaklanan bir mühendis adayıyım.</p>
 						<ul class="banner-meta" id="hero-tags"></ul>
 						<ul class="actions">
-							<li><a href="#projects" class="button big">Projeleri Gör</a></li>
-							<li><a href="#about" class="button">Hakkımda</a></li>
+							<li><a href="projeler.html" class="button big" data-tr="Projelerimi İncele" data-en="View My Projects">Projelerimi İncele</a></li>
+							<li><a href="#about" class="button" data-tr="Hakkımda" data-en="About Me">Hakkımda</a></li>
 						</ul>
 						<div class="stat-grid" id="stat-grid"></div>
 					</div>
@@ -343,17 +269,17 @@
 				<!-- Section -->
 				<section id="about">
 					<header class="major">
-						<h2>Profil Özeti</h2>
+						<h2 data-tr="Öne Çıkan Geliştirmeler" data-en="Featured Developments">Öne Çıkan Geliştirmeler</h2>
 					</header>
-					<div class="feature-grid" id="feature-grid"></div>
+					<div class="features" id="highlight-grid"></div>
 				</section>
 
 				<!-- Section -->
 				<section id="projects">
 					<header class="major">
-						<h2>Seçili Projeler</h2>
+						<h2 data-tr="Güncel Aktiviteler ve Portfolyo" data-en="Recent Activities &amp; Portfolio">Güncel Aktiviteler ve Portfolyo</h2>
 					</header>
-					<div class="project-grid" id="project-grid"></div>
+					<div class="posts" id="recent-projects"></div>
 				</section>
 
 			</div>
@@ -366,7 +292,7 @@
 				<!-- Profile -->
 				<section id="profile" class="profile-card">
 					<header class="major">
-						<h2>Kısa Profil</h2>
+						<h2 data-tr="Kısa Profil" data-en="Short Profile">Kısa Profil</h2>
 					</header>
 					<ul class="note-list" id="summary-points"></ul>
 				</section>
@@ -374,22 +300,22 @@
 				<!-- Menu -->
 				<nav id="menu">
 					<header class="major">
-						<h2>Menu</h2>
+						<h2 data-tr="Menü" data-en="Menu">Menü</h2>
 					</header>
 					<ul>
-						<li><a href="index.html">Yusuf İslam Budak</a></li>
-						<li><a href="projeler.html">Projeler</a></li>
-						<li><a href="kariyer.html">Kariyer Geçmişi</a></li>
-						<li><a href="certificates.html">Sertifikalar ve Belgeler</a></li>
-						<li><a href="articles.html">Makaleler ve Yayınlar</a></li>
-						<li><a href="teknofest.html">TEKNOFEST</a></li>
+						<li><a href="index.html" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a></li>
+						<li><a href="projeler.html" data-tr="Projeler" data-en="Projects">Projeler</a></li>
+						<li><a href="kariyer.html" data-tr="Kariyer Geçmişi" data-en="Career">Kariyer Geçmişi</a></li>
+						<li><a href="certificates.html" data-tr="Sertifikalar ve Belgeler" data-en="Certificates">Sertifikalar ve Belgeler</a></li>
+						<li><a href="articles.html" data-tr="Makaleler ve Yayınlar" data-en="Publications">Makaleler ve Yayınlar</a></li>
+						<li><a href="teknofest.html" data-tr="TEKNOFEST" data-en="TEKNOFEST">TEKNOFEST</a></li>
 					</ul>
 				</nav>
 
 				<!-- Section -->
 				<section id="focus">
 					<header class="major">
-						<h2>Beceriler</h2>
+						<h2 data-tr="Beceriler" data-en="Skills">Beceriler</h2>
 					</header>
 					<div class="focus-grid" id="focus-grid"></div>
 				</section>
@@ -397,23 +323,22 @@
 				<!-- Section -->
 				<section id="contact">
 					<header class="major">
-						<h2>İletişim Bilgileri</h2>
+						<h2 data-tr="İletişim Bilgileri" data-en="Contact">İletişim Bilgileri</h2>
 					</header>
-					<p id="contact-text">Yeni proje fikirleri, iş birlikleri veya teknik görüşmeler için GitHub ve
-						LinkedIn üzerinden ulaşılabilir.</p>
+					<p id="contact-text">Yeni proje fikirleri, iş birlikleri veya teknik görüşmeler için GitHub ve LinkedIn üzerinden ulaşılabilir.</p>
 					<ul class="contact">
 						<li class="icon brands fa-github"><a
 								href="https://github.com/YusufIslamBudak">github.com/YusufIslamBudak</a></li>
 						<li class="icon brands fa-linkedin-in"><a
 								href="https://www.linkedin.com/in/yusuf-islam-budak-7bb3b2177/">linkedin.com/in/yusuf-islam-budak-7bb3b2177</a>
 						</li>
-						<li class="icon solid fa-briefcase">Portfolyo ve kişisel site alanı</li>
+						<li class="icon solid fa-briefcase" data-tr="Portfolyo ve kişisel site alanı" data-en="Portfolio and personal website">Portfolyo ve kişisel site alanı</li>
 					</ul>
 				</section>
 
 				<!-- Footer -->
 				<footer id="footer">
-					<p class="copyright">&copy; 2026 Yusuf İslam Budak. Public profile data from GitHub and LinkedIn.
+					<p class="copyright" data-tr="&copy; 2026 Yusuf İslam Budak. Tüm hakları saklıdır." data-en="&copy; 2026 Yusuf Islam Budak. All rights reserved.">&copy; 2026 Yusuf İslam Budak. Public profile data from GitHub and LinkedIn.
 						Theme adapted from <a href="https://html5up.net">HTML5 UP</a>.</p>
 				</footer>
 
@@ -432,28 +357,31 @@
 	<script>
 		(function () {
 			const profile = window.portfolioProfile;
-			if (!profile) {
-				return;
-			}
+			if (!profile) return;
 
 			document.title = profile.name + ' | Portfolio';
-			const description = document.querySelector('meta[name="description"]');
-			if (description) {
-				description.setAttribute('content', profile.intro);
-			}
+			const desc = document.querySelector('meta[name="description"]');
+			if (desc) desc.setAttribute('content', profile.intro);
 
+			// Hero text — set data-tr/data-en so lang toggle works
 			const heroHeadline = document.getElementById('hero-headline');
 			if (heroHeadline) {
+				heroHeadline.setAttribute('data-tr', profile.headline);
+				heroHeadline.setAttribute('data-en', profile.headlineEn || profile.headline);
 				heroHeadline.textContent = profile.headline;
 			}
 
 			const heroIntro = document.getElementById('hero-intro');
 			if (heroIntro) {
+				heroIntro.setAttribute('data-tr', profile.intro);
+				heroIntro.setAttribute('data-en', profile.introEn || profile.intro);
 				heroIntro.textContent = profile.intro;
 			}
 
 			const heroBio = document.getElementById('hero-bio');
 			if (heroBio) {
+				heroBio.setAttribute('data-tr', profile.bio);
+				heroBio.setAttribute('data-en', profile.bioEn || profile.bio);
 				heroBio.textContent = profile.bio;
 			}
 
@@ -471,128 +399,141 @@
 			}
 
 			const statGrid = document.getElementById('stat-grid');
-			if (statGrid) {
+			if (statGrid && profile.stats) {
 				statGrid.innerHTML = profile.stats.map(function (stat) {
-					return '<article class="stat-card"><strong>' + stat.value + '</strong><span>' + stat.label + '</span></article>';
+					return `<article class="stat-card"><strong>${stat.value}</strong><span data-tr="${stat.label}" data-en="${stat.labelEn || stat.label}">${stat.label}</span></article>`;
 				}).join('');
 			}
 
-			const featureGrid = document.getElementById('feature-grid');
-			if (featureGrid) {
-				featureGrid.innerHTML = profile.highlights.map(function (item) {
-					return '<article><span class="note-chip">' + item.meta + '</span><div class="content"><h3>' + item.title + '</h3><p>' + item.description + '</p><ul class="actions"><li><a class="button" href="' + item.url + '" target="_blank" rel="noopener noreferrer">Repoya Git</a></li></ul></div></article>';
+			const highlightGrid = document.getElementById('highlight-grid');
+			if (highlightGrid && profile.highlights) {
+				let hue = 210;
+				highlightGrid.innerHTML = profile.highlights.map(function (h) {
+					const hueVal = hue;
+					hue += 40;
+					return `
+					<article>
+						<span class="icon" style="color: hsl(${hueVal}, 80%, 55%); background: hsla(${hueVal}, 80%, 55%, 0.1);"><i class="solid fa-code"></i></span>
+						<div class="content">
+							<h3 data-tr="${h.title}" data-en="${h.titleEn || h.title}">${h.title}</h3>
+							<p data-tr="${h.description}" data-en="${h.descriptionEn || h.description}">${h.description}</p>
+							<a href="${h.url}" class="button small" target="_blank" rel="noopener noreferrer" data-tr="İncele" data-en="Review">İncele</a>
+						</div>
+					</article>`;
 				}).join('');
 			}
 
-			const projectGrid = document.getElementById('project-grid');
-			if (projectGrid) {
-				projectGrid.innerHTML = profile.projects.map(function (project) {
-					return '<article class="project-card"><span class="project-tag">' + project.meta + '</span><h3>' + project.title + '</h3><p>' + project.description + '</p><ul class="actions"><li><a class="button" href="' + project.url + '" target="_blank" rel="noopener noreferrer">Projeyi G\u00f6r</a></li></ul></article>';
+			const recentProjects = document.getElementById('recent-projects');
+			if (recentProjects && profile.articles) {
+				recentProjects.innerHTML = profile.articles.map(function (item, index) {
+					return `
+					<article class="project-card reveal" style="transition-delay: ${(index % 4) * 0.1}s">
+						<span class="project-tag" data-tr="${item.publisher}" data-en="${item.publisherEn || item.publisher}">${item.publisher}</span>
+						<h3 data-tr="${item.title}" data-en="${item.titleEn || item.title}">${item.title}</h3>
+						<p data-tr="${item.description}" data-en="${item.descriptionEn || item.description}">${item.description}</p>
+						<ul class="actions">
+							<li><a class="button" href="${item.url}" data-tr="Projeyi Gör" data-en="View Project">Projeyi Gör</a></li>
+						</ul>
+					</article>`;
 				}).join('');
 			}
 
 			const summaryPoints = document.getElementById('summary-points');
-			if (summaryPoints) {
-				summaryPoints.innerHTML = profile.summaryPoints.map(function (point) {
-					return '<li>' + point + '</li>';
+			if (summaryPoints && profile.summaryPoints) {
+				summaryPoints.innerHTML = profile.summaryPoints.map(function (p) {
+					return `<li data-tr="${p.tr || p}" data-en="${p.en || p}">${p.tr || p}</li>`;
 				}).join('');
 			}
 
 			const focusGrid = document.getElementById('focus-grid');
-			if (focusGrid) {
+			if (focusGrid && profile.currentFocus) {
 				focusGrid.innerHTML = profile.currentFocus.map(function (item) {
-					return '<article class="focus-card"><h3></h3><p>' + item + '</p></article>';
+					const tr = item.tr || item;
+					const en = item.en || item;
+					return `<article class="focus-card"><p data-tr="${tr}" data-en="${en}">${tr}</p></article>`;
 				}).join('');
 			}
 
 			const contactText = document.getElementById('contact-text');
 			if (contactText) {
-				contactText.textContent = profile.contactText;
+				contactText.setAttribute('data-tr', profile.contactText);
+				contactText.setAttribute('data-en', profile.contactTextEn || profile.contactText);
+				contactText.innerHTML = profile.contactText;
 			}
 
-			const sidebarBio = document.getElementById('sidebar-bio');
-			if (sidebarBio) {
-				sidebarBio.textContent = profile.bio;
-			}
-
-			// Typewriter Effect for Headline
+			// Typewriter effect — respects current language
 			const headlineEl = document.getElementById('hero-headline');
 			if (headlineEl && profile.headline) {
-				const text = profile.headline;
+				const lang = localStorage.getItem('lang') || 'tr';
+				const text = lang === 'en' ? (profile.headlineEn || profile.headline) : profile.headline;
 				headlineEl.textContent = '';
 				let i = 0;
 				function typeWriter() {
 					if (i < text.length) {
 						headlineEl.textContent += text.charAt(i);
 						i++;
-						setTimeout(typeWriter, 40); // Fast typing speed
+						setTimeout(typeWriter, 40);
 					}
 				}
-				setTimeout(typeWriter, 600); // Initial delay
+				setTimeout(typeWriter, 600);
+			}
+
+			// Trigger language update after all dynamic content is injected
+			if (window.applyLanguage) window.applyLanguage();
+		})();
+
+		// Theme Toggle
+		(function () {
+			const themeToggle = document.getElementById('theme-toggle');
+			const savedTheme = localStorage.getItem('theme');
+			if (savedTheme) {
+				document.documentElement.setAttribute('data-theme', savedTheme);
+				if (savedTheme === 'dark' && themeToggle) themeToggle.classList.replace('fa-moon', 'fa-sun');
+			} else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				document.documentElement.setAttribute('data-theme', 'dark');
+				if (themeToggle) themeToggle.classList.replace('fa-moon', 'fa-sun');
+			}
+			if (themeToggle) {
+				themeToggle.addEventListener('click', function () {
+					let theme = 'light';
+					if (document.documentElement.hasAttribute('data-theme')) {
+						document.documentElement.removeAttribute('data-theme');
+						themeToggle.classList.replace('fa-sun', 'fa-moon');
+					} else {
+						document.documentElement.setAttribute('data-theme', 'dark');
+						themeToggle.classList.replace('fa-moon', 'fa-sun');
+						theme = 'dark';
+					}
+					localStorage.setItem('theme', theme);
+				});
 			}
 		})();
 
-		// Theme Toggle functionality
-		const themeToggle = document.getElementById('theme-toggle');
-		const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+		// Scroll Reveal
+		(function () {
+			const obs = new IntersectionObserver(function (entries, o) {
+				entries.forEach(function (entry) {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('active');
+						o.unobserve(entry.target);
+					}
+				});
+			}, { root: null, rootMargin: '0px', threshold: 0.1 });
 
-		if (currentTheme) {
-			document.documentElement.setAttribute('data-theme', currentTheme);
-			if (currentTheme === 'dark' && themeToggle) {
-				themeToggle.classList.replace('fa-moon', 'fa-sun');
-			}
-		} else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-			document.documentElement.setAttribute('data-theme', 'dark');
-			if (themeToggle) themeToggle.classList.replace('fa-moon', 'fa-sun');
-		}
-
-		if (themeToggle) {
-			themeToggle.addEventListener('click', function (e) {
-				let theme = 'light';
-				if (document.documentElement.hasAttribute('data-theme')) {
-					document.documentElement.removeAttribute('data-theme');
-					themeToggle.classList.replace('fa-sun', 'fa-moon');
-				} else {
-					document.documentElement.setAttribute('data-theme', 'dark');
-					themeToggle.classList.replace('fa-moon', 'fa-sun');
-					theme = 'dark';
-				}
-				localStorage.setItem('theme', theme);
+			document.addEventListener('DOMContentLoaded', function () {
+				document.querySelectorAll('section, .stat-card, .project-card, .feature-grid article, .focus-card').forEach(function (el, idx) {
+					el.classList.add('reveal');
+					if (el.classList.contains('stat-card') || el.classList.contains('project-card')) {
+						el.style.transitionDelay = (idx % 4) * 0.1 + 's';
+					}
+					obs.observe(el);
+				});
+				const banner = document.getElementById('banner');
+				if (banner) banner.classList.add('active');
 			});
-		}
-
-		// Scroll Reveal Logic
-		const observerOptions = {
-			root: null,
-			rootMargin: '0px',
-			threshold: 0.1
-		};
-		const observer = new IntersectionObserver((entries, obs) => {
-			entries.forEach(entry => {
-				if (entry.isIntersecting) {
-					entry.target.classList.add('active');
-					obs.unobserve(entry.target);
-				}
-			});
-		}, observerOptions);
-
-		document.addEventListener('DOMContentLoaded', () => {
-			// Apply reveal class structurally
-			const reveals = document.querySelectorAll('section, .stat-card, .project-card, .feature-grid article, .focus-card');
-			reveals.forEach((el, index) => {
-				el.classList.add('reveal');
-				if (el.classList.contains('stat-card') || el.classList.contains('project-card')) {
-					el.style.transitionDelay = `${(index % 4) * 0.1}s`;
-				}
-				observer.observe(el);
-			});
-			// Pre-activate banner immediately
-			const banner = document.getElementById('banner');
-			if (banner) {
-				banner.classList.add('active');
-			}
-		});
+		})();
 	</script>
+	<script src="assets/js/global-lang.js"></script>
 	<script src="assets/js/dynamic-bg.js"></script>
 
 </body>

@@ -206,7 +206,7 @@
 
 				<!-- Header -->
 				<header id="header">
-					<a href="index.html" class="logo"><strong>Yusuf İslam Budak</strong> Portfolio</a>
+					<a href="index.html" class="logo"><strong data-tr="Yusuf İslam Budak" data-en="Yusuf Islam Budak">Yusuf İslam Budak</strong> <span data-tr="Portfolio" data-en="Portfolio">Portfolio</span></a>
 					<ul class="icons">
 						<li><button id="theme-toggle" class="icon solid fa-moon" aria-label="Toggle dark mode"
 								style="border: none; background: transparent; cursor: pointer; color: var(--text-soft); box-shadow: none; min-width: auto; width: auto; height: auto; line-height: inherit; padding: 0 0.5rem;"></button>
@@ -222,10 +222,9 @@
 				<!-- Section -->
 				<section id="articles" class="reveal" style="margin-top: 3rem;">
 					<header class="major">
-						<h2>Makaleler ve Yayınlar</h2>
+						<h2 data-tr="Makaleler ve Yayınlar" data-en="Articles & Publications">Makaleler ve Yayınlar</h2>
 					</header>
-					<p>Blog yazıları, teknik dökümanlar ve yayımladığınız makaleler listesi. Detaylar ve tam metinler
-						için bağlantıları inceleyebilirsiniz.</p>
+					<p data-tr="Akademik çalışmalar, yayımlanan teknik makaleler, bitirme projeleri ve teknik konferans bildirileri." data-en="Academic studies, published technical articles, graduation projects, and technical conference papers.">Akademik çalışmalar, yayımlanan teknik makaleler, bitirme projeleri ve teknik konferans bildirileri.</p>
 					<div class="article-grid" id="article-grid">
 						<!-- Javascript will populate this based on portfolio-data.js -->
 					</div>
@@ -241,7 +240,7 @@
 				<!-- Profile -->
 				<section id="profile" class="profile-card reveal">
 					<header class="major">
-						<h2>Kısa Profil</h2>
+						<h2 data-tr="Kısa Profil" data-en="Short Profile">Kısa Profil</h2>
 					</header>
 					<ul class="note-list" id="summary-points"></ul>
 				</section>
@@ -249,21 +248,21 @@
 				<!-- Menu -->
 				<nav id="menu">
 					<header class="major">
-						<h2>Menu</h2>
+						<h2 data-tr="Menü" data-en="Menu">Menu</h2>
 					</header>
 					<ul>
-										<li><a href="index.html">Yusuf İslam Budak</a></li>
-										<li><a href="projeler.html">Projeler</a></li>
-										<li><a href="kariyer.html">Kariyer Geçmişi</a></li>
-										<li><a href="certificates.html">Sertifikalar ve Belgeler</a></li>
-										<li><a href="articles.html">Makaleler ve Yayınlar</a></li>
-										<li><a href="teknofest.html">TEKNOFEST</a></li>
+						<li><a href="index.html" data-tr="Ana Sayfa" data-en="Home">Yusuf İslam Budak</a></li>
+						<li><a href="projeler.html" data-tr="Projeler" data-en="Projects">Projeler</a></li>
+						<li><a href="kariyer.html" data-tr="Kariyer Geçmişi" data-en="Career">Kariyer Geçmişi</a></li>
+						<li><a href="certificates.html" data-tr="Sertifikalar ve Belgeler" data-en="Certificates">Sertifikalar ve Belgeler</a></li>
+						<li><a href="articles.html" data-tr="Makaleler ve Yayınlar" data-en="Publications">Makaleler ve Yayınlar</a></li>
+						<li><a href="teknofest.html" data-tr="TEKNOFEST" data-en="TEKNOFEST">TEKNOFEST</a></li>
 					</ul>
 				</nav>
 
 				<!-- Footer -->
 				<footer id="footer">
-					<p class="copyright">&copy; 2026 Yusuf İslam Budak. Public profile data from GitHub and LinkedIn.
+					<p class="copyright" data-tr="&copy; 2026 Yusuf İslam Budak. Tüm hakları saklıdır." data-en="&copy; 2026 Yusuf Islam Budak. All rights reserved.">&copy; 2026 Yusuf İslam Budak. Public profile data from GitHub and LinkedIn.
 						Theme adapted from <a href="https://html5up.net">HTML5 UP</a>.</p>
 				</footer>
 
@@ -287,30 +286,34 @@
 			}
 
 			const summaryPoints = document.getElementById('summary-points');
-			if (summaryPoints) {
-				summaryPoints.innerHTML = profile.summaryPoints.map(function (point) {
-					return '<li>' + point + '</li>';
-				}).join('');
+			if (summaryPoints && profile.summaryPoints) {
+				summaryPoints.innerHTML = profile.summaryPoints.map(p => `<li data-tr="${p.tr || p}" data-en="${p.en || p}">${p.tr || p}</li>`).join('');
 			}
 
-			const articleGrid = document.getElementById('article-grid');
-			if (articleGrid && profile.articles) {
-				articleGrid.innerHTML = profile.articles.map(function (article) {
+			const articlesGrid = document.getElementById('article-grid');
+			if (articlesGrid && profile.articles) {
+				articlesGrid.innerHTML = profile.articles.map(function(item, index) {
 					return `
-                            <article class="article-card">
-                                <span class="article-tag">${article.date} - ${article.publisher}</span>
-                                <h3>${article.title}</h3>
-                                <p>${article.description}</p>
-                                <ul class="actions">
-                                    <li><a class="button" href="${article.url}" target="_blank" rel="noopener noreferrer">Makaleyi Oku</a></li>
-                                </ul>
-                            </article>
-                            `;
+					<article class="article-card reveal" style="transition-delay: ${(index % 4) * 0.1}s">
+						<span class="article-tag" data-tr="${item.publisher}" data-en="${item.publisherEn || item.publisher}">${item.publisher}</span>
+						<h3 data-tr="${item.title}" data-en="${item.titleEn || item.title}">${item.title}</h3>
+						<p data-tr="${item.description}" data-en="${item.descriptionEn || item.description}">${item.description}</p>
+						<div class="article-footer">
+							<span class="date"><i class="fas fa-calendar-week"></i> <span data-tr="${item.date}" data-en="${item.dateEn || item.date}">${item.date}</span></span>
+							<ul class="actions">
+								<li><a class="button small" href="${item.url}" data-tr="Yazıyı Oku" data-en="Read Article">Yazıyı Oku</a></li>
+							</ul>
+						</div>
+					</article>
+					`;
 				}).join('');
 			}
+			if (window.updateLanguageDOM) window.updateLanguageDOM();
 		})();
-
-		// Theme Toggle functionality
+	</script>
+	<script src="assets/js/global-lang.js"></script>
+	<script src="assets/js/dynamic-bg.js"></script>
+	<script>
 		const themeToggle = document.getElementById('theme-toggle');
 		const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 

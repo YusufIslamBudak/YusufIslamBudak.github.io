@@ -188,7 +188,7 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="index.html" class="logo"><strong>Yusuf İslam Budak</strong> Portfolio</a>
+									<a href="index.html" class="logo"><strong data-tr="Yusuf İslam Budak" data-en="Yusuf Islam Budak">Yusuf İslam Budak</strong> <span data-tr="Portfolio" data-en="Portfolio">Portfolio</span></a>
 									<ul class="icons">
 										<li><button id="theme-toggle" class="icon solid fa-moon" aria-label="Toggle dark mode" style="border: none; background: transparent; cursor: pointer; color: var(--text-soft); box-shadow: none; min-width: auto; width: auto; height: auto; line-height: inherit; padding: 0 0.5rem;"></button></li>
 										<li><a href="https://github.com/YusufIslamBudak" class="icon brands fa-github" style="color: var(--text-soft);"><span class="label">GitHub</span></a></li>
@@ -199,9 +199,9 @@
 							<!-- Section -->
 								<section id="certificates" class="reveal" style="margin-top: 3rem;">
 									<header class="major">
-										<h2>Sertifikalar ve Belgeler</h2>
+										<h2 data-tr="Eğitimler ve Sertifikalar" data-en="Trainings & Certificates">Eğitimler ve Sertifikalar</h2>
 									</header>
-									<p>Alınan eğitimler, kazanılan yetkinlikler ve sertifikaların bulunduğu alan. Belge detayları ve doğrulama linklerine ilgili kart içerisinden ulaşılabilir.</p>
+									<p data-tr="Alanımla ilgili katıldığım eğitimler, yetkinliklerimi belgeleyen sertifikalar." data-en="Training programs I participated in and certificates verifying my competencies.">Alanımla ilgili katıldığım eğitimler, yetkinliklerimi belgeleyen sertifikalar.</p>
 									<div class="cert-grid" id="cert-grid">
                                         <!-- Javascript will populate this based on portfolio-data.js -->
                                     </div>
@@ -217,7 +217,7 @@
 								<!-- Profile -->
 									<section id="profile" class="profile-card reveal">
 										<header class="major">
-											<h2>Kısa Profil</h2>
+											<h2 data-tr="Kısa Profil" data-en="Short Profile">Kısa Profil</h2>
 										</header>
 										<ul class="note-list" id="summary-points"></ul>
 									</section>
@@ -225,21 +225,21 @@
 							<!-- Menu -->
 								<nav id="menu">
 									<header class="major">
-										<h2>Menu</h2>
+										<h2 data-tr="Menü" data-en="Menu">Menu</h2>
 									</header>
 									<ul>
-										<li><a href="index.html">Yusuf İslam Budak</a></li>
-										<li><a href="projeler.html">Projeler</a></li>
-										<li><a href="kariyer.html">Kariyer Geçmişi</a></li>
-										<li><a href="certificates.html">Sertifikalar ve Belgeler</a></li>
-										<li><a href="articles.html">Makaleler ve Yayınlar</a></li>
-										<li><a href="teknofest.html">TEKNOFEST</a></li>
+										<li><a href="index.html" data-tr="Ana Sayfa" data-en="Home">Yusuf İslam Budak</a></li>
+										<li><a href="projeler.html" data-tr="Projeler" data-en="Projects">Projeler</a></li>
+										<li><a href="kariyer.html" data-tr="Kariyer Geçmişi" data-en="Career">Kariyer Geçmişi</a></li>
+										<li><a href="certificates.html" data-tr="Sertifikalar ve Belgeler" data-en="Certificates">Sertifikalar ve Belgeler</a></li>
+										<li><a href="articles.html" data-tr="Makaleler ve Yayınlar" data-en="Publications">Makaleler ve Yayınlar</a></li>
+										<li><a href="teknofest.html" data-tr="TEKNOFEST" data-en="TEKNOFEST">TEKNOFEST</a></li>
 									</ul>
 								</nav>
 
 							<!-- Footer -->
 								<footer id="footer">
-									<p class="copyright">&copy; 2026 Yusuf İslam Budak. Public profile data from GitHub and LinkedIn. Theme adapted from <a href="https://html5up.net">HTML5 UP</a>.</p>
+									<p class="copyright" data-tr="&copy; 2026 Yusuf İslam Budak. Tüm hakları saklıdır." data-en="&copy; 2026 Yusuf Islam Budak. All rights reserved.">&copy; 2026 Yusuf İslam Budak. Public profile data from GitHub and LinkedIn. Theme adapted from <a href="https://html5up.net">HTML5 UP</a>.</p>
 								</footer>
 
 						</div>
@@ -263,40 +263,53 @@
                     
                     const summaryPoints = document.getElementById('summary-points');
                     if (summaryPoints && profile.summaryPoints) {
-                        summaryPoints.innerHTML = profile.summaryPoints.map(function (point) {
-                            return '<li>' + point + '</li>';
-                        }).join('');
+                        summaryPoints.innerHTML = profile.summaryPoints.map(p => `<li data-tr="${p.tr || p}" data-en="${p.en || p}">${p.tr || p}</li>`).join('');
                     }
 
                     const certGrid = document.getElementById('cert-grid');
                     if (certGrid && profile.certificates) {
-                        certGrid.innerHTML = profile.certificates.map(function(cert) {
-                            let linksHtml = '';
-                            if (cert.urlTr) {
-                                linksHtml += `<li><a class="button" href="${cert.urlTr}" target="_blank" rel="noopener noreferrer">Belgeyi Gör (TR)</a></li>`;
-                            }
-                            if (cert.urlEn) {
-                                linksHtml += `<li><a class="button" href="${cert.urlEn}" target="_blank" rel="noopener noreferrer">Belgeyi Gör (EN)</a></li>`;
-                            }
-                            
-                            const titleEnHtml = cert.titleEn ? `<h4 style="font-size:0.9rem; color:var(--text-soft); font-weight:400; margin-top:-0.5rem; margin-bottom:1rem;">${cert.titleEn}</h4>` : '';
-
+                        certGrid.innerHTML = profile.certificates.map(function(cert, index) {
                             return `
-                            <article class="cert-card">
-                                <div class="cert-content">
-                                    <span class="cert-tag">${cert.date} - ${cert.issuer}</span>
-                                    <h3 style="margin-top: 0.5rem;">${cert.title}</h3>
-                                    ${titleEnHtml}
-                                    <p>${cert.description}</p>
-                                    <ul class="actions">
-                                        ${linksHtml}
-                                    </ul>
+                            <article class="cert-card reveal" style="transition-delay: ${(index % 4) * 0.1}s">
+                                <div class="cert-header">
+                                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                                    <div class="cert-meta"><i class="fas fa-calendar-alt"></i> <span data-tr="${cert.date}" data-en="${cert.dateEn || cert.date}">${cert.date}</span></div>
+                                </div>
+                                <h3 class="cert-title" data-tr="${cert.title}" data-en="${cert.titleEn || cert.title}">${cert.title}</h3>
+                                <div class="cert-issuer" data-tr="${cert.issuer}" data-en="${cert.issuerEn || cert.issuer}">${cert.issuer}</div>
+                                <p class="cert-desc" data-tr="${cert.description}" data-en="${cert.descriptionEn || cert.description}">${cert.description}</p>
+                                <div style="margin-top: auto; padding-top: 1.5rem;">
+                                    <a href="${cert.urlTr}" class="button fit small cert-url" data-url-tr="${cert.urlTr}" data-url-en="${cert.urlEn || cert.urlTr}" target="_blank" rel="noopener noreferrer" data-tr="Sertifikayı Görüntüle" data-en="View Certificate">Sertifikayı Görüntüle</a>
                                 </div>
                             </article>
                             `;
                         }).join('');
                     }
+
+                    // Special logic for certificates URL switching
+                    if (window.updateLanguageDOM) {
+                        const originalUpdateDOM = window.updateLanguageDOM;
+                        window.updateLanguageDOM = function() {
+                            originalUpdateDOM();
+                            // also update certificate URLs
+                            const currentLang = localStorage.getItem('lang') || 'tr';
+                            document.querySelectorAll('.cert-url').forEach(btn => {
+                                const trUrl = btn.getAttribute('data-url-tr');
+                                const enUrl = btn.getAttribute('data-url-en');
+                                if (currentLang === 'en' && enUrl) {
+                                    btn.href = enUrl;
+                                } else {
+                                    btn.href = trUrl;
+                                }
+                            });
+                        }
+                        window.updateLanguageDOM();
+                    }
+
                 })();
+            </script>
+            <script src="assets/js/global-lang.js"></script>
+            <script>
 
                 // Theme Toggle functionality
                 const themeToggle = document.getElementById('theme-toggle');
