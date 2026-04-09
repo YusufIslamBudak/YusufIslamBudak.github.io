@@ -9,7 +9,7 @@ window.portfolioProfile = {
 	bioEn: 'I am an engineering candidate focusing on IoT, autonomous systems, and embedded AI. At Arı Drones, I actively contribute to open-source flight software and data analysis modules. With active roles in TEKNOFEST and TÜBİTAK projects, I developed sensor data processing and flight control software using C++, Python, and C#. Leveraging my experience from academic and volunteer projects, I aim to produce innovative solutions in my field.',
 	avatar: 'https://avatars.githubusercontent.com/u/149049403?v=4',
 	githubUrl: 'https://github.com/YusufIslamBudak',
-	linkedinUrl: 'https://www.linkedin.com/in/yusuf-islam-budak-7bb3b2177/',
+	linkedinUrl: 'https://www.linkedin.com/in/yusuf-islam-budak/',
 	repositoryCount: 15,
 	contributionCount: 28,
 	summaryPoints: [
