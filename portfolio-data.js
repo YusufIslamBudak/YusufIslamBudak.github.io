@@ -177,6 +177,57 @@ window.portfolioProfile = {
 			urlEn: ''
 		}
 	],
+	careerHistory: [
+		{
+			company: 'Arı Drones',
+			role: 'Yazılım ve IoT Stajyeri / Aday Mühendis',
+			date: 'Mayıs 2025 - Günümüz',
+			location: 'İstanbul, Türkiye',
+			description: 'Otonom drone yazılımı ve sensör verisi işleme üzerine çalışmalar yapmaktayım. C# ve C++ kullanarak uçuş verilerini analiz eden modüller geliştiriyor, donanım ve yazılım entegrasyonu süreçlerinde yer alıyorum.'
+		},
+		{
+			company: 'Gedik Robotics Team',
+			role: 'Takım Kaptanı',
+			date: 'Ocak 2025 - Günümüz',
+			location: 'İstanbul, Türkiye',
+			description: 'İnsansız Kara ve Sualtı Aracı yarışmaları için proje koordinasyonu sağlıyor, sistem tasarımı, görev paylaşımı ve ekip yönetimi süreçlerini organize ediyorum.'
+		},
+		{
+			company: 'TeamNameless (Nova)',
+			role: 'Uçuş Yazılımı Geliştiricisi – Alt Ekip Kaptanı',
+			date: 'Eylül 2022 - Ekim 2024',
+			location: 'İstanbul, Türkiye',
+			description: 'Teknofest 2023’te Türkiye genelinde 7. olan takımımızda, IoT tabanlı uçuş kontrol yazılımları ve elektronik alt sistemlerini geliştirdim. Ekip üyelerine mesleki yarışma eğitimleri verdim.'
+		},
+		{
+			company: 'İstanbul Gedik Üniversitesi - TÖMER',
+			role: 'Türkçe Öğretimi Uygulama ve Araştırma Merkezi Görevlisi',
+			date: 'Mayıs 2024 - Şubat 2025',
+			location: 'İstanbul, Türkiye',
+			description: 'Üniversite bünyesindeki Türkçe Öğretimi Uygulama ve Araştırma Merkezi\'nde idari ve teknik süreçlere destek sağlayarak görev aldım.'
+		},
+		{
+			company: 'Yükseköğretim Kalite Kurulu (YÖKAK)',
+			role: 'Mühendislik Fakültesi Temsilcisi',
+			date: 'Haziran 2023 - Günümüz',
+			location: 'İstanbul, Türkiye',
+			description: 'Mühendislik fakültesinin kalite ve akreditasyon çalışmalarına katılıp gerekli denetim süreçleri için üniversitemi hazırlamaktayım.'
+		},
+		{
+			company: 'Bilişim Teknolojileri Kulübü',
+			role: 'Yönetim Kurulu Başkanı',
+			date: 'Şubat 2023 - Günümüz',
+			location: 'İstanbul, Türkiye',
+			description: 'Ekip yönetimi, proje geliştirme, kurumlar arası iletişim sağlama ve teknoloji paydaşlarıyla etkinlikler düzenleyerek öğrencilere kariyer ve sertifika imkanları yaratmaktayım.'
+		},
+		{
+			company: 'McDonald\'s',
+			role: 'Ekip Üyesi → Ekip Lideri → Bölüm Müdürü',
+			date: 'Haziran 2022 - Ocak 2024',
+			location: 'İstanbul, Türkiye',
+			description: 'Operasyonun temel gerekliliklerinden başlayıp, iş akışı koordinasyonu, personel eğitimleri ve yönetimsel kararların alınmasına kadar operasyonel süreçleri yürüttüm.'
+		}
+	],
 	articles: [
 		{
 			title: 'Örnek Makale Başlığı 1',
