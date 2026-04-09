@@ -433,10 +433,13 @@
                     
                     const summaryPoints = document.getElementById('summary-points');
                     if (summaryPoints && profile.summaryPoints) {
-                        summaryPoints.innerHTML = profile.summaryPoints.map(function (point) {
-                            return '<li>' + point + '</li>';
+                        summaryPoints.innerHTML = profile.summaryPoints.map(function (p) {
+                            const tr = p.tr || p;
+                            const en = p.en || p;
+                            return `<li data-tr="${tr}" data-en="${en}">${tr}</li>`;
                         }).join('');
                     }
+                    if (window.applyLanguage) window.applyLanguage();
 
                     const teknoGrid = document.getElementById('tekno-grid');
                     if (teknoGrid && profile.teknofest) {

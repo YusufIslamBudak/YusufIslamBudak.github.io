@@ -286,25 +286,27 @@
                         }).join('');
                     }
 
-                    // Special logic for certificates URL switching
-                    if (window.updateLanguageDOM) {
-                        const originalUpdateDOM = window.updateLanguageDOM;
-                        window.updateLanguageDOM = function() {
-                            originalUpdateDOM();
-                            // also update certificate URLs
-                            const currentLang = localStorage.getItem('lang') || 'tr';
-                            document.querySelectorAll('.cert-url').forEach(btn => {
-                                const trUrl = btn.getAttribute('data-url-tr');
-                                const enUrl = btn.getAttribute('data-url-en');
-                                if (currentLang === 'en' && enUrl) {
-                                    btn.href = enUrl;
-                                } else {
-                                    btn.href = trUrl;
-                                }
-                            });
-                        }
-                        window.updateLanguageDOM();
+                    // Apply language translations
+                    if (window.applyLanguage) window.applyLanguage();
+                    if (window.updateLanguageDOM) window.updateLanguageDOM();
+
+                    // Update cert button URLs based on language
+                    function updateCertUrls() {
+                        const lang = localStorage.getItem('lang') || 'tr';
+                        document.querySelectorAll('.cert-url').forEach(function(btn) {
+                            const trUrl = btn.getAttribute('data-url-tr');
+                            const enUrl = btn.getAttribute('data-url-en');
+                            btn.href = (lang === 'en' && enUrl) ? enUrl : (trUrl || '#');
+                        });
                     }
+                    updateCertUrls();
+
+                    // Re-run cert URL update whenever language toggle is clicked
+                    document.addEventListener('click', function(e) {
+                        if (e.target && e.target.id === 'lang-toggle') {
+                            setTimeout(updateCertUrls, 50);
+                        }
+                    });
 
                 })();
             </script>

@@ -413,7 +413,7 @@
 					hue += 40;
 					return `
 					<article>
-						<span class="icon" style="color: hsl(${hueVal}, 80%, 55%); background: hsla(${hueVal}, 80%, 55%, 0.1);"><i class="solid fa-code"></i></span>
+						<span class="icon" style="color: hsl(${hueVal}, 80%, 55%); background: hsla(${hueVal}, 80%, 55%, 0.1);"><i class="fas fa-code"></i></span>
 						<div class="content">
 							<h3 data-tr="${h.title}" data-en="${h.titleEn || h.title}">${h.title}</h3>
 							<p data-tr="${h.description}" data-en="${h.descriptionEn || h.description}">${h.description}</p>
@@ -461,21 +461,23 @@
 				contactText.innerHTML = profile.contactText;
 			}
 
-			// Typewriter effect — respects current language
+			// Typewriter effect — clears INSIDE the timeout so applyLanguage runs first
 			const headlineEl = document.getElementById('hero-headline');
 			if (headlineEl && profile.headline) {
 				const lang = localStorage.getItem('lang') || 'tr';
 				const text = lang === 'en' ? (profile.headlineEn || profile.headline) : profile.headline;
-				headlineEl.textContent = '';
-				let i = 0;
-				function typeWriter() {
-					if (i < text.length) {
-						headlineEl.textContent += text.charAt(i);
-						i++;
-						setTimeout(typeWriter, 40);
+				setTimeout(function() {
+					headlineEl.textContent = ''; // clear AFTER applyLanguage has run
+					let i = 0;
+					function typeChar() {
+						if (i < text.length) {
+							headlineEl.textContent += text.charAt(i);
+							i++;
+							setTimeout(typeChar, 40);
+						}
 					}
-				}
-				setTimeout(typeWriter, 600);
+					typeChar();
+				}, 300);
 			}
 
 			// Trigger language update after all dynamic content is injected
