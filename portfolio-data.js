@@ -242,6 +242,20 @@ window.portfolioProfile = {
 			date: '2026',
 			description: 'Tarımsal üretimde kaynak verimliliğini sağlamak amacıyla IoT, Kalman Filtresi ve Makine Öğrenmesi (Karar Ağacı) entegreli Akıllı Sera Sistemi üzerine sunulan Full Paper ve Abstract çalışması.',
 			url: 'projeler.html#akilli-sera'
+		},
+		{
+			title: 'GPS Data Synchronisation Using Kalman Filter',
+			publisher: '10th International IFS and Contemporary Mathematics and Engineering Conference',
+			date: '2024',
+			description: 'TÜBİTAK 2209-A kapsamında da odaklanılan, Kalman filtresi ile yüksek hassasiyetli sensör veri stabilizasyonu ve hata düzeltmesi üzerine konferans bildirisi.',
+			url: 'projeler.html#gps-kalman'
+		},
+		{
+			title: 'Yüksek Basınç ve İrtifada GPS Veri Stabilizasyonu',
+			publisher: 'TÜBİTAK 2209-A Projesi',
+			date: '2023',
+			description: 'İnsansız Hava Aracı, Model Uydu ve Roket gibi savunma sanayii projelerinde yer alan GPS modüllerinin yüksek basınç/irtifada Kalman filtresi ile stabilizasyonunu sağlayan başarıyla tamamlanmış projedir.',
+			url: 'projeler.html#gps-tubitak'
 		}
 	],
 	teknofest: [
