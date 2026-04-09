@@ -21,40 +21,45 @@
         document.documentElement.lang = currentLang;
     };
 
-    // ── 3. Inject toggle button ───────────────────────────────────────────────
-    function injectButton() {
-        if (document.getElementById('lang-toggle')) return; // already exists
+    // ── 3. Handle toggle button (Injected or Static) ──────────────────────────
+    function setupToggleButton() {
+        let btn = document.getElementById('lang-toggle');
+        
+        if (!btn) {
+            const headerIcons = document.querySelector('#header .icons');
+            if (headerIcons) {
+                const li = document.createElement('li');
+                li.innerHTML = `<button id="lang-toggle" aria-label="Toggle language">${currentLang === 'tr' ? 'EN' : 'TR'}</button>`;
 
-        const headerIcons = document.querySelector('#header .icons');
-        if (!headerIcons) return;
-
-        const li = document.createElement('li');
-        li.innerHTML = `<button id="lang-toggle" aria-label="Toggle language">${currentLang === 'tr' ? 'EN' : 'TR'}</button>`;
-
-        // Insert before theme toggle so order is: [LANG] [🌙] [GitHub] [LinkedIn]
-        const themeLi = document.querySelector('#theme-toggle')?.closest('li');
-        if (themeLi) {
-            headerIcons.insertBefore(li, themeLi);
-        } else {
-            headerIcons.prepend(li);
+                // Insert before theme toggle so order is: [LANG] [🌙] [GitHub] [LinkedIn]
+                const themeLi = document.querySelector('#theme-toggle')?.closest('li');
+                if (themeLi) {
+                    headerIcons.insertBefore(li, themeLi);
+                } else {
+                    headerIcons.prepend(li);
+                }
+                btn = document.getElementById('lang-toggle');
+            }
         }
 
-        li.querySelector('#lang-toggle').addEventListener('click', function () {
-            currentLang = currentLang === 'tr' ? 'en' : 'tr';
-            localStorage.setItem('lang', currentLang);
-            window.applyLanguage();
-        });
+        if (btn) {
+            btn.addEventListener('click', function () {
+                currentLang = currentLang === 'tr' ? 'en' : 'tr';
+                localStorage.setItem('lang', currentLang);
+                window.applyLanguage();
+            });
+        }
     }
 
     // ── 4. Boot ───────────────────────────────────────────────────────────────
     function boot() {
-        injectButton();
+        setupToggleButton();
         window.applyLanguage();
     }
 
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', boot);
     } else {
-        boot(); // DOM already ready (script loaded at end of body)
+        boot(); 
     }
 })();
