@@ -387,7 +387,7 @@
 								<!-- Profile -->
 									<section id="profile" class="profile-card reveal">
 										<header class="major">
-											<h2>Kısa Profil</h2>
+											<h2 data-tr="Kısa Profil" data-en="Short Profile">Kısa Profil</h2>
 										</header>
 										<ul class="note-list" id="summary-points"></ul>
 									</section>
@@ -464,33 +464,7 @@
                     }
                 };
 
-                // Language Toggle functionality
-                const langToggle = document.getElementById('lang-toggle');
-                let currentLang = localStorage.getItem('lang') || 'tr';
-                
-                function updateLanguageDOM() {
-                    const elements = document.querySelectorAll('[data-tr]');
-                    elements.forEach(el => {
-                        if (currentLang === 'en' && el.hasAttribute('data-en')) {
-                            el.innerHTML = el.getAttribute('data-en');
-                        } else {
-                            el.innerHTML = el.getAttribute('data-tr');
-                        }
-                    });
-                    if(langToggle) langToggle.textContent = currentLang.toUpperCase();
-                    document.documentElement.lang = currentLang;
-                }
-                
-                // Initialize language
-                updateLanguageDOM();
-
-                if (langToggle) {
-                    langToggle.addEventListener('click', function() {
-                        currentLang = currentLang === 'tr' ? 'en' : 'tr';
-                        localStorage.setItem('lang', currentLang);
-                        updateLanguageDOM();
-                    });
-                }
+                // Theme Toggle functionality
 
                 // Theme Toggle functionality
                 const themeToggle = document.getElementById('theme-toggle');
