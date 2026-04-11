@@ -1,21 +1,21 @@
 window.portfolioProfile = {
 	name: 'Yusuf İslam Budak',
 	displayName: 'Yusuf İslam Budak',
-	headline: 'Yazılım Geliştirme ve Gömülü Sistemler',
-	headlineEn: 'Software Development & Embedded Systems',
-	intro: 'Gömülü Sistemler, Yazılım Geliştirme ve Yapay Zeka alanlarında çalışmalar.',
-	introEn: 'Focusing on Embedded Systems, Software Development, and Artificial Intelligence.',
-	bio: 'IoT, otonom sistemler ve gömülü AI üzerine odaklanan bir mühendis adayıyım. Arı Drones bünyesinde açık kaynak uçuş yazılımları ve veri analiz modülleri üzerinde aktif geliştirme yapmış bulunmaktayım. Teknofest ve TÜBİTAK projelerinde aktif rol alarak C++, Python ve C# dillerinde sensör verisi işleme ve uçuş kontrol yazılımları geliştirdim. Akademik ve gönüllü projelerde edindiğim tecrübelerimi kullanarak alanımda yenilikçi çözümler üretmeyi hedeflemekteyim.',
-	bioEn: 'I am an engineering candidate focusing on IoT, autonomous systems, and embedded AI. At Arı Drones, I actively contribute to open-source flight software and data analysis modules. With active roles in TEKNOFEST and TÜBİTAK projects, I developed sensor data processing and flight control software using C++, Python, and C#. Leveraging my experience from academic and volunteer projects, I aim to produce innovative solutions in my field.',
+	headline: 'Gömülü Sistemler ve Yapay Zeka Geliştiricisi',
+	headlineEn: 'Embedded Systems & AI Developer',
+	intro: 'Donanım ve yazılımın kesişim noktasında, otonom sistemler ve IoT çözümleri geliştiriyorum.',
+	introEn: 'Developing autonomous systems and IoT solutions at the intersection of hardware and software.',
+	bio: 'Gömülü sistemler, IoT ve yapay zeka alanlarında derinlemesine teknik bilgiye sahip bir Mühendis Adayıyım. Arı Drones bünyesinde otonom uçuş yazılımları ve kritik veri analiz modülleri geliştirme tecrübesine sahibim. TEKNOFEST ve TÜBİTAK projelerinde sergilediğim başarılarla; C++, Python ve C# dillerinde yüksek performanslı sensör füzyonu ve kontrol sistemleri mimarileri inşa etmekteyim. Teknolojiyi sınırlarına zorlayan projelerde aktif rol alarak, otonom geleceği tasarlamayı hedefliyorum.',
+	bioEn: 'I am an Engineering Candidate with deep technical expertise in embedded systems, IoT, and artificial intelligence. I have extensive experience developing autonomous flight software and critical data analysis modules at Arı Drones. Through successes in TEKNOFEST and TÜBİTAK projects, I build high-performance sensor fusion and control system architectures using C++, Python, and C#. I aim to design the autonomous future by taking active roles in projects that push the boundaries of technology.',
 	avatar: 'https://avatars.githubusercontent.com/u/149049403?v=4',
 	githubUrl: 'https://github.com/YusufIslamBudak',
 	linkedinUrl: 'https://www.linkedin.com/in/yusuf-islam-budak/',
 	repositoryCount: 15,
 	contributionCount: 28,
 	summaryPoints: [
-		{ tr: 'IoT, otonom sistemler ve gömülü AI üzerine odaklanan bir mühendis adayıyım.', en: 'Engineering candidate focused on IoT, autonomous systems, and embedded AI.' },
-		{ tr: 'Arı Drones bünyesinde açık kaynak uçuş yazılımları ve veri analiz modülleri geliştirme tecrübesine sahibim.', en: 'Experienced in developing open-source flight software and data analysis modules at Arı Drones.' },
-		{ tr: 'Teknofest ve TÜBİTAK projelerinde C++, Python ve C# dilleriyle sensör verisi işleme ve uçuş kontrol yazılımları geliştirdim.', en: 'Developed sensor data processing and flight control software using C++, Python, and C# in TEKNOFEST and TÜBİTAK projects.' }
+		{ tr: 'Gömülü AI ve otonom sistem mimarileri üzerine odaklı çalışmalar.', en: 'Focused studies on embedded AI and autonomous system architectures.' },
+		{ tr: 'Arı Drones bünyesinde kritik uçuş yazılımları ve veri analiz modülleri geliştirme tecrübesi.', en: 'Experience developing critical flight software and data analysis modules at Arı Drones.' },
+		{ tr: 'TEKNOFEST ve TÜBİTAK projelerinde yüksek hassasiyetli sensör füzyonu ve kontrol sistemleri tasarımı.', en: 'Design of high-precision sensor fusion and control systems in TEKNOFEST and TÜBİTAK projects.' }
 	],
 	stats: [
 		{ value: '15', label: 'Repository', labelEn: 'Repositories' },
@@ -29,8 +29,13 @@ window.portfolioProfile = {
 	highlights: [
 		{
 			title: 'Hava Durumu', titleEn: 'Weather App',
-			description: 'Flutter ile geliştirilen hava durumu uygulaması.', descriptionEn: 'Weather application developed with Flutter.',
-			meta: 'Dart', url: 'https://github.com/YusufIslamBudak/Hava-Durumu'
+			description: 'Flutter ve API entegrasyonu ile gerçek zamanlı hava durumu uygulaması.', descriptionEn: 'Real-time weather application with Flutter and API integration.',
+			meta: 'Flutter', url: 'https://github.com/YusufIslamBudak/Hava-Durumu'
+		},
+		{
+			title: 'ToDo App', titleEn: 'ToDo App',
+			description: 'noSQL veritabanı ile geliştirilmiş dinamik görev yönetim uygulaması.', descriptionEn: 'Dynamic task management app developed with noSQL database.',
+			meta: 'noSQL', url: 'https://github.com/YusufIslamBudak/ToDoApp'
 		},
 		{
 			title: 'Stok Takip Uygulaması', titleEn: 'Stock Tracking App',
@@ -43,8 +48,8 @@ window.portfolioProfile = {
 			meta: 'Embedded', url: 'https://github.com/YusufIslamBudak/Emmbedded-codes'
 		},
 		{
-			title: 'Kitap Yönetim', titleEn: 'Book Management',
-			description: 'ASP.NET ile geliştirilen basit kitap yönetim uygulaması.', descriptionEn: 'Simple book management application developed with ASP.NET.',
+			title: 'Kitap Yönetimi', titleEn: 'Book Management',
+			description: 'ASP.NET MVC ile geliştirilmiş kurumsal kitap yönetim paneli.', descriptionEn: 'Enterprise book management panel developed with ASP.NET MVC.',
 			meta: 'ASP.NET', url: 'https://github.com/YusufIslamBudak/KitapY-netim'
 		}
 	],
@@ -62,6 +67,42 @@ window.portfolioProfile = {
 			githubUrls: [
 				{ label: 'Core System & ML', url: 'https://github.com/YusufIslamBudak/Bitirme-Projesi-Ak-ll-Tar-m-' },
 				{ label: 'Cloud Management', url: 'https://github.com/YusufIslamBudak/Akilli-Tarim-Yonetim-' }
+			]
+		},
+		{
+			id: 'todo-app',
+			title: 'To-Do List Uygulaması (noSQL)',
+			titleEn: 'To-Do List Application (noSQL)',
+			category: 'Web Development',
+			description: 'noSQL veritabanı mimarileri kullanılarak geliştirilmiş, CRUD işlemlerini kapsayan dinamik bir görev yönetim uygulamasıdır.',
+			descriptionEn: 'A dynamic task management application covering CRUD operations, developed using noSQL database architectures.',
+			technologies: ['JavaScript', 'noSQL', 'HTML/CSS'],
+			githubUrls: [
+				{ label: 'Repository', url: 'https://github.com/YusufIslamBudak/ToDoApp' }
+			]
+		},
+		{
+			id: 'weather-app',
+			title: 'Hava Durumu Uygulaması (Flutter)',
+			titleEn: 'Weather Application (Flutter)',
+			category: 'Mobile Development',
+			description: 'Flutter ve OpenWeatherMap API kullanılarak geliştirilen, gerçek zamanlı hava durumu verilerini sunan mobil uygulama.',
+			descriptionEn: 'A mobile application providing real-time weather data, developed using Flutter and OpenWeatherMap API.',
+			technologies: ['Flutter', 'Dart', 'OpenWeatherMap API'],
+			githubUrls: [
+				{ label: 'Repository', url: 'https://github.com/YusufIslamBudak/Hava-Durumu' }
+			]
+		},
+		{
+			id: 'book-management',
+			title: 'Kitap Yönetim Sistemi (ASP.NET)',
+			titleEn: 'Book Management System (ASP.NET)',
+			category: 'Web Development',
+			description: 'ASP.NET Core MVC mimarisi ile geliştirilmiş, kitap arşiv yönetimi sağlayan kurumsal ölçekli bir web uygulamasıdır.',
+			descriptionEn: 'An enterprise-scale web application providing book archive management, developed with ASP.NET Core MVC architecture.',
+			technologies: ['ASP.NET Core', 'MVC', 'Entity Framework', 'MSSQL'],
+			githubUrls: [
+				{ label: 'Repository', url: 'https://github.com/YusufIslamBudak/KitapY-netim' }
 			]
 		}
 	],
@@ -155,6 +196,46 @@ window.portfolioProfile = {
 			descriptionEn: 'Certificate of attendance issued in the ISO 9001:2015 Quality Management System standard following a 6-hour practical training.',
 			urlTr: 'Sertifikalar/TS EN ISO 90012015 EĞİTİMİ.pdf',
 			urlEn: ''
+		},
+		{
+			title: 'ETSC\'26 Uluslararası Enerji Dönüşümü ve Sürdürülebilirlik Konferansı Katılım Belgesi',
+			titleEn: 'ETSC\'26 International Energy Transition and Sustainability Conference Participation Certificate',
+			issuer: 'İstanbul Gedik Üniversitesi',
+			date: '20.03.2026',
+			description: 'ETSC\'26 kapsamında gerçekleştirilen bilimsel çalışmalara katılım ve katkı belgesi.',
+			descriptionEn: 'Certificate of participation and contribution to scientific studies within the scope of ETSC\'26.',
+			urlTr: 'Sertifikalar/Katılım Belgesi - etsc26.pdf',
+			urlEn: ''
+		},
+		{
+			title: 'Teşekkür Belgesi - Gedik Robotics Team',
+			titleEn: 'Appreciation Certificate - Gedik Robotics Team',
+			issuer: 'İstanbul Gedik Üniversitesi',
+			date: '10.04.2025',
+			description: 'Gedik Robotics Team bünyesinde yürütülen robotik projeleri ve takım liderliği süreçlerindeki üstün gayret ve katkı teşekkürü.',
+			descriptionEn: 'Appreciation for outstanding efforts and contributions in robotic projects and team leadership processes within the Gedik Robotics Team.',
+			urlTr: 'Sertifikalar/Teşekkür belgesi -Gedik Robotics.pdf',
+			urlEn: ''
+		},
+		{
+			title: 'Teşekkür Belgesi - GPS Veri Stabilizasyonu Projesi',
+			titleEn: 'Appreciation Certificate - GPS Data Stabilization Project',
+			issuer: 'İstanbul Gedik Üniversitesi / TÜBİTAK',
+			date: '25.10.2023',
+			description: 'Yüksek Basınç ve İrtifada GPS Veri Stabilizasyonu projesindeki başarılı çalışmalar ve araştırma katkıları.',
+			descriptionEn: 'Appreciation for successful work and research contributions in the project of GPS Data Stabilization at High Pressure and Altitude.',
+			urlTr: 'Sertifikalar/Teşekkür belgesi -Yüksek Basınç ve İrtifada GPS Veri Stabilizasyonu.pdf',
+			urlEn: ''
+		},
+		{
+			title: 'Teşekkür Belgesi - Team Nameless',
+			titleEn: 'Appreciation Certificate - Team Nameless',
+			issuer: 'TEKNOFEST',
+			date: '15.05.2023',
+			description: 'TEKNOFEST yarışma süreçlerinde Team Nameless bünyesindeki yazılım geliştirme ve teknik sorumluluk üstlenme teşekkürü.',
+			descriptionEn: 'Appreciation for software development and technical responsibility within Team Nameless during the TEKNOFEST competition processes.',
+			urlTr: 'Sertifikalar/Teşekkür belgesi -team nameless.pdf',
+			urlEn: ''
 		}
 	],
 	careerHistory: [
@@ -182,8 +263,8 @@ window.portfolioProfile = {
 			role: 'Uçuş Yazılımı Geliştiricisi – Alt Ekip Kaptanı', roleEn: 'Flight Software Developer – Sub-Team Captain',
 			date: 'Eylül 2022 - Ekim 2024', dateEn: 'Sep 2022 - Oct 2024',
 			location: 'İstanbul, Türkiye', locationEn: 'Istanbul, Turkey',
-			description: 'Teknofest 2023’te Türkiye genelinde 7. olan takımımızda, IoT tabanlı uçuş kontrol yazılımları ve elektronik alt sistemlerini geliştirdim. Ekip üyelerine mesleki yarışma eğitimleri verdim.',
-			descriptionEn: 'Developed IoT-based flight control software and electronic sub-systems in our team that ranked 7th in Turkey at Teknofest 2023. Provided vocational competition training to team members.'
+			description: 'Teknofest 2023\'te Türkiye 7.liği elde eden takımımızda, IoT tabanlı uçuş kontrol yazılımları geliştirdim. Ayrıca TÜRKSAT Model Uydu Yarışması ve NASA sponsorluğundaki CanSat Competition süreçlerinde yer alarak model uydu yazılım mimarileri üzerine çalışmalar gerçekleştirdim.',
+			descriptionEn: 'Developed IoT-based flight control software in our team that ranked 7th in Turkey at TEKNOFEST 2023. Participated in TÜRKSAT Model Satellite Competition and NASA-sponsored CanSat Competition, focusing on model satellite software architectures.'
 		},
 		{
 			company: 'İstanbul Gedik Üniversitesi - TÖMER', companyEn: 'Istanbul Gedik University - TOMER',
@@ -252,14 +333,14 @@ window.portfolioProfile = {
 	],
 	teknofest: [],
 	currentFocus: [
-		{ tr: 'Programlama Dilleri: Python, C++, C, C#', en: 'Programming Languages: Python, C++, C, C#' },
-		{ tr: 'Gömülü AI & Otonom Sistemler: NVIDIA Jetson Nano, Orin Nano', en: 'Embedded AI & Autonomous Systems: NVIDIA Jetson Nano, Orin Nano' },
-		{ tr: 'IoT & Gömülü Platformlar: Linux, Raspberry Pi, STM32, ESP32, Arduino', en: 'IoT & Embedded Platforms: Linux, Raspberry Pi, STM32, ESP32, Arduino' },
-		{ tr: 'Donanım & Haberleşme: I2C, SPI, UART tabanlı sensör entegrasyonu', en: 'Hardware & Comm: I2C, SPI, UART based sensor integration' },
-		{ tr: 'İşletim Sistemleri: Linux (WSL, Ubuntu/Debian), Windows', en: 'Operating Systems: Linux (WSL, Ubuntu/Debian), Windows' },
-		{ tr: 'Araçlar & Versiyon Kontrol: Git, GitHub, GitLab, Bitbucket', en: 'Tools & VCS: Git, GitHub, GitLab, Bitbucket' },
-		{ tr: 'Dil Yetkinliği: İngilizce (B2)', en: 'Language Proficiency: English (B2)' },
-		{ tr: 'İlgi Alanları: Yapay Zeka, Sensör Tabanlı Sistemler, Veri Analizi', en: 'Interests: Artificial Intelligence, Sensor-Based Systems, Data Analysis' }
+		{ tr: 'Gelişmiş Yazılım Geliştirme: Python, C++, C, C# (.NET Core)', en: 'Advanced Software Dev: Python, C++, C, C# (.NET Core)' },
+		{ tr: 'Gömülü AI ve Otonom Sistemler: NVIDIA Jetson Nano/Orin, Edge AI', en: 'Embedded AI & Autonomous Systems: NVIDIA Jetson Nano/Orin, Edge AI' },
+		{ tr: 'IoT ve Gömülü Platformlar: Linux, RTOS, STM32, ESP32, Rasp-Pi', en: 'IoT & Embedded Platforms: Linux, RTOS, STM32, ESP32, Rasp-Pi' },
+		{ tr: 'Haberleşme Protokolleri: I2C, SPI, UART, LoRa, MavLink', en: 'Comm Protocols: I2C, SPI, UART, LoRa, MavLink' },
+		{ tr: 'Sistem Entegrasyonu: Sensör Füzyonu, Kalman Filtresi, PID', en: 'System Integration: Sensor Fusion, Kalman Filter, PID' },
+		{ tr: 'Versiyon Kontrol ve DevOps: Git, Docker, CI/CD Temelleri', en: 'VCS & DevOps: Git, Docker, CI/CD Fundamentals' },
+		{ tr: 'Dil Yetkinliği: İngilizce (B2 - Teknik Okuryazarlık)', en: 'Language Proficiency: English (B2 - Technical Literacy)' },
+		{ tr: 'İlgi Alanları: Robotik Otonomi, Gömülü Görüntü İşleme, Akıllı Şehirler', en: 'Interests: Robotic Autonomy, Embedded Vision, Smart Cities' }
 	],
 	contactText: 'Yeni proje fikirleri, iş birlikleri veya teknik görüşmeler için GitHub ya da LinkedIn üzerinden ulaşılabilir.',
 	contactTextEn: 'Available for new project ideas, collaborations, or technical discussions via GitHub or LinkedIn.'
