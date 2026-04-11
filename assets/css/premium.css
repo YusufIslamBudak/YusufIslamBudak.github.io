@@ -44,9 +44,18 @@ body {
     transition: background 0.4s ease, color 0.4s ease;
 }
 
-#header .logo strong { color: var(--accent); }
-#sidebar, #header { border-color: var(--border-color) !important; }
-#sidebar > .inner { border-right: none !important; }
+#header .logo strong {
+    color: var(--accent);
+}
+
+#sidebar,
+#header {
+    border-color: var(--border-color) !important;
+}
+
+#sidebar>.inner {
+    border-right: none !important;
+}
 
 /* Premium Header Styles */
 #header {
@@ -132,7 +141,7 @@ body {
     filter: brightness(1.1);
 }
 
-#header .icons a.icon, 
+#header .icons a.icon,
 #header .icons button.icon,
 #header .icons button#lang-toggle {
     color: var(--text-soft) !important;
@@ -182,6 +191,7 @@ body {
         height: 60px;
         padding: 0 0.75rem 0 3.5rem;
     }
+
     #header .logo {
         font-size: 1.05rem;
         white-space: nowrap;
@@ -190,20 +200,25 @@ body {
         max-width: 180px;
         gap: 0.25rem;
     }
+
     #header .logo span {
         display: none;
     }
+
     .cv-button {
         padding: 0.4rem 0.65rem !important;
         font-size: 0.7rem !important;
         border-radius: 8px !important;
     }
+
     .cv-button span {
         display: none;
     }
+
     #header .icons {
         gap: 0.4rem;
     }
+
     /* Hide social icons on very small screens to prevent clutter, 
        as they are already available in the sidebar */
     @media screen and (max-width: 480px) {
@@ -349,4 +364,48 @@ body {
     border-bottom: 1px solid var(--border-color);
     margin-bottom: 2rem;
     padding-bottom: 0.5rem;
+}
+
+/* Mission Statement Styles */
+.mission-statement {
+    background: var(--surface);
+    backdrop-filter: blur(14px);
+    border: 1px solid var(--border-color);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 12px 30px var(--shadow-color);
+}
+
+.mission-statement h3 {
+    color: var(--accent);
+    font-size: 1.4rem;
+    margin-top: 2.2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.mission-statement h3:first-child {
+    margin-top: 0;
+}
+
+.mission-statement p {
+    color: var(--text-soft);
+    line-height: 1.85;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.mission-statement .highlight-text {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+@media screen and (max-width: 736px) {
+    .mission-statement {
+        padding: 1.5rem;
+    }
+    .mission-statement h3 {
+        font-size: 1.25rem;
+    }
 }

@@ -218,7 +218,16 @@
 					<header class="major">
 						<h2 data-tr="Teknik Yetkinlikler ve Öne Çıkan Çalışmalar" data-en="Technical Competencies & Featured Studies">Teknik Yetkinlikler ve Öne Çıkan Çalışmalar</h2>
 					</header>
-					<div class="features" id="highlight-grid"></div>
+					<div class="mission-statement reveal">
+						<h3 data-tr="Teknolojiyi Çözüme, Merakı Geleceğe Dönüştürmek" data-en="Transforming Technology into Solutions, Curiosity into the Future">Teknolojiyi Çözüme, Merakı Geleceğe Dönüştürmek</h3>
+						<p data-tr="Dijital dünyanın sonsuz olasılıkları arasında yolculuğum, bir problemin en verimli şekilde nasıl çözülebileceğine duyduğum merakla başladı. Benim için yazılım, sadece satırlardan oluşan bir kod bütünü değil; karmaşık yapıları basitleştirme, soyut fikirleri somut değerlere dönüştürme ve her gün daha iyisini inşa etme sanatıdır." data-en="My journey through the infinite possibilities of the digital world began with curiosity about how a problem can be solved most efficiently. For me, software is not just a body of code consisting of lines; it is the art of simplifying complex structures, transforming abstract ideas into concrete values, and building better every day.">Dijital dünyanın sonsuz olasılıkları arasında yolculuğum, bir problemin en verimli şekilde nasıl çözülebileceğine duyduğum merakla başladı. Benim için yazılım, sadece satırlardan oluşan bir kod bütünü değil; karmaşık yapıları basitleştirme, soyut fikirleri somut değerlere dönüştürme ve her gün daha iyisini inşa etme sanatıdır.</p>
+						
+						<h3 data-tr="Teknik Derinlik ve Yaklaşımım" data-en="Technical Depth and My Approach">Teknik Derinlik ve Yaklaşımım</h3>
+						<p data-tr="Teknoloji dünyasının hızla değişen doğasına ayak uydururken, öğrendiğim her yeni dili ve aracı sadece birer 'beceri' olarak değil, çözüm setimin bir parçası olarak görüyorum. Geliştirme süreçlerimde temel odağım, sadece çalışan değil; aynı zamanda sürdürülebilir, ölçeklenebilir ve temiz (clean code) yapılar kurmaktır. <span class='highlight-text'>C++, Python, C#, Flutter ve Gömülü Sistemler</span> kullanarak inşa ettiğim projelerde, sistemin mimari sağlamlığı ile kullanıcı deneyiminin zarafeti arasındaki o hassas dengeyi korumaya büyük önem veriyorum." data-en="While keeping pace with the rapidly changing nature of the technology world, I see every new language and tool I learn not just as a 'skill', but as a part of my solution set. My main focus in my development processes is to build structures that are not only working but also sustainable, scalable, and clean (clean code). In projects I build using <span class='highlight-text'>C++, Python, C#, Flutter, and Embedded Systems</span>, I attach great importance to maintaining that delicate balance between the architectural robustness of the system and the elegance of the user experience.">Teknoloji dünyasının hızla değişen doğasına ayak uydururken, öğrendiğim her yeni dili ve aracı sadece birer 'beceri' olarak değil, çözüm setimin bir parçası olarak görüyorum. Geliştirme süreçlerimde temel odağım, sadece çalışan değil; aynı zamanda sürdürülebilir, ölçeklenebilir ve temiz (clean code) yapılar kurmaktır. <span class='highlight-text'>C++, Python, C#, Flutter ve Gömülü Sistemler</span> kullanarak inşa ettiğim projelerde, sistemin mimari sağlamlığı ile kullanıcı deneyiminin zarafeti arasındaki o hassas dengeyi korumaya büyük önem veriyorum.</p>
+						
+						<h3 data-tr="Neden Üretiyorum?" data-en="Why Do I Create?">Neden Üretiyorum?</h3>
+						<p data-tr="Her projem, bir öğrenme sürecinin ve titiz bir mühendislik çalışmasının ürünüdür. Teknik yetkinliklerimi geliştirirken; veri yapılarının mantığından, kullanıcı arayüzünün estetiğine kadar her aşamada 'daha iyisi mümkün mü?' sorusunun peşinden gidiyorum. Öne çıkan çalışmalarım, bu sorgulamanın ve teknolojiye duyduğum profesyonel tutkunun birer yansımasıdır. Bugün, sahip olduğum teknik donanımı yaratıcı bakış açımla birleştirerek; sadece bugünün ihtiyaçlarını karşılayan değil, geleceğin dijital dünyasına da uyum sağlayabilen projeler üretmeye devam ediyorum." data-en="Each of my projects is a product of a learning process and meticulous engineering work. While developing my technical skills, I pursue the question 'is a better one possible?' at every stage, from the logic of data structures to the aesthetics of the user interface. My prominent works are reflections of this questioning and the professional passion I have for technology. Today, by combining my technical equipment with my creative perspective; I continue to produce projects that not only meet today's needs but can also adapt to the digital world of the future.">Her projem, bir öğrenme sürecinin ve titiz bir mühendislik çalışmasının ürünüdür. Teknik yetkinliklerimi geliştirirken; veri yapılarının mantığından, kullanıcı arayüzünün estetiğine kadar her aşamada 'daha iyisi mümkün mü?' sorusunun peşinden gidiyorum. Öne çıkan çalışmalarım, bu sorgulamanın ve teknolojiye duyduğum profesyonel tutkunun birer yansımasıdır. Bugün, sahip olduğum teknik donanımı yaratıcı bakış açımla birleştirerek; sadece bugünün ihtiyaçlarını karşılayan değil, geleceğin dijital dünyasına da uyum sağlayabilen projeler üretmeye devam ediyorum.</p>
+					</div>
 				</section>
 
 				<!-- Section -->
@@ -349,24 +358,6 @@
 			if (statGrid && profile.stats) {
 				statGrid.innerHTML = profile.stats.map(function (stat) {
 					return `<article class="stat-card"><strong>${stat.value}</strong><span data-tr="${stat.label}" data-en="${stat.labelEn || stat.label}">${stat.label}</span></article>`;
-				}).join('');
-			}
-
-			const highlightGrid = document.getElementById('highlight-grid');
-			if (highlightGrid && profile.highlights) {
-				let hue = 210;
-				highlightGrid.innerHTML = profile.highlights.map(function (h) {
-					const hueVal = hue;
-					hue += 40;
-					return `
-					<article>
-						<span class="icon" style="color: hsl(${hueVal}, 80%, 55%); background: hsla(${hueVal}, 80%, 55%, 0.1);"><i class="fas fa-code"></i></span>
-						<div class="content">
-							<h3 data-tr="${h.title}" data-en="${h.titleEn || h.title}">${h.title}</h3>
-							<p data-tr="${h.description}" data-en="${h.descriptionEn || h.description}">${h.description}</p>
-							<a href="${h.url}" class="button small" target="_blank" rel="noopener noreferrer" data-tr="İncele" data-en="Review">İncele</a>
-						</div>
-					</article>`;
 				}).join('');
 			}
 
