@@ -283,14 +283,40 @@
                         summaryPoints.innerHTML = profile.summaryPoints.map(p => `<li data-tr="${p.tr || p}" data-en="${p.en || p}">${p.tr || p}</li>`).join('');
                     }
 
+                    const lang = localStorage.getItem('lang') || 'tr';
+
                     const timeline = document.getElementById('career-timeline');
                     if (timeline && profile.careerHistory) {
-                        timeline.innerHTML = profile.careerHistory.map(function(item) {
+                        timeline.innerHTML = profile.careerHistory.map(function(item, idx) {
                             const initials = (item.companyEn || item.company).substring(0,2).toUpperCase();
                             const logoHtml = item.logo 
                                 ? `<img src="${item.logo}" alt="${item.company}" style="width:100%;height:100%;object-fit:contain;border-radius:0.5rem;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
                                 : '';
                             
+                            const hasImages = item.images && item.images.length > 0;
+                            let galleryHtml = '';
+                            if (hasImages) {
+                                const galleryItems = item.images.map(function(img, imgIdx) {
+                                    const cap = lang === 'en' ? (img.captionEn || img.caption) : img.caption;
+                                    return `<div class="gallery-item" onclick="openLightbox('career-${idx}', ${imgIdx})">
+                                        <img src="${img.src}" alt="${cap}" loading="lazy">
+                                        <div class="gallery-caption">${cap}</div>
+                                    </div>`;
+                                }).join('');
+
+                                galleryHtml = `
+                                <div class="expandable-content" id="expand-career-${idx}">
+                                    <div class="gallery-heading"><i class="fas fa-camera"></i> <span data-tr="Proje Görselleri" data-en="Project Gallery">Proje Görselleri</span></div>
+                                    <div class="photo-gallery" data-gallery-id="career-${idx}">
+                                        ${galleryItems}
+                                    </div>
+                                </div>`;
+                            }
+
+                            const toggleBtn = hasImages 
+                                ? `<button class="expand-toggle" onclick="toggleExpand('expand-career-${idx}', this)" data-tr="Görselleri Gör" data-en="View Gallery"><i class="fas fa-chevron-down"></i> <span data-tr="Görselleri Gör" data-en="View Gallery">Görselleri Gör</span></button>` 
+                                : '';
+
                             return `
                             <div class="career-card reveal">
                                 <div class="career-logo-container">
@@ -311,6 +337,8 @@
                                         <span><i class="fas fa-map-marker-alt"></i> <span data-tr="${item.location}" data-en="${item.locationEn || item.location}">${item.location}</span></span>
                                     </div>
                                     <p class="career-desc" data-tr="${item.description}" data-en="${item.descriptionEn || item.description}">${item.description}</p>
+                                    ${toggleBtn}
+                                    ${galleryHtml}
                                 </div>
                             </div>
                             `;
@@ -318,6 +346,74 @@
                     }
                     if (window.applyLanguage) window.applyLanguage();
                     if (window.updateLanguageDOM) window.updateLanguageDOM();
+                })();
+
+                // Expand/Collapse toggle
+                window.toggleExpand = function(id, btn) {
+                    const el = document.getElementById(id);
+                    if (el) {
+                        el.classList.toggle('open');
+                        btn.classList.toggle('active');
+                    }
+                };
+
+                // Lightbox system
+                (function() {
+                    // Create lightbox DOM
+                    const overlay = document.createElement('div');
+                    overlay.className = 'lightbox-overlay';
+                    overlay.innerHTML = `
+                        <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+                        <button class="lightbox-nav prev" onclick="navLightbox(-1)"><i class="fas fa-chevron-left"></i></button>
+                        <button class="lightbox-nav next" onclick="navLightbox(1)"><i class="fas fa-chevron-right"></i></button>
+                        <img src="" alt="">
+                        <div class="lightbox-caption"></div>
+                    `;
+                    document.body.appendChild(overlay);
+                    overlay.addEventListener('click', function(e) {
+                        if (e.target === overlay) closeLightbox();
+                    });
+
+                    let currentGallery = [];
+                    let currentIndex = 0;
+
+                    window.openLightbox = function(galleryId, index) {
+                        const gallery = document.querySelector(`[data-gallery-id="${galleryId}"]`);
+                        if (!gallery) return;
+                        const items = gallery.querySelectorAll('.gallery-item img');
+                        const captions = gallery.querySelectorAll('.gallery-caption');
+                        currentGallery = Array.from(items).map((img, i) => ({
+                            src: img.src,
+                            caption: captions[i] ? captions[i].textContent : ''
+                        }));
+                        currentIndex = index;
+                        showLightboxImage();
+                        overlay.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    };
+
+                    window.closeLightbox = function() {
+                        overlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    };
+
+                    window.navLightbox = function(dir) {
+                        currentIndex = (currentIndex + dir + currentGallery.length) % currentGallery.length;
+                        showLightboxImage();
+                    };
+
+                    function showLightboxImage() {
+                        if (!currentGallery[currentIndex]) return;
+                        overlay.querySelector('img').src = currentGallery[currentIndex].src;
+                        overlay.querySelector('.lightbox-caption').textContent = currentGallery[currentIndex].caption;
+                    }
+
+                    document.addEventListener('keydown', function(e) {
+                        if (!overlay.classList.contains('active')) return;
+                        if (e.key === 'Escape') closeLightbox();
+                        if (e.key === 'ArrowLeft') navLightbox(-1);
+                        if (e.key === 'ArrowRight') navLightbox(1);
+                    });
                 })();
             </script>
             <script src="assets/js/global-lang.js"></script>

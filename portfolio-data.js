@@ -246,7 +246,10 @@ window.portfolioProfile = {
 			date: 'Mayıs 2025 - Günümüz', dateEn: 'May 2025 - Present',
 			location: 'İstanbul, Türkiye', locationEn: 'Istanbul, Turkey',
 			description: 'Otonom drone yazılımı ve sensör verisi işleme üzerine çalışmalar yapmaktayım. C# ve C++ kullanarak uçuş verilerini analiz eden modüller geliştiriyor, donanım ve yazılım entegrasyonu süreçlerinde yer alıyorum.',
-			descriptionEn: 'Working on autonomous drone software and sensor data processing. Developing modules to analyze flight data using C# and C++, and participating in hardware and software integration processes.'
+			descriptionEn: 'Working on autonomous drone software and sensor data processing. Developing modules to analyze flight data using C# and C++, and participating in hardware and software integration processes.',
+			images: [
+				{ src: 'Resimler/Arı Drones/16.jpeg', caption: 'IDEF 2025 Savunma Fuarı — Arı Drones standında ekibimizle birlikte.', captionEn: 'IDEF 2025 Defense Fair — With our team at the Arı Drones booth.' }
+			]
 		},
 		{
 			company: 'Gedik Robotics Team',
@@ -255,7 +258,12 @@ window.portfolioProfile = {
 			date: 'Ocak 2025 - Günümüz', dateEn: 'Jan 2025 - Present',
 			location: 'İstanbul, Türkiye', locationEn: 'Istanbul, Turkey',
 			description: 'İnsansız Kara ve Sualtı Aracı yarışmaları için proje koordinasyonu sağlıyor, sistem tasarımı, görev paylaşımı ve ekip yönetimi süreçlerini organize ediyorum.',
-			descriptionEn: 'Providing project coordination for Unmanned Ground and Underwater Vehicle competitions, and organizing system design, task delegation, and team management processes.'
+			descriptionEn: 'Providing project coordination for Unmanned Ground and Underwater Vehicle competitions, and organizing system design, task delegation, and team management processes.',
+			images: [
+				{ src: 'Resimler/GEDİK ROBOTİCS TEAM/8.jpeg', caption: 'İnsansız Kara Aracı ekibiyle 2025 toplantı anı.', captionEn: 'Meeting with the Unmanned Ground Vehicle team in 2025.' },
+				{ src: 'Resimler/GEDİK ROBOTİCS TEAM/9.jpeg', caption: 'Takım çalışması öncesi stand-up toplantısı.', captionEn: 'Stand-up meeting before a team work session.' },
+				{ src: 'Resimler/GEDİK ROBOTİCS TEAM/13.jpeg', caption: '2026 sezonu için ilk rapor ve şartnameyi incelerken çekilen ekip görseli.', captionEn: 'Team reviewing the first report and specifications for the 2026 season.' }
+			]
 		},
 		{
 			company: 'TeamNameless (Nova)',
@@ -264,7 +272,12 @@ window.portfolioProfile = {
 			date: 'Eylül 2022 - Ekim 2024', dateEn: 'Sep 2022 - Oct 2024',
 			location: 'İstanbul, Türkiye', locationEn: 'Istanbul, Turkey',
 			description: 'Teknofest 2023\'te Türkiye 7.liği elde eden takımımızda, IoT tabanlı uçuş kontrol yazılımları geliştirdim. Ayrıca TÜRKSAT Model Uydu Yarışması ve NASA sponsorluğundaki CanSat Competition süreçlerinde yer alarak model uydu yazılım mimarileri üzerine çalışmalar gerçekleştirdim.',
-			descriptionEn: 'Developed IoT-based flight control software in our team that ranked 7th in Turkey at TEKNOFEST 2023. Participated in TÜRKSAT Model Satellite Competition and NASA-sponsored CanSat Competition, focusing on model satellite software architectures.'
+			descriptionEn: 'Developed IoT-based flight control software in our team that ranked 7th in Turkey at TEKNOFEST 2023. Participated in TÜRKSAT Model Satellite Competition and NASA-sponsored CanSat Competition, focusing on model satellite software architectures.',
+			images: [
+				{ src: 'Resimler/Team Nameless/1.jpeg', caption: 'Solarİst Fuarı — İstanbul Elektrik Teknisyenleri Odasında model uydumuzu tanıtırken.', captionEn: 'Solarİst Fair — Presenting our model satellite at the Istanbul Chamber of Electrical Technicians.' },
+				{ src: 'Resimler/Team Nameless/2.jpeg', caption: 'Solarİst Fuarında İstanbul Elektrik Teknisyenleri Odası Başkanı ile sohbet anı.', captionEn: 'Chatting with the President of the Istanbul Chamber of Electrical Technicians at the Solarİst Fair.' },
+				{ src: 'Resimler/Team Nameless/4.jpeg', caption: 'TEKNOFEST 2024 — Selçuk Bayraktar ile birlikte çekindiğimiz özel bir kare.', captionEn: 'TEKNOFEST 2024 — A special photo with Selçuk Bayraktar.' }
+			]
 		},
 		{
 			company: 'İstanbul Gedik Üniversitesi - TÖMER', companyEn: 'Istanbul Gedik University - TOMER',
@@ -291,7 +304,10 @@ window.portfolioProfile = {
 			date: 'Şubat 2023 - Günümüz', dateEn: 'Feb 2023 - Present',
 			location: 'İstanbul, Türkiye', locationEn: 'Istanbul, Turkey',
 			description: 'Ekip yönetimi, proje geliştirme, kurumlar arası iletişim sağlama ve teknoloji paydaşlarıyla etkinlikler düzenleyerek öğrencilere kariyer ve sertifika imkanları yaratmaktayım.',
-			descriptionEn: 'Creating career and certification opportunities for students by managing the team, developing projects, ensuring inter-institutional communication, and organizing events with technology stakeholders.'
+			descriptionEn: 'Creating career and certification opportunities for students by managing the team, developing projects, ensuring inter-institutional communication, and organizing events with technology stakeholders.',
+			images: [
+				{ src: 'Resimler/GEDİK BTK/7.jpeg', caption: 'İstanbul Kültür Üniversitesi\'ndeki Golang konferansında KOMMUNITY ekibi ile birlikte.', captionEn: 'With the KOMMUNITY team at the Golang conference at Istanbul Kültür University.' }
+			]
 		},
 		{
 			company: 'McDonald\'s',
@@ -310,7 +326,12 @@ window.portfolioProfile = {
 			date: '2025',
 			description: 'Tarımsal üretimde kaynak verimliliğini sağlamak amacıyla IoT, Kalman Filtresi ve Makine Öğrenmesi (Karar Ağacı) entegreli Akıllı Sera Sistemi üzerine sunulan Full Paper ve Abstract çalışması.',
 			descriptionEn: 'Full Paper and Abstract presentation on a Smart Agriculture System integrating IoT, Kalman Filter, and Machine Learning (Decision Tree) to ensure resource efficiency in agricultural production.',
-			url: 'projeler.html#akilli-sera'
+			url: 'projeler.html#akilli-sera',
+			images: [
+				{ src: 'Resimler/Bitirme Tezi/12.jpeg', caption: 'Akıllı sera sistemimizin prototip elektronik test devresi.', captionEn: 'Prototype electronic test circuit of our smart greenhouse system.' },
+				{ src: 'Resimler/Bitirme Tezi/14.jpeg', caption: 'Mini sera üzerinde test ve kontrol devresi entegrasyonu.', captionEn: 'Test and control circuit integration on the mini greenhouse.' },
+				{ src: 'Resimler/Bitirme Tezi/15.jpeg', caption: 'Akıllı sera için mini sunucu olarak yapılandırdığımız Jetson Nano.', captionEn: 'Jetson Nano configured as a mini server for the smart greenhouse.' }
+			]
 		},
 		{
 			title: 'GPS Data Synchronisation Using Kalman Filter',
@@ -318,7 +339,10 @@ window.portfolioProfile = {
 			date: '2024',
 			description: 'TÜBİTAK 2209-A kapsamında da odaklanılan, Kalman filtresi ile yüksek hassasiyetli sensör veri stabilizasyonu ve hata düzeltmesi üzerine konferans bildirisi.',
 			descriptionEn: 'Conference paper on high-precision sensor data stabilization and error correction with a Kalman filter, also focused within the scope of TÜBİTAK 2209-A.',
-			url: 'projeler.html#gps-kalman'
+			url: 'projeler.html#gps-kalman',
+			images: [
+				{ src: 'Resimler/Gps İle Veri stabilizasyonu/5.jpeg', caption: 'Projenin başarısı dolayısıyla Mühendislik Fakültesi Dekanımızdan aldığımız teşekkür belgesi.', captionEn: 'Appreciation certificate received from our Engineering Faculty Dean for the project\'s success.' }
+			]
 		},
 		{
 			title: 'Yüksek Basınç ve İrtifada GPS Veri Stabilizasyonu',
@@ -328,7 +352,10 @@ window.portfolioProfile = {
 			date: '2023',
 			description: 'İnsansız Hava Aracı, Model Uydu ve Roket gibi savunma sanayii projelerinde yer alan GPS modüllerinin yüksek basınç/irtifada Kalman filtresi ile stabilizasyonunu sağlayan başarıyla tamamlanmış projedir.',
 			descriptionEn: 'Successfully completed project providing stabilization of GPS modules used in defense industry projects such as UAVs, Model Satellites, and Rockets with a Kalman filter at high pressure/altitude.',
-			url: 'projeler.html#gps-tubitak'
+			url: 'projeler.html#gps-tubitak',
+			images: [
+				{ src: 'Resimler/Gps İle Veri stabilizasyonu/5.jpeg', caption: 'TÜBİTAK 2209-A projemizin başarılı tamamlanması üzerine Mühendislik Fakültesi Dekanından aldığımız teşekkür belgesi.', captionEn: 'Appreciation certificate from the Engineering Faculty Dean upon successful completion of the TÜBİTAK 2209-A project.' }
+			]
 		}
 	],
 	teknofest: [],

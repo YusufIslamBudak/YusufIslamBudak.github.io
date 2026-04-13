@@ -290,11 +290,21 @@
 												</div>
 											</div>
 											
-											<div class="project-visuals" style="justify-content: center; align-items: center; background: rgba(31, 111, 235, 0.05); border-radius: 1rem; border: 1px dashed var(--border-color);">
-												<div style="text-align: center; padding: 3rem;">
-													<i class="fas fa-fighter-jet" style="font-size: 5rem; color: #1f6feb; margin-bottom: 1.5rem;"></i>
-													<h4 style="margin:0;">TEKNOFEST 2023</h4>
-													<p style="font-size: 0.9rem; color: var(--text-soft); margin-top: 0.5rem;">TeamNameless (Nova)</p>
+											<div class="project-visuals">
+												<div class="gallery-heading"><i class="fas fa-camera"></i> <span data-tr="Takım Görselleri" data-en="Team Gallery">Takım Görselleri</span></div>
+												<div class="photo-gallery" data-gallery-id="tekno-nameless">
+													<div class="gallery-item" onclick="openLightbox('tekno-nameless', 0)">
+														<img src="Resimler/Team Nameless/1.jpeg" alt="SolarİST Fuarı" loading="lazy">
+														<div class="gallery-caption" data-tr="SolarİST Fuarı — İstanbul Elektrik Teknisyenleri Odasında model uydumuzu tanıtırken" data-en="SolarİST Fair — Presenting our model satellite at the Istanbul Chamber of Electrical Technicians">SolarİST Fuarı — İstanbul Elektrik Teknisyenleri Odasında model uydumuzu tanıtırken</div>
+													</div>
+													<div class="gallery-item" onclick="openLightbox('tekno-nameless', 1)">
+														<img src="Resimler/Team Nameless/2.jpeg" alt="SolarİST Başkan" loading="lazy">
+														<div class="gallery-caption" data-tr="SolarİST Fuarında İstanbul Elektrik Teknisyenleri Odası Başkanı ile" data-en="With the President of the Istanbul Chamber of Electrical Technicians at the SolarİST Fair">SolarİST Fuarında İstanbul Elektrik Teknisyenleri Odası Başkanı ile</div>
+													</div>
+													<div class="gallery-item" onclick="openLightbox('tekno-nameless', 2)" style="grid-column: span 2;">
+														<img src="Resimler/Team Nameless/4.jpeg" alt="Selçuk Bayraktar" loading="lazy">
+														<div class="gallery-caption" data-tr="TEKNOFEST 2024 — Selçuk Bayraktar ile birlikte" data-en="TEKNOFEST 2024 — With Selçuk Bayraktar">TEKNOFEST 2024 — Selçuk Bayraktar ile birlikte</div>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -336,11 +346,21 @@
 												</div>
 											</div>
 											
-											<div class="project-visuals" style="justify-content: center; align-items: center; background: rgba(15, 118, 110, 0.05); border-radius: 1rem; border: 1px dashed var(--border-color);">
-												<div style="text-align: center; padding: 3rem;">
-													<i class="fas fa-water" style="font-size: 5rem; color: #0f766e; margin-bottom: 1.5rem;"></i>
-													<h4 style="margin:0;" data-tr="Teknoloji Projeleri" data-en="Technology Projects">Teknoloji Projeleri</h4>
-													<p style="font-size: 0.9rem; color: var(--text-soft); margin-top: 0.5rem;" data-tr="İnsansız Sistemler Geliştirme Takımı" data-en="Unmanned Systems Development Team">İnsansız Sistemler Geliştirme Takımı</p>
+											<div class="project-visuals">
+												<div class="gallery-heading"><i class="fas fa-camera"></i> <span data-tr="Takım Görselleri" data-en="Team Gallery">Takım Görselleri</span></div>
+												<div class="photo-gallery" data-gallery-id="tekno-robotics">
+													<div class="gallery-item" onclick="openLightbox('tekno-robotics', 0)">
+														<img src="Resimler/GEDİK ROBOTİCS TEAM/8.jpeg" alt="İKA Ekip Toplantısı" loading="lazy">
+														<div class="gallery-caption" data-tr="İnsansız Kara Aracı ekibiyle 2025 toplantı anı" data-en="Meeting with the Unmanned Ground Vehicle team in 2025">İnsansız Kara Aracı ekibiyle 2025 toplantı anı</div>
+													</div>
+													<div class="gallery-item" onclick="openLightbox('tekno-robotics', 1)">
+														<img src="Resimler/GEDİK ROBOTİCS TEAM/9.jpeg" alt="Stand-up Toplantısı" loading="lazy">
+														<div class="gallery-caption" data-tr="Takım çalışması öncesi stand-up toplantısı" data-en="Stand-up meeting before a team work session">Takım çalışması öncesi stand-up toplantısı</div>
+													</div>
+													<div class="gallery-item" onclick="openLightbox('tekno-robotics', 2)">
+														<img src="Resimler/GEDİK ROBOTİCS TEAM/13.jpeg" alt="Şartname İnceleme" loading="lazy">
+														<div class="gallery-caption" data-tr="2026 sezonu ilk rapor ve şartname toplantısı" data-en="First report and specifications meeting for the 2026 season">2026 sezonu ilk rapor ve şartname toplantısı</div>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -433,6 +453,64 @@
                         }
                     }
                 };
+
+                // Lightbox system
+                (function() {
+                    const overlay = document.createElement('div');
+                    overlay.className = 'lightbox-overlay';
+                    overlay.innerHTML = `
+                        <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+                        <button class="lightbox-nav prev" onclick="navLightbox(-1)"><i class="fas fa-chevron-left"></i></button>
+                        <button class="lightbox-nav next" onclick="navLightbox(1)"><i class="fas fa-chevron-right"></i></button>
+                        <img src="" alt="">
+                        <div class="lightbox-caption"></div>
+                    `;
+                    document.body.appendChild(overlay);
+                    overlay.addEventListener('click', function(e) {
+                        if (e.target === overlay) closeLightbox();
+                    });
+
+                    let currentGallery = [];
+                    let currentIndex = 0;
+
+                    window.openLightbox = function(galleryId, index) {
+                        const gallery = document.querySelector(`[data-gallery-id="${galleryId}"]`);
+                        if (!gallery) return;
+                        const items = gallery.querySelectorAll('.gallery-item img');
+                        const captions = gallery.querySelectorAll('.gallery-caption');
+                        currentGallery = Array.from(items).map((img, i) => ({
+                            src: img.src,
+                            caption: captions[i] ? captions[i].textContent : ''
+                        }));
+                        currentIndex = index;
+                        showLightboxImage();
+                        overlay.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    };
+
+                    window.closeLightbox = function() {
+                        overlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    };
+
+                    window.navLightbox = function(dir) {
+                        currentIndex = (currentIndex + dir + currentGallery.length) % currentGallery.length;
+                        showLightboxImage();
+                    };
+
+                    function showLightboxImage() {
+                        if (!currentGallery[currentIndex]) return;
+                        overlay.querySelector('img').src = currentGallery[currentIndex].src;
+                        overlay.querySelector('.lightbox-caption').textContent = currentGallery[currentIndex].caption;
+                    }
+
+                    document.addEventListener('keydown', function(e) {
+                        if (!overlay.classList.contains('active')) return;
+                        if (e.key === 'Escape') closeLightbox();
+                        if (e.key === 'ArrowLeft') navLightbox(-1);
+                        if (e.key === 'ArrowRight') navLightbox(1);
+                    });
+                })();
 
                 // Theme Toggle functionality
 

@@ -1,0 +1,3 @@
+12.jpeg - Akıllı sera sistemimizin prototip elektronik test devresi
+14.jpeg - Akıllı sera sistemimizin mini sera üzerinde test ve kontrol devresi.
+15.jpeg - Akıllı sera sisteminde kullanmak üzere ayarladığımız Mini sunucu olarak jetson nano.
