@@ -24,20 +24,20 @@
 
 			.career-logo-container {
 				position: absolute;
-				left: -4rem; /* Adjusted for larger logo */
+				left: -3.25rem; /* Moved closer to the card */
 				top: 1rem;
-				width: 3rem;
-				height: 3rem;
-				background: var(--surface);
+				width: 3.25rem;
+				height: 3.25rem;
+				background: var(--surface-strong);
 				border-radius: 50%;
-				border: 3px solid var(--accent-soft);
+				border: 3px solid var(--accent);
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				box-shadow: 0 4px 10px var(--shadow-color);
+				box-shadow: 0 0 15px var(--accent-soft), 0 4px 10px var(--shadow-color);
 				overflow: hidden;
 				z-index: 2;
-				transition: transform 0.3s ease;
+				transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s ease;
 			}
 
 			.career-card:hover .career-logo-container {
@@ -81,13 +81,14 @@
 			.career-timeline::before {
 				content: '';
 				position: absolute;
-				left: 1.4rem; /* Centered under the logo */
-				top: 0;
+				left: 2.875rem; /* Centered: card margin 4.5rem - logo offset 3.25rem + logo radius 1.625rem */
+				top: 1rem;
 				bottom: 0;
-				width: 2px;
-				background: var(--accent-soft);
-				border-radius: 2px;
+				width: 3px;
+				background: linear-gradient(to bottom, var(--accent), var(--accent-soft), transparent);
+				border-radius: 4px;
 				z-index: 1;
+				opacity: 0.8;
 			}
 
 			.career-header {
@@ -178,7 +179,7 @@
 					padding: 1.2rem;
 				}
 				.career-logo-container {
-					left: -2.5rem;
+					left: -2rem;
 					width: 2rem;
 					height: 2rem;
 					top: 1.2rem;
@@ -187,7 +188,7 @@
 					font-size: 0.9rem;
 				}
 				.career-timeline::before {
-					left: 0.4rem;
+					left: 2rem; /* Mobile: card margin 3rem - logo offset 2rem + logo radius 1rem */
 				}
 			}
 		</style>
@@ -314,7 +315,7 @@
                             }
 
                             const toggleBtn = hasImages 
-                                ? `<button class="expand-toggle" onclick="toggleExpand('expand-career-${idx}', this)" data-tr="Görselleri Gör" data-en="View Gallery"><i class="fas fa-chevron-down"></i> <span data-tr="Görselleri Gör" data-en="View Gallery">Görselleri Gör</span></button>` 
+                                ? `<button class="expand-trigger" onclick="toggleExpand('expand-career-${idx}', this)" title="Görselleri Gör"><i class="fas fa-chevron-down"></i></button>` 
                                 : '';
 
                             return `

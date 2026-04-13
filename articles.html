@@ -46,6 +46,7 @@
 			display: flex;
 			flex-direction: column;
 			gap: 0.9rem;
+			position: relative;
 			transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s ease, border-color 0.4s ease;
 		}
 
@@ -232,7 +233,7 @@
 					}
 
 					const toggleBtn = hasImages 
-						? `<button class="expand-toggle" onclick="event.stopPropagation(); toggleExpand('expand-article-${index}', this)" data-tr="Görselleri Gör" data-en="View Gallery"><i class="fas fa-chevron-down"></i> <span data-tr="Görselleri Gör" data-en="View Gallery">Görselleri Gör</span></button>` 
+						? `<button class="expand-trigger" onclick="event.stopPropagation(); toggleExpand('expand-article-${index}', this)" title="Görselleri Gör"><i class="fas fa-chevron-down"></i></button>` 
 						: '';
 
 					return `
