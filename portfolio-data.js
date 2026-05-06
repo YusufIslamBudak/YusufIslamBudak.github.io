@@ -7,7 +7,7 @@ window.portfolioProfile = {
 	introEn: 'Developing autonomous systems and IoT solutions at the intersection of hardware and software.',
 	bio: 'Gömülü sistemler, IoT ve yapay zeka alanlarında derinlemesine teknik bilgiye sahip bir Mühendis Adayıyım. Arı Drones bünyesinde otonom uçuş yazılımları ve kritik veri analiz modülleri geliştirme tecrübesine sahibim. TEKNOFEST ve TÜBİTAK projelerinde sergilediğim başarılarla; C++, Python ve C# dillerinde yüksek performanslı sensör füzyonu ve kontrol sistemleri mimarileri inşa etmekteyim. Teknolojiyi sınırlarına zorlayan projelerde aktif rol alarak, otonom geleceği tasarlamayı hedefliyorum.',
 	bioEn: 'I am an Engineering Candidate with deep technical expertise in embedded systems, IoT, and artificial intelligence. I have extensive experience developing autonomous flight software and critical data analysis modules at Arı Drones. Through successes in TEKNOFEST and TÜBİTAK projects, I build high-performance sensor fusion and control system architectures using C++, Python, and C#. I aim to design the autonomous future by taking active roles in projects that push the boundaries of technology.',
-	avatar: 'https://avatars.githubusercontent.com/u/149049403?v=4',
+	avatar: 'images/PP.jpg',
 	githubUrl: 'https://github.com/YusufIslamBudak',
 	linkedinUrl: 'https://www.linkedin.com/in/yusuf-islam-budak/',
 	repositoryCount: 15,
