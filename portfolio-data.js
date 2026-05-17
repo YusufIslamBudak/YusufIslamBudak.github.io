@@ -108,6 +108,42 @@ window.portfolioProfile = {
 	],
 	certificates: [
 		{
+			title: 'CCNA: Switching, Routing, and Wireless Essentials',
+			titleEn: 'CCNA: Switching, Routing, and Wireless Essentials',
+			issuer: 'Cisco',
+			date: 'Mayıs 2025',
+			dateEn: 'May 2025',
+			description: 'Cisco Networking Academy CCNA: Switching, Routing, and Wireless Essentials sertifikası.',
+			descriptionEn: 'Cisco Networking Academy CCNA: Switching, Routing, and Wireless Essentials certificate.',
+			logo: 'images/cisco.svg',
+			urlTr: '',
+			urlEn: ''
+		},
+		{
+			title: 'CCNA: Enterprise Networking, Security, and Automation',
+			titleEn: 'CCNA: Enterprise Networking, Security, and Automation',
+			issuer: 'Cisco',
+			date: 'Mayıs 2025',
+			dateEn: 'May 2025',
+			description: 'Cisco Networking Academy CCNA: Enterprise Networking, Security, and Automation sertifikası.',
+			descriptionEn: 'Cisco Networking Academy CCNA: Enterprise Networking, Security, and Automation certificate.',
+			logo: 'images/cisco.svg',
+			urlTr: '',
+			urlEn: ''
+		},
+		{
+			title: 'CCNA: Introduction to Networks',
+			titleEn: 'CCNA: Introduction to Networks',
+			issuer: 'Cisco',
+			date: 'Mayıs 2025',
+			dateEn: 'May 2025',
+			description: 'Cisco Networking Academy CCNA: Introduction to Networks sertifikası.',
+			descriptionEn: 'Cisco Networking Academy CCNA: Introduction to Networks certificate.',
+			logo: 'images/cisco.svg',
+			urlTr: '',
+			urlEn: ''
+		},
+		{
 			title: 'B2 Seviye İngilizce Eğitimi',
 			titleEn: 'B2 Level English Training',
 			issuer: 'İstanbul Gedik Üniversitesi',

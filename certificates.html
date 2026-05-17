@@ -205,7 +205,9 @@
                             return `
                             <article class="cert-card reveal" style="transition-delay: ${(index % 4) * 0.1}s">
                                 <div class="cert-header">
-                                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                                    <div class="cert-icon">
+                                        ${cert.logo ? `<img src="${cert.logo}" alt="${cert.issuer} Logo" style="width: 24px; height: 24px; object-fit: contain; vertical-align: middle;">` : `<i class="fas fa-certificate"></i>`}
+                                    </div>
                                     <div class="cert-meta"><i class="fas fa-calendar-alt"></i> <span data-tr="${cert.date}" data-en="${cert.dateEn || cert.date}">${cert.date}</span></div>
                                 </div>
                                 <h3 class="cert-title" data-tr="${cert.title}" data-en="${cert.titleEn || cert.title}">${cert.title}</h3>
