@@ -274,7 +274,8 @@ window.portfolioProfile = {
 	careerHistory: [
 		{
 			company: 'Arı Drones',
-			logo: 'images/ari-drones.png',
+			logo: 'Logolar/arı drones.jpg',
+			emoji: '🚁',
 			role: 'Yazılım ve IoT Stajyeri / Aday Mühendis', roleEn: 'Software & IoT Intern / Candidate Engineer',
 			date: 'Mayıs 2025 - Günümüz', dateEn: 'May 2025 - Present',
 			location: 'İstanbul, Türkiye', locationEn: 'Istanbul, Turkey',
@@ -286,7 +287,8 @@ window.portfolioProfile = {
 		},
 		{
 			company: 'Gedik Robotics Team',
-			logo: 'images/gedik-robotics.png',
+			logo: 'Logolar/Gedik Robotics team.png',
+			emoji: '🤖',
 			role: 'Takım Kaptanı', roleEn: 'Team Captain',
 			date: 'Ocak 2025 - Günümüz', dateEn: 'Jan 2025 - Present',
 			location: 'İstanbul, Türkiye', locationEn: 'Istanbul, Turkey',
@@ -300,7 +302,8 @@ window.portfolioProfile = {
 		},
 		{
 			company: 'TeamNameless (Nova)',
-			logo: 'images/team-nameless.png',
+			logo: 'Logolar/TeamNameless.jpg',
+			emoji: '🚀',
 			role: 'Uçuş Yazılımı Geliştiricisi – Alt Ekip Kaptanı', roleEn: 'Flight Software Developer – Sub-Team Captain',
 			date: 'Eylül 2022 - Ekim 2024', dateEn: 'Sep 2022 - Oct 2024',
 			location: 'İstanbul, Türkiye', locationEn: 'Istanbul, Turkey',
@@ -314,7 +317,8 @@ window.portfolioProfile = {
 		},
 		{
 			company: 'İstanbul Gedik Üniversitesi - TÖMER', companyEn: 'Istanbul Gedik University - TOMER',
-			logo: 'images/gedik-uni.png',
+			logo: 'Logolar/Gedik.png',
+			emoji: '🎓',
 			role: 'Türkçe Öğretimi Uygulama ve Araştırma Merkezi Görevlisi', roleEn: 'Turkish Teaching Application and Research Center Staff',
 			date: 'Mayıs 2024 - Şubat 2025', dateEn: 'May 2024 - Feb 2025',
 			location: 'İstanbul, Türkiye', locationEn: 'Istanbul, Turkey',
@@ -323,7 +327,8 @@ window.portfolioProfile = {
 		},
 		{
 			company: 'Yükseköğretim Kalite Kurulu (YÖKAK)', companyEn: 'Higher Education Quality Council (YÖKAK)',
-			logo: 'images/yokak.png',
+			logo: 'Logolar/gedik mühendislik.jpg',
+			emoji: '🏅',
 			role: 'Mühendislik Fakültesi Temsilcisi', roleEn: 'Engineering Faculty Representative',
 			date: 'Haziran 2023 - Günümüz', dateEn: 'Jun 2023 - Present',
 			location: 'İstanbul, Türkiye', locationEn: 'Istanbul, Turkey',
@@ -332,7 +337,8 @@ window.portfolioProfile = {
 		},
 		{
 			company: 'Bilişim Teknolojileri Kulübü', companyEn: 'Information Technologies Club',
-			logo: 'images/bilisim-klubucu.png',
+			logo: 'Logolar/Gedik btk logo.png',
+			emoji: '💻',
 			role: 'Yönetim Kurulu Başkanı', roleEn: 'Chairman of the Board',
 			date: 'Şubat 2023 - Günümüz', dateEn: 'Feb 2023 - Present',
 			location: 'İstanbul, Türkiye', locationEn: 'Istanbul, Turkey',
@@ -344,7 +350,8 @@ window.portfolioProfile = {
 		},
 		{
 			company: 'McDonald\'s',
-			logo: 'images/mcdonalds.png',
+			logo: 'Logolar/MC donalds logo.png',
+			emoji: '🍔',
 			role: 'Ekip Üyesi → Ekip Lideri → Bölüm Müdürü', roleEn: 'Crew Member → Crew Leader → Department Manager',
 			date: 'Haziran 2022 - Ocak 2024', dateEn: 'Jun 2022 - Jan 2024',
 			location: 'İstanbul, Türkiye', locationEn: 'Istanbul, Turkey',

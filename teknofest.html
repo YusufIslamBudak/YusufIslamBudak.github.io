@@ -1,576 +1,688 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>TEKNOFEST | Yusuf İslam Budak</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="assets/css/premium.css" />
-		<style>
-			/* Page Specific TEKNOFEST Styles */
 
-			/* Featured Project Card Styling (Accordion Layout) */
-			.featured-project {
-				background: var(--surface);
-				backdrop-filter: blur(14px);
-				border: 1px solid var(--border-color);
-				border-radius: 1.5rem;
-				box-shadow: 0 18px 40px var(--shadow-color);
-				overflow: hidden;
-				margin-bottom: 3rem;
-				transition: transform 0.3s ease, box-shadow 0.3s ease;
-			}
+<head>
+	<title>TEKNOFEST | Yusuf İslam Budak</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/premium.css" />
+	<style>
+		/* Page Specific TEKNOFEST Styles */
 
-			.featured-project:hover {
-				transform: translateY(-5px);
-				box-shadow: 0 25px 50px var(--shadow-color);
-			}
+		/* Featured Project Card Styling (Accordion Layout) */
+		.featured-project {
+			background: var(--surface);
+			backdrop-filter: blur(14px);
+			border: 1px solid var(--border-color);
+			border-radius: 1.5rem;
+			box-shadow: 0 18px 40px var(--shadow-color);
+			overflow: hidden;
+			margin-bottom: 3rem;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
 
-			.featured-header {
-				padding: 3rem 3rem 1.5rem 3rem;
-				position: relative;
-				cursor: pointer;
-			}
+		.featured-project:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 25px 50px var(--shadow-color);
+		}
 
-			.featured-header h2 {
-				font-size: 2.2rem;
-				margin-bottom: 0.5rem;
-				font-weight: 700;
-				color: var(--text-strong);
-			}
+		.featured-header {
+			padding: 3rem 3rem 1.5rem 3rem;
+			position: relative;
+			cursor: pointer;
+		}
 
-			.project-tags {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 0.5rem;
-				margin-bottom: 1.5rem;
-			}
+		.featured-header h2 {
+			font-size: 2.2rem;
+			margin-bottom: 0.5rem;
+			font-weight: 700;
+			color: var(--text-strong);
+		}
 
-			.tag {
-				background: rgba(15, 118, 110, 0.1);
-				color: var(--accent-2);
-				padding: 0.4rem 1rem;
-				border-radius: 999px;
-				font-size: 0.85rem;
-				font-weight: 600;
-				border: 1px solid rgba(15, 118, 110, 0.2);
-			}
-			
-			[data-theme="dark"] .tag {
-				background: rgba(45, 212, 191, 0.15);
-				border-color: rgba(45, 212, 191, 0.25);
-			}
+		.project-tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.5rem;
+			margin-bottom: 1.5rem;
+		}
 
+		.tag {
+			background: rgba(15, 118, 110, 0.1);
+			color: var(--accent-2);
+			padding: 0.4rem 1rem;
+			border-radius: 999px;
+			font-size: 0.85rem;
+			font-weight: 600;
+			border: 1px solid rgba(15, 118, 110, 0.2);
+		}
+
+		[data-theme="dark"] .tag {
+			background: rgba(45, 212, 191, 0.15);
+			border-color: rgba(45, 212, 191, 0.25);
+		}
+
+		.featured-body {
+			padding: 0 3rem 3rem 3rem;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 3rem;
+			align-items: start;
+			display: none;
+		}
+
+		.featured-body.expanded {
+			display: grid;
+		}
+
+		.expand-icon {
+			position: absolute;
+			top: 3.5rem;
+			right: 3rem;
+			font-size: 1.5rem;
+			color: var(--accent);
+			transition: transform 0.3s ease;
+		}
+
+		.featured-project.expanded .expand-icon {
+			transform: rotate(180deg);
+		}
+
+		.project-visuals {
+			display: flex;
+			flex-direction: column;
+			gap: 1.5rem;
+		}
+
+		.project-details p {
+			color: var(--text-soft);
+			line-height: 1.8;
+			margin-bottom: 1.2rem;
+		}
+
+		.project-details h3 {
+			font-size: 1.3rem;
+			color: var(--accent);
+			margin-bottom: 0.75rem;
+			margin-top: 1.5rem;
+		}
+
+		.project-stats {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1rem;
+			margin-top: 2rem;
+			padding-top: 2rem;
+			border-top: 1px solid var(--border-color);
+		}
+
+		.stat-box {
+			background: var(--bg-gradient);
+			padding: 1rem;
+			border-radius: 0.75rem;
+			border: 1px solid var(--border-color);
+			text-align: center;
+		}
+
+		.stat-box .icon {
+			font-size: 1.5rem;
+			color: var(--accent);
+			margin-bottom: 0.5rem;
+		}
+
+		.stat-box span {
+			display: block;
+			font-weight: 700;
+			color: var(--text-strong);
+			font-size: 0.9rem;
+		}
+
+		.profile-card {
+			background: var(--surface);
+			backdrop-filter: blur(14px);
+			border: 1px solid var(--border-color);
+			border-radius: 1.25rem;
+			box-shadow: 0 18px 40px var(--shadow-color);
+			padding: 1.25rem;
+		}
+
+		.note-list {
+			display: flex;
+			flex-direction: column;
+			gap: 0.75rem;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.note-list li {
+			padding: 0.8rem 0.95rem;
+			border-radius: 0.95rem;
+			background: rgba(255, 255, 255, 0.7);
+			color: var(--text-soft);
+			border: 1px solid transparent;
+		}
+
+		[data-theme="dark"] .note-list li {
+			background: rgba(255, 255, 255, 0.05);
+			color: var(--text-strong);
+			border-color: var(--border-color);
+		}
+
+		@media (max-width: 980px) {
 			.featured-body {
-				padding: 0 3rem 3rem 3rem;
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				gap: 3rem;
-				align-items: start;
-				display: none;
-			}
-			
-			.featured-body.expanded {
-				display: grid;
+				grid-template-columns: 1fr;
+				gap: 2rem;
 			}
 
-			.expand-icon {
-				position: absolute;
-				top: 3.5rem;
-				right: 3rem;
-				font-size: 1.5rem;
-				color: var(--accent);
-				transition: transform 0.3s ease;
+			.featured-header,
+			.featured-body {
+				padding: 2rem;
 			}
+		}
 
-			.featured-project.expanded .expand-icon {
-				transform: rotate(180deg);
+		@media (max-width: 736px) {
+
+			.featured-header,
+			.featured-body {
+				padding: 1.5rem;
 			}
+		}
 
-			.project-visuals {
-				display: flex;
-				flex-direction: column;
-				gap: 1.5rem;
-			}
+		.reveal.active {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	</style>
+</head>
 
-			.project-details p {
-				color: var(--text-soft);
-				line-height: 1.8;
-				margin-bottom: 1.2rem;
-			}
-			
-			.project-details h3 {
-				font-size: 1.3rem;
-				color: var(--accent);
-				margin-bottom: 0.75rem;
-				margin-top: 1.5rem;
-			}
+<body class="is-preload">
 
-			.project-stats {
-				display: grid;
-				grid-template-columns: repeat(2, 1fr);
-				gap: 1rem;
-				margin-top: 2rem;
-				padding-top: 2rem;
-				border-top: 1px solid var(--border-color);
-			}
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-			.stat-box {
-				background: var(--bg-gradient);
-				padding: 1rem;
-				border-radius: 0.75rem;
-				border: 1px solid var(--border-color);
-				text-align: center;
-			}
-			
-			.stat-box .icon {
-				font-size: 1.5rem;
-				color: var(--accent);
-				margin-bottom: 0.5rem;
-			}
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
 
-			.stat-box span {
-				display: block;
-				font-weight: 700;
-				color: var(--text-strong);
-				font-size: 0.9rem;
-			}
+				<!-- Header -->
+				<header id="header">
+					<a href="index.html" class="logo"><strong data-tr="Yusuf İslam Budak"
+							data-en="Yusuf Islam Budak">Yusuf İslam Budak</strong> <span data-tr="Portfolio"
+							data-en="Portfolio">Portfolio</span></a>
+					<ul class="icons">
+						<li><a href="Yusuf_İslam_Budak_CV.pdf" class="cv-button" target="_blank"><i
+									class="fas fa-file-pdf"></i> <span data-tr="CV İndir" data-en="Download CV">CV
+									İndir</span></a></li>
+						<li><button id="lang-toggle" aria-label="Toggle language">TR</button></li>
+						<li><button id="theme-toggle" class="icon solid fa-moon" aria-label="Toggle dark mode"></button>
+						</li>
+						<li><a href="https://github.com/YusufIslamBudak" class="icon brands fa-github"><span
+									class="label">GitHub</span></a></li>
+						<li><a href="https://www.linkedin.com/in/yusuf-islam-budak/"
+								class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					</ul>
+				</header>
 
-			.profile-card {
-				background: var(--surface);
-				backdrop-filter: blur(14px);
-				border: 1px solid var(--border-color);
-				border-radius: 1.25rem;
-				box-shadow: 0 18px 40px var(--shadow-color);
-				padding: 1.25rem;
-			}
-            
-			.note-list {
-				display: flex;
-				flex-direction: column;
-				gap: 0.75rem;
-				margin: 0;
-				padding: 0;
-				list-style: none;
-			}
+				<section id="teknofest" class="reveal" style="margin-top: 3rem;">
+					<header class="major">
+						<h2 data-tr="TEKNOFEST Başarı Tablosu" data-en="TEKNOFEST Achievement Table">TEKNOFEST Başarı
+							Tablosu</h2>
+					</header>
 
-			.note-list li {
-				padding: 0.8rem 0.95rem;
-				border-radius: 0.95rem;
-				background: rgba(255, 255, 255, 0.7);
-				color: var(--text-soft);
-				border: 1px solid transparent;
-			}
+					<div class="modern-table-wrapper">
+						<table class="modern-table">
+							<thead>
+								<tr>
+									<th data-tr="Yarışma / Proje" data-en="Competition / Project">Yarışma / Proje</th>
+									<th data-tr="Yıl" data-en="Year">Yıl</th>
+									<th data-tr="Teknik Rol" data-en="Technical Role">Teknik Rol</th>
+									<th data-tr="Başarı / Derece" data-en="Achievement">Başarı / Derece</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>TeamNameless (Nova)</strong><br><small data-tr="Uçuş Kontrol Yazılımı"
+											data-en="Flight Control Software">Uçuş Kontrol Yazılımı</small></td>
+									<td>2023 / 2024</td>
+									<td><span class="role-badge">Embedded Dev</span></td>
+									<td data-tr="TEKNOFEST 7.liği / TÜRKSAT & NASA CanSat Katılım"
+										data-en="TEKNOFEST 7th Place / TÜRKSAT & NASA CanSat Participation">TEKNOFEST
+										7.liği / TÜRKSAT & NASA CanSat Katılım</td>
+								</tr>
+								<tr>
+									<td><strong>Gedik Robotics</strong><br><small data-tr="İKA & İSA Geliştirme"
+											data-en="UGV & ROV Development">İKA & İSA Geliştirme</small></td>
+									<td>2025</td>
+									<td><span class="role-badge">Team Lead</span></td>
+									<td data-tr="Çeyrek Final" data-en="Quarter Final">Çeyrek Final</td>
+								</tr>
+								<tr>
+									<td><strong>Gedik Robotics</strong><br><small data-tr="İKA & İSA Geliştirme"
+											data-en="UGV & ROV Development">İKA & İSA Geliştirme</small></td>
+									<td>2026</td>
+									<td><span class="role-badge">Mentor</span></td>
+									<td data-tr="Çeyrek Final" data-en="Quarter Final">Çeyrek Final</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 
-			[data-theme="dark"] .note-list li {
-				background: rgba(255, 255, 255, 0.05);
-				color: var(--text-strong);
-				border-color: var(--border-color);
-			}
+					<p data-tr="Teknofest kapsamında katıldığım projeler, projelerde üstlendiğim görevler ve takım çalışmalarının detayları aşağıda yer almaktadır."
+						data-en="Details of the projects I have participated in within the scope of TEKNOFEST and the roles I assumed can be found below.">
+						Teknofest kapsamında katıldığım projeler, projelerde üstlendiğim görevler ve takım
+						çalışmalarının detayları aşağıda yer almaktadır.</p>
 
-			@media (max-width: 980px) {
-				.featured-body {
-					grid-template-columns: 1fr;
-					gap: 2rem;
-				}
-				.featured-header, .featured-body {
-					padding: 2rem;
-				}
-			}
+					<!-- Featured Project: Team Nameless -->
+					<article class="featured-project reveal" id="team-nameless">
+						<div class="featured-header" onclick="toggleProject('team-nameless')">
+							<h2>TeamNameless (Nova) - TEKNOFEST 2023 / 2024</h2>
+							<i class="fas fa-chevron-down expand-icon"></i>
+							<div class="project-tags">
+								<span class="tag">Teknofest 2023 / 2024</span>
+								<span class="tag">TÜRKSAT Model Uydu</span>
+								<span class="tag">NASA CanSat Competition</span>
+								<span class="tag" data-tr="Uçuş Kontrol Yazılımları"
+									data-en="Flight Control Software">Uçuş Kontrol Yazılımları</span>
+								<span class="tag" data-tr="IoT & Elektronik" data-en="IoT & Electronics">IoT &
+									Elektronik</span>
+								<span class="tag" data-tr="Derece: Türkiye 7'nciliği (2023)"
+									data-en="Rank: 7th in Turkey (2023)">Derece: Türkiye 7'nciliği (2023)</span>
+							</div>
+							<p style="font-weight: 600; color: var(--text-soft); margin-bottom: 0;"
+								data-tr="<strong>Görev:</strong> Uçuş Yazılımı Geliştiricisi & Alt Ekip Kaptanı"
+								data-en="<strong>Role:</strong> Flight Software Developer & Sub-Team Captain">
+								<strong>Görev:</strong> Uçuş Yazılımı Geliştiricisi & Alt Ekip Kaptanı</p>
+						</div>
+						<div class="featured-body">
+							<div class="project-details">
+								<p data-tr="Modern savunma sanayii ve otonom sistemler vizyonuyla katıldığımız TEKNOFEST, TÜRKSAT Model Uydu Yarışması ve NASA sponsorluğundaki CanSat Competition süreçlerini kapsayan çalışmalardır. Geniş bir teknik altyapı gerektiren bu yarışmalarda, model uydu yazılım mimarileri, telemetri sistemleri ve uçuş dinamiklerinin yönetilmesine odaklandık."
+									data-en="These studies cover our participation in TEKNOFEST, TÜRKSAT Model Satellite Competition, and NASA-sponsored CanSat Competition with a vision of modern defense industry and autonomous systems. In these competitions requiring extensive technical infrastructure, we focused on model satellite software architectures, telemetry systems, and flight dynamics management.">
+									Modern savunma sanayii ve otonom sistemler vizyonuyla katıldığımız TEKNOFEST,
+									TÜRKSAT Model Uydu Yarışması ve NASA sponsorluğundaki CanSat Competition süreçlerini
+									kapsayan çalışmalardır. Geniş bir teknik altyapı gerektiren bu yarışmalarda, model
+									uydu yazılım mimarileri, telemetri sistemleri ve uçuş dinamiklerinin yönetilmesine
+									odaklandık.</p>
 
-			@media (max-width: 736px) {
-				.featured-header, .featured-body {
-					padding: 1.5rem;
-				}
-			}
+								<h3 data-tr="Model Uydu ve IoT Altyapısı"
+									data-en="Model Satellite and IoT Infrastructure">Model Uydu ve IoT Altyapısı</h3>
+								<p data-tr="Bu projelerde, uçuş kontrol yazılımlarının otonom bir şekilde çalışabilmesi adına nesnelerin interneti (IoT) tabanlı çeşitli iletişim protokollerini entegre ettim. Araç üzerindeki telemetri ve komuta sistemleri optimize edilerek, elektronik alt sistemlerin sorunsuz birbiriyle haberleşmesi sağlandı. TÜRKSAT ve NASA CanSat standartlarına uygun yazılım mimarileri geliştirerek uluslararası platformlarda deneyim kazandım."
+									data-en="In these projects, I integrated various Internet of Things (IoT) based communication protocols so that the flight control software could operate autonomously. By optimizing the telemetry and command systems on the vehicle, the electronic subsystems communicated seamlessly. I gained experience on international platforms by developing software architectures compliant with TÜRKSAT and NASA CanSat standards.">
+									Bu projelerde, uçuş kontrol yazılımlarının otonom bir şekilde çalışabilmesi adına
+									nesnelerin interneti (IoT) tabanlı çeşitli iletişim protokollerini entegre ettim.
+									Araç üzerindeki telemetri ve komuta sistemleri optimize edilerek, elektronik alt
+									sistemlerin sorunsuz birbiriyle haberleşmesi sağlandı. TÜRKSAT ve NASA CanSat
+									standartlarına uygun yazılım mimarileri geliştirerek uluslararası platformlarda
+									deneyim kazandım.</p>
 
-			.reveal.active {
-				opacity: 1;
-				transform: translateY(0);
-			}
-		</style>
-	</head>
-	<body class="is-preload">
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo"><strong data-tr="Yusuf İslam Budak" data-en="Yusuf Islam Budak">Yusuf İslam Budak</strong> <span data-tr="Portfolio" data-en="Portfolio">Portfolio</span></a>
-									<ul class="icons">
-										<li><a href="Yusuf_İslam_Budak_CV.pdf" class="cv-button" target="_blank"><i class="fas fa-file-pdf"></i> <span data-tr="CV İndir" data-en="Download CV">CV İndir</span></a></li>
-										<li><button id="lang-toggle" aria-label="Toggle language">TR</button></li>
-										<li><button id="theme-toggle" class="icon solid fa-moon" aria-label="Toggle dark mode"></button></li>
-										<li><a href="https://github.com/YusufIslamBudak" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-										<li><a href="https://www.linkedin.com/in/yusuf-islam-budak/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-									</ul>
-								</header>
-
-								<section id="teknofest" class="reveal" style="margin-top: 3rem;">
-									<header class="major">
-										<h2 data-tr="TEKNOFEST Başarı Tablosu" data-en="TEKNOFEST Achievement Table">TEKNOFEST Başarı Tablosu</h2>
-									</header>
-
-									<div class="modern-table-wrapper">
-										<table class="modern-table">
-											<thead>
-												<tr>
-													<th data-tr="Yarışma / Proje" data-en="Competition / Project">Yarışma / Proje</th>
-													<th data-tr="Yıl" data-en="Year">Yıl</th>
-													<th data-tr="Teknik Rol" data-en="Technical Role">Teknik Rol</th>
-													<th data-tr="Başarı / Derece" data-en="Achievement">Başarı / Derece</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td><strong>TeamNameless (Nova)</strong><br><small data-tr="Uçuş Kontrol Yazılımı" data-en="Flight Control Software">Uçuş Kontrol Yazılımı</small></td>
-													<td>2023 / 2024</td>
-													<td><span class="role-badge">Embedded Dev</span></td>
-													<td data-tr="TEKNOFEST 7.liği / TÜRKSAT & NASA CanSat Katılım" data-en="TEKNOFEST 7th Place / TÜRKSAT & NASA CanSat Participation">TEKNOFEST 7.liği / TÜRKSAT & NASA CanSat Katılım</td>
-												</tr>
-												<tr>
-													<td><strong>Gedik Robotics</strong><br><small data-tr="İKA & İSA Geliştirme" data-en="UGV & ROV Development">İKA & İSA Geliştirme</small></td>
-													<td>2025</td>
-													<td><span class="role-badge">Team Lead</span></td>
-													<td data-tr="Çeyrek Final" data-en="Quarter Final">Çeyrek Final</td>
-												</tr>
-												<tr>
-													<td><strong>Gedik Robotics</strong><br><small data-tr="İKA & İSA Geliştirme" data-en="UGV & ROV Development">İKA & İSA Geliştirme</small></td>
-													<td>2026</td>
-													<td><span class="role-badge">Team Lead</span></td>
-													<td data-tr="Çeyrek Final" data-en="Quarter Final">Çeyrek Final</td>
-												</tr>
-											</tbody>
-										</table>
+								<div class="project-stats">
+									<div class="stat-box">
+										<i class="icon solid fa-trophy"></i>
+										<span data-tr="Türkiye Genelinde 7.lik" data-en="7th Place in Turkey">Türkiye
+											Genelinde 7.lik</span>
+										<small style="color:var(--text-soft)"
+											data-tr="Kendi kategorisinde büyük bir başarı"
+											data-en="A major success in its category">Kendi kategorisinde büyük bir
+											başarı</small>
 									</div>
+									<div class="stat-box">
+										<i class="icon solid fa-users"></i>
+										<span data-tr="Eğitim & Liderlik" data-en="Training & Leadership">Eğitim &
+											Liderlik</span>
+										<small style="color:var(--text-soft)"
+											data-tr="Ekip içi mesleki donanım eğitimleri verildi"
+											data-en="Intra-team technical hardware trainings provided">Ekip içi mesleki
+											donanım eğitimleri verildi</small>
+									</div>
+								</div>
+							</div>
 
-									<p data-tr="Teknofest kapsamında katıldığım projeler, projelerde üstlendiğim görevler ve takım çalışmalarının detayları aşağıda yer almaktadır." data-en="Details of the projects I have participated in within the scope of TEKNOFEST and the roles I assumed can be found below.">Teknofest kapsamında katıldığım projeler, projelerde üstlendiğim görevler ve takım çalışmalarının detayları aşağıda yer almaktadır.</p>
-									
-									<!-- Featured Project: Team Nameless -->
-									<article class="featured-project reveal" id="team-nameless">
-										<div class="featured-header" onclick="toggleProject('team-nameless')">
-											<h2>TeamNameless (Nova) - TEKNOFEST 2023 / 2024</h2>
-											<i class="fas fa-chevron-down expand-icon"></i>
-											<div class="project-tags">
-												<span class="tag">Teknofest 2023 / 2024</span>
-												<span class="tag">TÜRKSAT Model Uydu</span>
-												<span class="tag">NASA CanSat Competition</span>
-												<span class="tag" data-tr="Uçuş Kontrol Yazılımları" data-en="Flight Control Software">Uçuş Kontrol Yazılımları</span>
-												<span class="tag" data-tr="IoT & Elektronik" data-en="IoT & Electronics">IoT & Elektronik</span>
-												<span class="tag" data-tr="Derece: Türkiye 7'nciliği (2023)" data-en="Rank: 7th in Turkey (2023)">Derece: Türkiye 7'nciliği (2023)</span>
-											</div>
-											<p style="font-weight: 600; color: var(--text-soft); margin-bottom: 0;" data-tr="<strong>Görev:</strong> Uçuş Yazılımı Geliştiricisi & Alt Ekip Kaptanı" data-en="<strong>Role:</strong> Flight Software Developer & Sub-Team Captain"><strong>Görev:</strong> Uçuş Yazılımı Geliştiricisi & Alt Ekip Kaptanı</p>
-										</div>
-										<div class="featured-body">
-											<div class="project-details">
-												<p data-tr="Modern savunma sanayii ve otonom sistemler vizyonuyla katıldığımız TEKNOFEST, TÜRKSAT Model Uydu Yarışması ve NASA sponsorluğundaki CanSat Competition süreçlerini kapsayan çalışmalardır. Geniş bir teknik altyapı gerektiren bu yarışmalarda, model uydu yazılım mimarileri, telemetri sistemleri ve uçuş dinamiklerinin yönetilmesine odaklandık." data-en="These studies cover our participation in TEKNOFEST, TÜRKSAT Model Satellite Competition, and NASA-sponsored CanSat Competition with a vision of modern defense industry and autonomous systems. In these competitions requiring extensive technical infrastructure, we focused on model satellite software architectures, telemetry systems, and flight dynamics management.">Modern savunma sanayii ve otonom sistemler vizyonuyla katıldığımız TEKNOFEST, TÜRKSAT Model Uydu Yarışması ve NASA sponsorluğundaki CanSat Competition süreçlerini kapsayan çalışmalardır. Geniş bir teknik altyapı gerektiren bu yarışmalarda, model uydu yazılım mimarileri, telemetri sistemleri ve uçuş dinamiklerinin yönetilmesine odaklandık.</p>
-												
-												<h3 data-tr="Model Uydu ve IoT Altyapısı" data-en="Model Satellite and IoT Infrastructure">Model Uydu ve IoT Altyapısı</h3>
-												<p data-tr="Bu projelerde, uçuş kontrol yazılımlarının otonom bir şekilde çalışabilmesi adına nesnelerin interneti (IoT) tabanlı çeşitli iletişim protokollerini entegre ettim. Araç üzerindeki telemetri ve komuta sistemleri optimize edilerek, elektronik alt sistemlerin sorunsuz birbiriyle haberleşmesi sağlandı. TÜRKSAT ve NASA CanSat standartlarına uygun yazılım mimarileri geliştirerek uluslararası platformlarda deneyim kazandım." data-en="In these projects, I integrated various Internet of Things (IoT) based communication protocols so that the flight control software could operate autonomously. By optimizing the telemetry and command systems on the vehicle, the electronic subsystems communicated seamlessly. I gained experience on international platforms by developing software architectures compliant with TÜRKSAT and NASA CanSat standards.">Bu projelerde, uçuş kontrol yazılımlarının otonom bir şekilde çalışabilmesi adına nesnelerin interneti (IoT) tabanlı çeşitli iletişim protokollerini entegre ettim. Araç üzerindeki telemetri ve komuta sistemleri optimize edilerek, elektronik alt sistemlerin sorunsuz birbiriyle haberleşmesi sağlandı. TÜRKSAT ve NASA CanSat standartlarına uygun yazılım mimarileri geliştirerek uluslararası platformlarda deneyim kazandım.</p>
-
-												<div class="project-stats">
-													<div class="stat-box">
-														<i class="icon solid fa-trophy"></i>
-														<span data-tr="Türkiye Genelinde 7.lik" data-en="7th Place in Turkey">Türkiye Genelinde 7.lik</span>
-														<small style="color:var(--text-soft)" data-tr="Kendi kategorisinde büyük bir başarı" data-en="A major success in its category">Kendi kategorisinde büyük bir başarı</small>
-													</div>
-													<div class="stat-box">
-														<i class="icon solid fa-users"></i>
-														<span data-tr="Eğitim & Liderlik" data-en="Training & Leadership">Eğitim & Liderlik</span>
-														<small style="color:var(--text-soft)" data-tr="Ekip içi mesleki donanım eğitimleri verildi" data-en="Intra-team technical hardware trainings provided">Ekip içi mesleki donanım eğitimleri verildi</small>
-													</div>
-												</div>
-											</div>
-											
-											<div class="project-visuals">
-												<div class="gallery-heading"><i class="fas fa-camera"></i> <span data-tr="Takım Görselleri" data-en="Team Gallery">Takım Görselleri</span></div>
-												<div class="photo-gallery" data-gallery-id="tekno-nameless">
-													<div class="gallery-item" onclick="openLightbox('tekno-nameless', 0)">
-														<img src="Resimler/Team Nameless/1.jpeg" alt="SolarİST Fuarı" loading="lazy">
-														<div class="gallery-caption" data-tr="SolarİST Fuarı — İstanbul Elektrik Teknisyenleri Odasında model uydumuzu tanıtırken" data-en="SolarİST Fair — Presenting our model satellite at the Istanbul Chamber of Electrical Technicians">SolarİST Fuarı — İstanbul Elektrik Teknisyenleri Odasında model uydumuzu tanıtırken</div>
-													</div>
-													<div class="gallery-item" onclick="openLightbox('tekno-nameless', 1)">
-														<img src="Resimler/Team Nameless/2.jpeg" alt="SolarİST Başkan" loading="lazy">
-														<div class="gallery-caption" data-tr="SolarİST Fuarında İstanbul Elektrik Teknisyenleri Odası Başkanı ile" data-en="With the President of the Istanbul Chamber of Electrical Technicians at the SolarİST Fair">SolarİST Fuarında İstanbul Elektrik Teknisyenleri Odası Başkanı ile</div>
-													</div>
-													<div class="gallery-item" onclick="openLightbox('tekno-nameless', 2)" style="grid-column: span 2;">
-														<img src="Resimler/Team Nameless/4.jpeg" alt="Selçuk Bayraktar" loading="lazy">
-														<div class="gallery-caption" data-tr="TEKNOFEST 2024 — Selçuk Bayraktar ile birlikte" data-en="TEKNOFEST 2024 — With Selçuk Bayraktar">TEKNOFEST 2024 — Selçuk Bayraktar ile birlikte</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</article>
-
-									<!-- Featured Project: Gedik Robotics Team -->
-									<article class="featured-project reveal" id="gedik-robotics">
-										<div class="featured-header" onclick="toggleProject('gedik-robotics')">
-											<h2>Gedik Robotics Team</h2>
-											<i class="fas fa-chevron-down expand-icon"></i>
-											<div class="project-tags">
-												<span class="tag" data-tr="İnsansız Kara Aracı (İKA)" data-en="Unmanned Ground Vehicle (UGV)">İnsansız Kara Aracı (İKA)</span>
-												<span class="tag" data-tr="İnsansız Sualtı Aracı (İSA)" data-en="Unmanned Underwater Vehicle (ROV)">İnsansız Sualtı Aracı (İSA)</span>
-												<span class="tag" data-tr="Otonom Sistemler" data-en="Autonomous Systems">Otonom Sistemler</span>
-												<span class="tag" data-tr="Takım Kaptanı" data-en="Team Captain">Takım Kaptanı</span>
-												<span class="tag" data-tr="Derece: Çeyrek Finalist (2025)" data-en="Rank: Quarter-Finalist (2025)">Derece: Çeyrek Finalist (2025)</span>
-												<span class="tag" data-tr="Derece: Çeyrek Finalist (2026)" data-en="Rank: Quarter-Finalist (2026)">Derece: Çeyrek Finalist (2026)</span>
-											</div>
-											<p style="font-weight: 600; color: var(--text-soft); margin-bottom: 0;" data-tr="<strong>Görev:</strong> Takım Kaptanı (Ocak 2025 - Günümüz)" data-en="<strong>Role:</strong> Team Captain (Jan 2025 - Present)"><strong>Görev:</strong> Takım Kaptanı (Ocak 2025 - Günümüz)</p>
-										</div>
-										<div class="featured-body">
-											<div class="project-details">
-												<p data-tr="Gedik Üniversitesi bünyesinde, gelişmiş İnsansız Kara Araçları (İKA) ve İnsansız Sualtı Araçları (İSA) tasarlamak üzere kurulan teknik proje takımıdır. Takım faaliyetleri kapsamında ulusal otonomi ve tasarım yarışmalarına hazırlık yapılmaktadır." data-en="This is a technical project team established at Gedik University to design advanced Unmanned Ground Vehicles (UGV) and Unmanned Underwater Vehicles (ROV). Within the scope of the team's activities, preparations are made for national autonomy and design competitions.">Gedik Üniversitesi bünyesinde, gelişmiş İnsansız Kara Araçları (İKA) ve İnsansız Sualtı Araçları (İSA) tasarlamak üzere kurulan teknik proje takımıdır. Takım faaliyetleri kapsamında ulusal otonomi ve tasarım yarışmalarına hazırlık yapılmaktadır.</p>
-												
-												<h3 data-tr="Görev Kapsamı ve Proje Yönetimi" data-en="Scope of Role and Project Management">Görev Kapsamı ve Proje Yönetimi</h3>
-												<p data-tr="Ekip lideri sıfatıyla mekanik, yazılım ve elektronik alt birimlerinin entegre bir biçimde çalışmasından sorumluyum. Projenin sistem tasarımı süreçlerini, bütçe yönetimi ve görev dağılımlarını üstlenerek, aracın otonom yazılım fonksiyonlarını destekliyorum. Hem karada hem suda zorlu şartlarda çalışabilecek donanımların geliştirilmesi amaçlanmaktadır." data-en="As the team captain, I am responsible for the integrated operation of the mechanical, software, and electronic sub-units. I undertake the system design processes, budget management, and task distribution of the project, and support the autonomous software functions of the vehicle. The aim is to develop hardware that can operate in harsh conditions both on land and in water.">Ekip lideri sıfatıyla mekanik, yazılım ve elektronik alt birimlerinin entegre bir biçimde çalışmasından sorumluyum. Projenin sistem tasarımı süreçlerini, bütçe yönetimi ve görev dağılımlarını üstlenerek, aracın otonom yazılım fonksiyonlarını destekliyorum. Hem karada hem suda zorlu şartlarda çalışabilecek donanımların geliştirilmesi amaçlanmaktadır.</p>
-
-												<div class="project-stats">
-													<div class="stat-box">
-														<i class="icon solid fa-robot"></i>
-														<span data-tr="Gelişmiş Otonomi" data-en="Advanced Autonomy">Gelişmiş Otonomi</span>
-														<small style="color:var(--text-soft)" data-tr="İKA ve İSA sistem tasarımı" data-en="UGV and ROV system design">İKA ve İSA sistem tasarımı</small>
-													</div>
-													<div class="stat-box">
-														<i class="icon solid fa-project-diagram"></i>
-														<span data-tr="Çok Disiplinli" data-en="Multidisciplinary">Çok Disiplinli</span>
-														<small style="color:var(--text-soft)" data-tr="Yazılım, Mekanik ve Elektronik koordinasyonu" data-en="Software, Mechanics & Electronics Coordination">Yazılım, Mekanik ve Elektronik koordinasyonu</small>
-													</div>
-												</div>
-											</div>
-											
-											<div class="project-visuals">
-												<div class="gallery-heading"><i class="fas fa-camera"></i> <span data-tr="Takım Görselleri" data-en="Team Gallery">Takım Görselleri</span></div>
-												<div class="photo-gallery" data-gallery-id="tekno-robotics">
-													<div class="gallery-item" onclick="openLightbox('tekno-robotics', 0)">
-														<img src="Resimler/GEDİK ROBOTİCS TEAM/8.jpeg" alt="İKA Ekip Toplantısı" loading="lazy">
-														<div class="gallery-caption" data-tr="İnsansız Kara Aracı ekibiyle 2025 toplantı anı" data-en="Meeting with the Unmanned Ground Vehicle team in 2025">İnsansız Kara Aracı ekibiyle 2025 toplantı anı</div>
-													</div>
-													<div class="gallery-item" onclick="openLightbox('tekno-robotics', 1)">
-														<img src="Resimler/GEDİK ROBOTİCS TEAM/9.jpeg" alt="Stand-up Toplantısı" loading="lazy">
-														<div class="gallery-caption" data-tr="Takım çalışması öncesi stand-up toplantısı" data-en="Stand-up meeting before a team work session">Takım çalışması öncesi stand-up toplantısı</div>
-													</div>
-													<div class="gallery-item" onclick="openLightbox('tekno-robotics', 2)">
-														<img src="Resimler/GEDİK ROBOTİCS TEAM/13.jpeg" alt="Şartname İnceleme" loading="lazy">
-														<div class="gallery-caption" data-tr="2026 sezonu ilk rapor ve şartname toplantısı" data-en="First report and specifications meeting for the 2026 season">2026 sezonu ilk rapor ve şartname toplantısı</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</article>
-								</section>
-
+							<div class="project-visuals">
+								<div class="gallery-heading"><i class="fas fa-camera"></i> <span
+										data-tr="Takım Görselleri" data-en="Team Gallery">Takım Görselleri</span></div>
+								<div class="photo-gallery" data-gallery-id="tekno-nameless">
+									<div class="gallery-item" onclick="openLightbox('tekno-nameless', 0)">
+										<img src="Resimler/Team Nameless/1.jpeg" alt="SolarİST Fuarı" loading="lazy">
+										<div class="gallery-caption"
+											data-tr="SolarİST Fuarı — İstanbul Elektrik Teknisyenleri Odasında model uydumuzu tanıtırken"
+											data-en="SolarİST Fair — Presenting our model satellite at the Istanbul Chamber of Electrical Technicians">
+											SolarİST Fuarı — İstanbul Elektrik Teknisyenleri Odasında model uydumuzu
+											tanıtırken</div>
+									</div>
+									<div class="gallery-item" onclick="openLightbox('tekno-nameless', 1)">
+										<img src="Resimler/Team Nameless/2.jpeg" alt="SolarİST Başkan" loading="lazy">
+										<div class="gallery-caption"
+											data-tr="SolarİST Fuarında İstanbul Elektrik Teknisyenleri Odası Başkanı ile"
+											data-en="With the President of the Istanbul Chamber of Electrical Technicians at the SolarİST Fair">
+											SolarİST Fuarında İstanbul Elektrik Teknisyenleri Odası Başkanı ile</div>
+									</div>
+									<div class="gallery-item" onclick="openLightbox('tekno-nameless', 2)"
+										style="grid-column: span 2;">
+										<img src="Resimler/Team Nameless/4.jpeg" alt="Selçuk Bayraktar" loading="lazy">
+										<div class="gallery-caption"
+											data-tr="TEKNOFEST 2024 — Selçuk Bayraktar ile birlikte"
+											data-en="TEKNOFEST 2024 — With Selçuk Bayraktar">TEKNOFEST 2024 — Selçuk
+											Bayraktar ile birlikte</div>
+									</div>
+								</div>
+							</div>
 						</div>
-					</div>
+					</article>
 
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
-
-								<!-- Profile -->
-									<section id="profile" class="profile-card reveal">
-										<header class="major">
-											<h2 data-tr="Kısa Profil" data-en="Short Profile">Kısa Profil</h2>
-										</header>
-										<ul class="note-list" id="summary-points"></ul>
-									</section>
-
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2 data-tr="Menü" data-en="Menu">Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html"><i class="fas fa-home"></i> <span data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</span></a></li>
-										<li><a href="projeler.html"><i class="fas fa-project-diagram"></i> <span data-tr="Projeler" data-en="Projects">Projeler</span></a></li>
-										<li><a href="kariyer.html"><i class="fas fa-briefcase"></i> <span data-tr="Kariyer Geçmişi" data-en="Career">Kariyer Geçmişi</span></a></li>
-										<li><a href="certificates.html"><i class="fas fa-certificate"></i> <span data-tr="Sertifikalar ve Belgeler" data-en="Certificates">Sertifikalar ve Belgeler</span></a></li>
-										<li><a href="articles.html"><i class="fas fa-file-alt"></i> <span data-tr="Makaleler ve Yayınlar" data-en="Publications">Makaleler ve Yayınlar</span></a></li>
-										<li><a href="teknofest.html" class="active"><i class="fas fa-rocket"></i> <span data-tr="TEKNOFEST" data-en="TEKNOFEST">TEKNOFEST</span></a></li>
-									</ul>
-								</nav>
-
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright" data-tr="&copy; 2026 Yusuf İslam Budak. Tüm hakları saklıdır." data-en="&copy; 2026 Yusuf Islam Budak. All rights reserved.">&copy; 2026 Yusuf İslam Budak. Public profile data from GitHub and LinkedIn. Theme adapted from <a href="https://html5up.net">HTML5 UP</a>.</p>
-								</footer>
-
+					<!-- Featured Project: Gedik Robotics Team -->
+					<article class="featured-project reveal" id="gedik-robotics">
+						<div class="featured-header" onclick="toggleProject('gedik-robotics')">
+							<h2>Gedik Robotics Team</h2>
+							<i class="fas fa-chevron-down expand-icon"></i>
+							<div class="project-tags">
+								<span class="tag" data-tr="İnsansız Kara Aracı (İKA)"
+									data-en="Unmanned Ground Vehicle (UGV)">İnsansız Kara Aracı (İKA)</span>
+								<span class="tag" data-tr="İnsansız Sualtı Aracı (İSA)"
+									data-en="Unmanned Underwater Vehicle (ROV)">İnsansız Sualtı Aracı (İSA)</span>
+								<span class="tag" data-tr="Otonom Sistemler" data-en="Autonomous Systems">Otonom
+									Sistemler</span>
+								<span class="tag" data-tr="Takım Kaptanı" data-en="Team Captain">Takım Kaptanı</span>
+								<span class="tag" data-tr="Derece: Çeyrek Finalist (2025)"
+									data-en="Rank: Quarter-Finalist (2025)">Derece: Çeyrek Finalist (2025)</span>
+								<span class="tag" data-tr="Derece: Çeyrek Finalist (2026)"
+									data-en="Rank: Quarter-Finalist (2026)">Derece: Çeyrek Finalist (2026)</span>
+							</div>
+							<p style="font-weight: 600; color: var(--text-soft); margin-bottom: 0;"
+								data-tr="<strong>Görev:</strong> Takım Kaptanı (Ocak 2025 - Günümüz)"
+								data-en="<strong>Role:</strong> Team Captain (Jan 2025 - Present)">
+								<strong>Görev:</strong> Takım Kaptanı (Ocak 2025 - Günümüz)</p>
 						</div>
-					</div>
+						<div class="featured-body">
+							<div class="project-details">
+								<p data-tr="Gedik Üniversitesi bünyesinde, gelişmiş İnsansız Kara Araçları (İKA) ve İnsansız Sualtı Araçları (İSA) tasarlamak üzere kurulan teknik proje takımıdır. Takım faaliyetleri kapsamında ulusal otonomi ve tasarım yarışmalarına hazırlık yapılmaktadır."
+									data-en="This is a technical project team established at Gedik University to design advanced Unmanned Ground Vehicles (UGV) and Unmanned Underwater Vehicles (ROV). Within the scope of the team's activities, preparations are made for national autonomy and design competitions.">
+									Gedik Üniversitesi bünyesinde, gelişmiş İnsansız Kara Araçları (İKA) ve İnsansız
+									Sualtı Araçları (İSA) tasarlamak üzere kurulan teknik proje takımıdır. Takım
+									faaliyetleri kapsamında ulusal otonomi ve tasarım yarışmalarına hazırlık
+									yapılmaktadır.</p>
+
+								<h3 data-tr="Görev Kapsamı ve Proje Yönetimi"
+									data-en="Scope of Role and Project Management">Görev Kapsamı ve Proje Yönetimi</h3>
+								<p data-tr="Ekip lideri sıfatıyla mekanik, yazılım ve elektronik alt birimlerinin entegre bir biçimde çalışmasından sorumluyum. Projenin sistem tasarımı süreçlerini, bütçe yönetimi ve görev dağılımlarını üstlenerek, aracın otonom yazılım fonksiyonlarını destekliyorum. Hem karada hem suda zorlu şartlarda çalışabilecek donanımların geliştirilmesi amaçlanmaktadır."
+									data-en="As the team captain, I am responsible for the integrated operation of the mechanical, software, and electronic sub-units. I undertake the system design processes, budget management, and task distribution of the project, and support the autonomous software functions of the vehicle. The aim is to develop hardware that can operate in harsh conditions both on land and in water.">
+									Ekip lideri sıfatıyla mekanik, yazılım ve elektronik alt birimlerinin entegre bir
+									biçimde çalışmasından sorumluyum. Projenin sistem tasarımı süreçlerini, bütçe
+									yönetimi ve görev dağılımlarını üstlenerek, aracın otonom yazılım fonksiyonlarını
+									destekliyorum. Hem karada hem suda zorlu şartlarda çalışabilecek donanımların
+									geliştirilmesi amaçlanmaktadır.</p>
+
+								<div class="project-stats">
+									<div class="stat-box">
+										<i class="icon solid fa-robot"></i>
+										<span data-tr="Gelişmiş Otonomi" data-en="Advanced Autonomy">Gelişmiş
+											Otonomi</span>
+										<small style="color:var(--text-soft)" data-tr="İKA ve İSA sistem tasarımı"
+											data-en="UGV and ROV system design">İKA ve İSA sistem tasarımı</small>
+									</div>
+									<div class="stat-box">
+										<i class="icon solid fa-project-diagram"></i>
+										<span data-tr="Çok Disiplinli" data-en="Multidisciplinary">Çok Disiplinli</span>
+										<small style="color:var(--text-soft)"
+											data-tr="Yazılım, Mekanik ve Elektronik koordinasyonu"
+											data-en="Software, Mechanics & Electronics Coordination">Yazılım, Mekanik ve
+											Elektronik koordinasyonu</small>
+									</div>
+								</div>
+							</div>
+
+							<div class="project-visuals">
+								<div class="gallery-heading"><i class="fas fa-camera"></i> <span
+										data-tr="Takım Görselleri" data-en="Team Gallery">Takım Görselleri</span></div>
+								<div class="photo-gallery" data-gallery-id="tekno-robotics">
+									<div class="gallery-item" onclick="openLightbox('tekno-robotics', 0)">
+										<img src="Resimler/GEDİK ROBOTİCS TEAM/8.jpeg" alt="İKA Ekip Toplantısı"
+											loading="lazy">
+										<div class="gallery-caption"
+											data-tr="İnsansız Kara Aracı ekibiyle 2025 toplantı anı"
+											data-en="Meeting with the Unmanned Ground Vehicle team in 2025">İnsansız
+											Kara Aracı ekibiyle 2025 toplantı anı</div>
+									</div>
+									<div class="gallery-item" onclick="openLightbox('tekno-robotics', 1)">
+										<img src="Resimler/GEDİK ROBOTİCS TEAM/9.jpeg" alt="Stand-up Toplantısı"
+											loading="lazy">
+										<div class="gallery-caption"
+											data-tr="Takım çalışması öncesi stand-up toplantısı"
+											data-en="Stand-up meeting before a team work session">Takım çalışması öncesi
+											stand-up toplantısı</div>
+									</div>
+									<div class="gallery-item" onclick="openLightbox('tekno-robotics', 2)">
+										<img src="Resimler/GEDİK ROBOTİCS TEAM/13.jpeg" alt="Şartname İnceleme"
+											loading="lazy">
+										<div class="gallery-caption"
+											data-tr="2026 sezonu ilk rapor ve şartname toplantısı"
+											data-en="First report and specifications meeting for the 2026 season">2026
+											sezonu ilk rapor ve şartname toplantısı</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+				</section>
 
 			</div>
+		</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-            <script src="portfolio-data.js"></script>
-            <script>
-                (function () {
-                    const profile = window.portfolioProfile;
-                    if (!profile) {
-                        return;
-                    }
-                    
-                    const summaryPoints = document.getElementById('summary-points');
-                    if (summaryPoints && profile.summaryPoints) {
-                        summaryPoints.innerHTML = profile.summaryPoints.map(function (p) {
-                            const tr = p.tr || p;
-                            const en = p.en || p;
-                            return `<li data-tr="${tr}" data-en="${en}">${tr}</li>`;
-                        }).join('');
-                    }
-                    if (window.applyLanguage) window.applyLanguage();
+		<!-- Sidebar -->
+		<div id="sidebar">
+			<div class="inner">
 
-                    const teknoGrid = document.getElementById('tekno-grid');
-                    if (teknoGrid && profile.teknofest) {
-                        // Dynamically generated structure removed to use hardcoded accordion in HTML
-                    }
-                })();
+				<!-- Profile -->
+				<section id="profile" class="profile-card reveal">
+					<header class="major">
+						<h2 data-tr="Kısa Profil" data-en="Short Profile">Kısa Profil</h2>
+					</header>
+					<ul class="note-list" id="summary-points"></ul>
+				</section>
 
-                window.toggleProject = function(id, forceOpen = false) {
-                    const project = document.getElementById(id);
-                    if (project) {
-                        const body = project.querySelector('.featured-body');
-                        if (forceOpen || !project.classList.contains('expanded')) {
-                            project.classList.add('expanded');
-                            body.classList.add('expanded');
-                            if (forceOpen) {
-                                setTimeout(() => project.scrollIntoView({ behavior: 'smooth', block: 'center' }), 300);
-                            }
-                        } else {
-                            project.classList.remove('expanded');
-                            body.classList.remove('expanded');
-                        }
-                    }
-                };
+				<!-- Menu -->
+				<nav id="menu">
+					<header class="major">
+						<h2 data-tr="Menü" data-en="Menu">Menu</h2>
+					</header>
+					<ul>
+						<li><a href="index.html"><i class="fas fa-home"></i> <span data-tr="Ana Sayfa"
+									data-en="Home">Ana Sayfa</span></a></li>
+						<li><a href="projeler.html"><i class="fas fa-project-diagram"></i> <span data-tr="Projeler"
+									data-en="Projects">Projeler</span></a></li>
+						<li><a href="kariyer.html"><i class="fas fa-briefcase"></i> <span data-tr="Kariyer Geçmişi"
+									data-en="Career">Kariyer Geçmişi</span></a></li>
+						<li><a href="certificates.html"><i class="fas fa-certificate"></i> <span
+									data-tr="Sertifikalar ve Belgeler" data-en="Certificates">Sertifikalar ve
+									Belgeler</span></a></li>
+						<li><a href="articles.html"><i class="fas fa-file-alt"></i> <span
+									data-tr="Makaleler ve Yayınlar" data-en="Publications">Makaleler ve
+									Yayınlar</span></a></li>
+						<li><a href="teknofest.html" class="active"><i class="fas fa-rocket"></i> <span
+									data-tr="TEKNOFEST" data-en="TEKNOFEST">TEKNOFEST</span></a></li>
+					</ul>
+				</nav>
 
-                // Lightbox system
-                (function() {
-                    const overlay = document.createElement('div');
-                    overlay.className = 'lightbox-overlay';
-                    overlay.innerHTML = `
+				<!-- Footer -->
+				<footer id="footer">
+					<p class="copyright" data-tr="&copy; 2026 Yusuf İslam Budak. Tüm hakları saklıdır."
+						data-en="&copy; 2026 Yusuf Islam Budak. All rights reserved.">&copy; 2026 Yusuf İslam Budak.
+						Public profile data from GitHub and LinkedIn. Theme adapted from <a
+							href="https://html5up.net">HTML5 UP</a>.</p>
+				</footer>
+
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="portfolio-data.js"></script>
+	<script>
+		(function () {
+			const profile = window.portfolioProfile;
+			if (!profile) {
+				return;
+			}
+
+			const summaryPoints = document.getElementById('summary-points');
+			if (summaryPoints && profile.summaryPoints) {
+				summaryPoints.innerHTML = profile.summaryPoints.map(function (p) {
+					const tr = p.tr || p;
+					const en = p.en || p;
+					return `<li data-tr="${tr}" data-en="${en}">${tr}</li>`;
+				}).join('');
+			}
+			if (window.applyLanguage) window.applyLanguage();
+
+			const teknoGrid = document.getElementById('tekno-grid');
+			if (teknoGrid && profile.teknofest) {
+				// Dynamically generated structure removed to use hardcoded accordion in HTML
+			}
+		})();
+
+		window.toggleProject = function (id, forceOpen = false) {
+			const project = document.getElementById(id);
+			if (project) {
+				const body = project.querySelector('.featured-body');
+				if (forceOpen || !project.classList.contains('expanded')) {
+					project.classList.add('expanded');
+					body.classList.add('expanded');
+					if (forceOpen) {
+						setTimeout(() => project.scrollIntoView({ behavior: 'smooth', block: 'center' }), 300);
+					}
+				} else {
+					project.classList.remove('expanded');
+					body.classList.remove('expanded');
+				}
+			}
+		};
+
+		// Lightbox system
+		(function () {
+			const overlay = document.createElement('div');
+			overlay.className = 'lightbox-overlay';
+			overlay.innerHTML = `
                         <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
                         <button class="lightbox-nav prev" onclick="navLightbox(-1)"><i class="fas fa-chevron-left"></i></button>
                         <button class="lightbox-nav next" onclick="navLightbox(1)"><i class="fas fa-chevron-right"></i></button>
                         <img src="" alt="">
                         <div class="lightbox-caption"></div>
                     `;
-                    document.body.appendChild(overlay);
-                    overlay.addEventListener('click', function(e) {
-                        if (e.target === overlay) closeLightbox();
-                    });
+			document.body.appendChild(overlay);
+			overlay.addEventListener('click', function (e) {
+				if (e.target === overlay) closeLightbox();
+			});
 
-                    let currentGallery = [];
-                    let currentIndex = 0;
+			let currentGallery = [];
+			let currentIndex = 0;
 
-                    window.openLightbox = function(galleryId, index) {
-                        const gallery = document.querySelector(`[data-gallery-id="${galleryId}"]`);
-                        if (!gallery) return;
-                        const items = gallery.querySelectorAll('.gallery-item img');
-                        const captions = gallery.querySelectorAll('.gallery-caption');
-                        currentGallery = Array.from(items).map((img, i) => ({
-                            src: img.src,
-                            caption: captions[i] ? captions[i].textContent : ''
-                        }));
-                        currentIndex = index;
-                        showLightboxImage();
-                        overlay.classList.add('active');
-                        document.body.style.overflow = 'hidden';
-                    };
+			window.openLightbox = function (galleryId, index) {
+				const gallery = document.querySelector(`[data-gallery-id="${galleryId}"]`);
+				if (!gallery) return;
+				const items = gallery.querySelectorAll('.gallery-item img');
+				const captions = gallery.querySelectorAll('.gallery-caption');
+				currentGallery = Array.from(items).map((img, i) => ({
+					src: img.src,
+					caption: captions[i] ? captions[i].textContent : ''
+				}));
+				currentIndex = index;
+				showLightboxImage();
+				overlay.classList.add('active');
+				document.body.style.overflow = 'hidden';
+			};
 
-                    window.closeLightbox = function() {
-                        overlay.classList.remove('active');
-                        document.body.style.overflow = '';
-                    };
+			window.closeLightbox = function () {
+				overlay.classList.remove('active');
+				document.body.style.overflow = '';
+			};
 
-                    window.navLightbox = function(dir) {
-                        currentIndex = (currentIndex + dir + currentGallery.length) % currentGallery.length;
-                        showLightboxImage();
-                    };
+			window.navLightbox = function (dir) {
+				currentIndex = (currentIndex + dir + currentGallery.length) % currentGallery.length;
+				showLightboxImage();
+			};
 
-                    function showLightboxImage() {
-                        if (!currentGallery[currentIndex]) return;
-                        overlay.querySelector('img').src = currentGallery[currentIndex].src;
-                        overlay.querySelector('.lightbox-caption').textContent = currentGallery[currentIndex].caption;
-                    }
+			function showLightboxImage() {
+				if (!currentGallery[currentIndex]) return;
+				overlay.querySelector('img').src = currentGallery[currentIndex].src;
+				overlay.querySelector('.lightbox-caption').textContent = currentGallery[currentIndex].caption;
+			}
 
-                    document.addEventListener('keydown', function(e) {
-                        if (!overlay.classList.contains('active')) return;
-                        if (e.key === 'Escape') closeLightbox();
-                        if (e.key === 'ArrowLeft') navLightbox(-1);
-                        if (e.key === 'ArrowRight') navLightbox(1);
-                    });
-                })();
+			document.addEventListener('keydown', function (e) {
+				if (!overlay.classList.contains('active')) return;
+				if (e.key === 'Escape') closeLightbox();
+				if (e.key === 'ArrowLeft') navLightbox(-1);
+				if (e.key === 'ArrowRight') navLightbox(1);
+			});
+		})();
 
-                // Theme Toggle functionality
+		// Theme Toggle functionality
 
-                // Theme Toggle functionality
-                const themeToggle = document.getElementById('theme-toggle');
-                const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+		// Theme Toggle functionality
+		const themeToggle = document.getElementById('theme-toggle');
+		const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 
-                if (currentTheme) {
-                    document.documentElement.setAttribute('data-theme', currentTheme);
-                    if (currentTheme === 'dark' && themeToggle) {
-                        themeToggle.classList.replace('fa-moon', 'fa-sun');
-                    }
-                } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                    if (themeToggle) themeToggle.classList.replace('fa-moon', 'fa-sun');
-                }
+		if (currentTheme) {
+			document.documentElement.setAttribute('data-theme', currentTheme);
+			if (currentTheme === 'dark' && themeToggle) {
+				themeToggle.classList.replace('fa-moon', 'fa-sun');
+			}
+		} else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			document.documentElement.setAttribute('data-theme', 'dark');
+			if (themeToggle) themeToggle.classList.replace('fa-moon', 'fa-sun');
+		}
 
-                if (themeToggle) {
-                    themeToggle.addEventListener('click', function (e) {
-                        let theme = 'light';
-                        if (document.documentElement.hasAttribute('data-theme')) {
-                            document.documentElement.removeAttribute('data-theme');
-                            themeToggle.classList.replace('fa-sun', 'fa-moon');
-                        } else {
-                            document.documentElement.setAttribute('data-theme', 'dark');
-                            themeToggle.classList.replace('fa-moon', 'fa-sun');
-                            theme = 'dark';
-                        }
-                        localStorage.setItem('theme', theme);
-                    });
-                }
+		if (themeToggle) {
+			themeToggle.addEventListener('click', function (e) {
+				let theme = 'light';
+				if (document.documentElement.hasAttribute('data-theme')) {
+					document.documentElement.removeAttribute('data-theme');
+					themeToggle.classList.replace('fa-sun', 'fa-moon');
+				} else {
+					document.documentElement.setAttribute('data-theme', 'dark');
+					themeToggle.classList.replace('fa-moon', 'fa-sun');
+					theme = 'dark';
+				}
+				localStorage.setItem('theme', theme);
+			});
+		}
 
-                // Scroll Reveal Logic
-                const observerOptions = {
-                    root: null,
-                    rootMargin: '0px',
-                    threshold: 0.1
-                };
-                const observer = new IntersectionObserver((entries, obs) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('active');
-                            obs.unobserve(entry.target);
-                        }
-                    });
-                }, observerOptions);
+		// Scroll Reveal Logic
+		const observerOptions = {
+			root: null,
+			rootMargin: '0px',
+			threshold: 0.1
+		};
+		const observer = new IntersectionObserver((entries, obs) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('active');
+					obs.unobserve(entry.target);
+				}
+			});
+		}, observerOptions);
 
-                document.addEventListener('DOMContentLoaded', () => {
-                    const reveals = document.querySelectorAll('section, .tekno-card, .profile-card, .featured-project');
-                    reveals.forEach((el, index) => {
-                        el.classList.add('reveal');
-                        if (el.classList.contains('tekno-card') || el.classList.contains('featured-project')) {
-                            el.style.transitionDelay = `${(index % 4) * 0.1}s`;
-                        }
-                        observer.observe(el);
-                    });
-                });
-            </script>
-            <script src="assets/js/global-lang.js"></script>
-            <script src="assets/js/dynamic-bg.js"></script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const reveals = document.querySelectorAll('section, .tekno-card, .profile-card, .featured-project');
+			reveals.forEach((el, index) => {
+				el.classList.add('reveal');
+				if (el.classList.contains('tekno-card') || el.classList.contains('featured-project')) {
+					el.style.transitionDelay = `${(index % 4) * 0.1}s`;
+				}
+				observer.observe(el);
+			});
+		});
+	</script>
+	<script src="assets/js/global-lang.js"></script>
+	<script src="assets/js/dynamic-bg.js"></script>
 
-	</body>
+</body>
+
 </html>
