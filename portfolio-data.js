@@ -141,6 +141,7 @@ window.portfolioProfile = {
 			date: '20.09.2024',
 			description: '42 saatlik eğitim sonucunda B2 Seviyesinde İngilizce Gramer, Okuma ve İletişim becerileri sertifikası.',
 			descriptionEn: 'Certificate of B2 Level English Grammar, Reading and Communication skills achieved after 42 hours of training.',
+			logo: 'Logolar/Gedik.png',
 			urlTr: 'Sertifikalar/B2 Seviye İngilizce Eğitimi.pdf',
 			urlEn: 'Sertifikalar/B2 Level English Training.pdf'
 		},
@@ -151,6 +152,7 @@ window.portfolioProfile = {
 			date: '19.09.2024',
 			description: '60 saatlik eğitim sonucunda, ISO 27001, KVKK, Stratejik Planlama ve Toplam Kalite Yönetimi uzmanlık sertifikası.',
 			descriptionEn: 'Specialization certificate in ISO 27001, GDPR/KVKK, Strategic Planning, and Total Quality Management after 60 hours of training.',
+			logo: 'Logolar/Gedik.png',
 			urlTr: 'Sertifikalar/Bilgi Güvenliği Sorumlusu Eğitimi.pdf',
 			urlEn: 'Sertifikalar/Information Security Officer Training.pdf'
 		},
@@ -161,6 +163,7 @@ window.portfolioProfile = {
 			date: '20.09.2024',
 			description: '60 saatlik kapsamlı eğitimle temel Python programlama, veri yapıları ve makine öğrenmesi algoritmaları eğitimi.',
 			descriptionEn: 'Training on basic Python programming, data structures, and machine learning algorithms via a comprehensive 60-hour program.',
+			logo: 'Logolar/Gedik.png',
 			urlTr: 'Sertifikalar/Python ile Veri Bilimi ve Makine Öğrenmesi Eğitimi.pdf',
 			urlEn: 'Sertifikalar/Data Science and Machine Learning Training with Python.pdf'
 		},
@@ -171,6 +174,7 @@ window.portfolioProfile = {
 			date: '10.09.2024',
 			description: '10 saatlik eğitim sonucunda ISO 27001 standartlarında bilgi güvenliği süreçlerinin yönetimi ve uygulanması.',
 			descriptionEn: 'Management and implementation of information security processes at ISO 27001 standards after 10 hours of training.',
+			logo: 'Logolar/Gedik.png',
 			urlTr: 'Sertifikalar/ISO 27001 Bilgi Güvenliği Yönetim Sistemi Eğitimi.pdf',
 			urlEn: 'Sertifikalar/ISO 27001 Information Security Management System Training.pdf'
 		},
@@ -181,6 +185,7 @@ window.portfolioProfile = {
 			date: '20.09.2024',
 			description: 'Sürekli Eğitim Uygulama ve Araştırma Merkezi tarafından verilen 45 saatlik iletişim ve beden dili eğitim programı.',
 			descriptionEn: 'A 45-hour communication and body language training program provided by the Continuing Education Application and Research Center.',
+			logo: 'Logolar/Gedik.png',
 			urlTr: 'Sertifikalar/Beden Dili Eğitimi.pdf',
 			urlEn: ''
 		},
@@ -191,6 +196,7 @@ window.portfolioProfile = {
 			date: '20.09.2024',
 			description: 'Grup sinerjisi, takım kurma aşamaları ve motivasyon odaklı 97 saatlik liderlik eğitimi.',
 			descriptionEn: 'A 97-hour leadership training focused on group synergy, team building stages, and motivation.',
+			logo: 'Logolar/Gedik.png',
 			urlTr: 'Sertifikalar/Liderlik ve Takım Çalışması Eğitimi.pdf',
 			urlEn: ''
 		},
@@ -199,8 +205,9 @@ window.portfolioProfile = {
 			titleEn: 'Meeting Management and Presentation Training',
 			issuer: 'İstanbul Gedik Üniversitesi',
 			date: '20.09.2024',
-			description: 'Kurum içi ve dışı toplantı dinamikleri, planlama ve roller üzerine 90 saatlik sunum ve yönetim eğitimi.',
+			description: 'Kurum içi ve dışı toplantı dinamikleri, planlama ve roller üzerine 90 saatlik sunum ve management eğitimi.',
 			descriptionEn: 'A 90-hour presentation and management training on internal and external meeting dynamics, planning, and roles.',
+			logo: 'Logolar/Gedik.png',
 			urlTr: 'Sertifikalar/Toplantı Yönetimi ve Toplantılarda Sunum Eğitimi.pdf',
 			urlEn: ''
 		},
@@ -211,6 +218,7 @@ window.portfolioProfile = {
 			date: '20.09.2024',
 			description: 'Kişilerarası, örgütsel, kitle ve uluslararası iletişim dinamiklerini kapsayan 96 saatlik kapsamlı eğitim.',
 			descriptionEn: 'Comprehensive 96-hour training covering interpersonal, organizational, mass, and international communication dynamics.',
+			logo: 'Logolar/Gedik.png',
 			urlTr: 'Sertifikalar/İletişim Teknikleri Eğitim.pdf',
 			urlEn: ''
 		},
@@ -221,6 +229,7 @@ window.portfolioProfile = {
 			date: '30.05.2023',
 			description: '6 saatlik uygulamalı eğitim sonucunda ISO 9001:2015 Kalite Yönetim Sistemi standardında verilen katılım belgesi.',
 			descriptionEn: 'Certificate of attendance issued in the ISO 9001:2015 Quality Management System standard following a 6-hour practical training.',
+			logo: 'Logolar/Gedik.png',
 			urlTr: 'Sertifikalar/TS EN ISO 90012015 EĞİTİMİ.pdf',
 			urlEn: ''
 		},
@@ -231,6 +240,7 @@ window.portfolioProfile = {
 			date: '20.03.2026',
 			description: 'ETSC\'26 kapsamında gerçekleştirilen bilimsel çalışmalara katılım ve katkı belgesi.',
 			descriptionEn: 'Certificate of participation and contribution to scientific studies within the scope of ETSC\'26.',
+			logo: 'Logolar/Gedik.png',
 			urlTr: 'Sertifikalar/Katılım Belgesi - etsc26.pdf',
 			urlEn: ''
 		},
@@ -241,6 +251,7 @@ window.portfolioProfile = {
 			date: '10.04.2025',
 			description: 'Gedik Robotics Team bünyesinde yürütülen robotik projeleri ve takım liderliği süreçlerindeki üstün gayret ve katkı teşekkürü.',
 			descriptionEn: 'Appreciation for outstanding efforts and contributions in robotic projects and team leadership processes within the Gedik Robotics Team.',
+			logo: 'Logolar/Gedik.png',
 			urlTr: 'Sertifikalar/Teşekkür belgesi -Gedik Robotics.pdf',
 			urlEn: ''
 		},
@@ -251,6 +262,7 @@ window.portfolioProfile = {
 			date: '25.10.2023',
 			description: 'Yüksek Basınç ve İrtifada GPS Veri Stabilizasyonu projesindeki başarılı çalışmalar ve araştırma katkıları.',
 			descriptionEn: 'Appreciation for successful work and research contributions in the project of GPS Data Stabilization at High Pressure and Altitude.',
+			logo: 'Logolar/Gedik.png',
 			urlTr: 'Sertifikalar/Teşekkür belgesi -Yüksek Basınç ve İrtifada GPS Veri Stabilizasyonu.pdf',
 			urlEn: ''
 		},
