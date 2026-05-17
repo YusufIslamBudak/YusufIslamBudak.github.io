@@ -1,12 +1,12 @@
 window.portfolioProfile = {
 	name: 'Yusuf İslam Budak',
 	displayName: 'Yusuf İslam Budak',
-	headline: 'Gömülü Sistemler ve Yapay Zeka Geliştiricisi',
-	headlineEn: 'Embedded Systems & AI Developer',
+	headline: '',
+	headlineEn: '',
 	intro: 'Donanım ve yazılımın kesişim noktasında, otonom sistemler ve IoT çözümleri geliştiriyorum.',
 	introEn: 'Developing autonomous systems and IoT solutions at the intersection of hardware and software.',
-	bio: 'Gömülü sistemler, IoT ve yapay zeka alanlarında derinlemesine teknik bilgiye sahip bir Mühendis Adayıyım. Arı Drones bünyesinde otonom uçuş yazılımları ve kritik veri analiz modülleri geliştirme tecrübesine sahibim. TEKNOFEST ve TÜBİTAK projelerinde sergilediğim başarılarla; C++, Python ve C# dillerinde yüksek performanslı sensör füzyonu ve kontrol sistemleri mimarileri inşa etmekteyim. Teknolojiyi sınırlarına zorlayan projelerde aktif rol alarak, otonom geleceği tasarlamayı hedefliyorum.',
-	bioEn: 'I am an Engineering Candidate with deep technical expertise in embedded systems, IoT, and artificial intelligence. I have extensive experience developing autonomous flight software and critical data analysis modules at Arı Drones. Through successes in TEKNOFEST and TÜBİTAK projects, I build high-performance sensor fusion and control system architectures using C++, Python, and C#. I aim to design the autonomous future by taking active roles in projects that push the boundaries of technology.',
+	bio: 'Gömülü sistemler, IoT ve yapay zeka alanlarında detaylı teknik bilgilere ve tecrübeye sahip bir Mühendis Adayıyım. Arı Drones bünyesinde otonom uçuş yazılımları ve sensör sistemleri geliştirme tecrübesine sahibim. TEKNOFEST ve TÜBİTAK projelerinde sergilediğim başarılarla; C++, Python ve C# dillerinde yüksek performanslı sensör füzyonu ve kontrol sistemleri mimarileri inşa etmekteyim. Teknolojiyi sınırlarına zorlayan projelerde aktif rol alarak, otonom geleceği tasarlamayı hedefliyorum.',
+	bioEn: 'I am an Engineering Candidate with detailed technical knowledge and experience in embedded systems, IoT, and artificial intelligence. I have extensive experience developing autonomous flight software and sensor systems at Arı Drones. Through successes in TEKNOFEST and TÜBİTAK projects, I build high-performance sensor fusion and control system architectures using C++, Python, and C#. I aim to design the autonomous future by taking active roles in projects that push the boundaries of technology.',
 	avatar: 'images/PP.jpg',
 	githubUrl: 'https://github.com/YusufIslamBudak',
 	linkedinUrl: 'https://www.linkedin.com/in/yusuf-islam-budak/',
@@ -14,7 +14,7 @@ window.portfolioProfile = {
 	contributionCount: 28,
 	summaryPoints: [
 		{ tr: 'Gömülü AI ve otonom sistem mimarileri üzerine odaklı çalışmalar.', en: 'Focused studies on embedded AI and autonomous system architectures.' },
-		{ tr: 'Arı Drones bünyesinde kritik uçuş yazılımları ve veri analiz modülleri geliştirme tecrübesi.', en: 'Experience developing critical flight software and data analysis modules at Arı Drones.' },
+		{ tr: 'Arı Drones bünyesinde otonom uçuş yazılımları ve sensör sistemleri geliştirme tecrübesi.', en: 'Experience developing autonomous flight software and sensor systems at Arı Drones.' },
 		{ tr: 'TEKNOFEST ve TÜBİTAK projelerinde yüksek hassasiyetli sensör füzyonu ve kontrol sistemleri tasarımı.', en: 'Design of high-precision sensor fusion and control systems in TEKNOFEST and TÜBİTAK projects.' }
 	],
 	stats: [
@@ -24,7 +24,7 @@ window.portfolioProfile = {
 		{ value: '5+', label: 'Teknoloji alanı', labelEn: 'Tech stacks' }
 	],
 	skills: [
-		'Flutter', 'Python', 'C#', 'ASP.NET', 'HTML/CSS', 'JavaScript', 'Embedded Systems', 'UI geli\u015ftirme'
+		'C++', 'Python', 'C#', 'C', 'Git', 'Linux', 'Raspberry Pi', 'Jetson Nano', 'ESP32', 'STM32', 'Arduino', 'Flutter', 'ASP.NET Core', 'HTML/CSS', 'JavaScript'
 	],
 	highlights: [
 		{

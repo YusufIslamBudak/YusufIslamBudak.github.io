@@ -52,10 +52,28 @@
 			padding: 0.4rem 0.8rem;
 			border-radius: 999px;
 			background: var(--accent-soft);
+			border: 1.5px solid #4a5568;
 			color: var(--accent-2);
 			font-size: 0.78rem;
 			font-weight: 700;
 			letter-spacing: 0.02em;
+			transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+
+		/* Koyu temada çerçevelerin her zaman görünür kalması için */
+		[data-theme="dark"] .hero-pill,
+		[data-theme="dark"] .skill-tag,
+		[data-theme="dark"] .project-tag,
+		[data-theme="dark"] .note-chip {
+			border-color: rgba(255, 255, 255, 0.2) !important;
+		}
+
+		.skill-tag:hover {
+			transform: translateY(-2.5px) scale(1.03);
+			border-color: var(--accent) !important;
+			color: var(--accent);
+			background: rgba(31, 111, 235, 0.06);
+			box-shadow: 0 6px 12px var(--shadow-color);
 		}
 
 		.banner-meta,
@@ -198,6 +216,7 @@
 							<p id="hero-intro">Gömülü sistemler, yazılım geliştirme ve yapay zeka alanlarında çalışmalar.</p>
 						</header>
 						<p id="hero-bio">IoT, otonom sistemler ve gömülü AI üzerine odaklanan bir mühendis adayıyım.</p>
+						<h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--text-strong);" data-tr="Yazılım Dilleri ve Teknolojiler" data-en="Programming Languages & Technologies">Yazılım Dilleri ve Teknolojiler</h4>
 						<ul class="banner-meta" id="hero-tags"></ul>
 						<ul class="actions">
 							<li><a href="projeler.html" class="button big" data-tr="Projelerimi İncele" data-en="View My Projects">Projelerimi İncele</a></li>
@@ -349,7 +368,7 @@
 
 			const heroTags = document.getElementById('hero-tags');
 			if (heroTags) {
-				heroTags.innerHTML = profile.skills.slice(0, 6).map(function (skill) {
+				heroTags.innerHTML = profile.skills.map(function (skill) {
 					return '<li><span class="skill-tag">' + skill + '</span></li>';
 				}).join('');
 			}
