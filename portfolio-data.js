@@ -17,14 +17,8 @@ window.portfolioProfile = {
 		{ tr: 'Arı Drones bünyesinde otonom uçuş yazılımları ve sensör sistemleri geliştirme tecrübesi.', en: 'Experience developing autonomous flight software and sensor systems at Arı Drones.' },
 		{ tr: 'TEKNOFEST ve TÜBİTAK projelerinde yüksek hassasiyetli sensör füzyonu ve kontrol sistemleri tasarımı.', en: 'Design of high-precision sensor fusion and control systems in TEKNOFEST and TÜBİTAK projects.' }
 	],
-	stats: [
-		{ value: '15', label: 'Repository', labelEn: 'Repositories' },
-		{ value: '28', label: 'Son yıl contribution', labelEn: 'Contributions this year' },
-		{ value: '6', label: 'Seçili proje', labelEn: 'Featured projects' },
-		{ value: '5+', label: 'Teknoloji alanı', labelEn: 'Tech stacks' }
-	],
 	skills: [
-		'C++', 'Python', 'C#', 'C', 'Git', 'Linux', 'Raspberry Pi', 'Jetson Nano', 'ESP32', 'STM32', 'Arduino', 'Flutter', 'ASP.NET Core', 'HTML/CSS', 'JavaScript'
+		'C++', 'Python', 'C#', 'C', 'Git', 'Linux', 'Linux Server', 'SQL', 'Raspberry Pi', 'Jetson Nano', 'ESP32', 'STM32', 'Arduino', 'Ardupilot', 'Flutter', 'ASP.NET Core', 'HTML/CSS', 'JavaScript', 'WordPress', 'SLAM',
 	],
 	highlights: [
 		{

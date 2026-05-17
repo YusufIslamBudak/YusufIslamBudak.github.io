@@ -36,10 +36,49 @@
 	<style>
 		#header .logo strong { color: var(--accent); }
 
-		/* Page Specific Banner Styles */
+		/* Page Specific Banner Styles & Layout Enhancements */
+		#banner .content {
 			display: flex;
 			flex-direction: column;
 			gap: 1.25rem;
+		}
+
+		@media screen and (min-width: 1280px) {
+			#banner {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 4rem;
+			}
+			#banner .content {
+				width: 68% !important;
+				flex: 1;
+			}
+			#banner .image {
+				width: 32% !important;
+				max-width: 400px;
+				margin: 0 !important;
+				flex-shrink: 0;
+			}
+		}
+
+		@media screen and (min-width: 736px) and (max-width: 1279px) {
+			#banner {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 2.5rem;
+			}
+			#banner .content {
+				width: 60% !important;
+				flex: 1;
+			}
+			#banner .image {
+				width: 40% !important;
+				max-width: 320px;
+				margin: 0 !important;
+				flex-shrink: 0;
+			}
 		}
 
 		.hero-pill,
@@ -76,6 +115,18 @@
 			box-shadow: 0 6px 12px var(--shadow-color);
 		}
 
+		.hero-divider {
+			width: 100%;
+			height: 1px;
+			background: rgba(20, 33, 61, 0.15);
+			margin: 2rem 0 1.5rem 0;
+			border: none;
+		}
+
+		[data-theme="dark"] .hero-divider {
+			background: rgba(255, 255, 255, 0.2);
+		}
+
 		.banner-meta,
 		.skill-list,
 		.note-list {
@@ -87,13 +138,7 @@
 			list-style: none;
 		}
 
-		.stat-grid {
-			display: grid;
-			grid-template-columns: repeat(4, minmax(0, 1fr));
-			gap: 1rem;
-		}
 
-		.stat-card,
 		.focus-card,
 		.project-card,
 		.profile-card {
@@ -105,7 +150,6 @@
 			transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s ease, border-color 0.4s ease;
 		}
 
-		.stat-card:hover,
 		.focus-card:hover,
 		.project-card:hover,
 		.profile-card:hover,
@@ -114,9 +158,6 @@
 			box-shadow: 0 24px 48px var(--shadow-color);
 		}
 
-		.stat-card { padding: 1rem 1.1rem; }
-		.stat-card strong { display: block; font-size: 1.45rem; color: var(--text-strong); }
-		.stat-card span { font-size: 0.82rem; color: var(--text-soft); }
 
 		.feature-grid,
 		.project-grid,
@@ -165,13 +206,13 @@
 		.sidebar-links a { color: var(--text-strong); font-weight: 700; }
 
 		@media (max-width: 980px) {
-			.stat-grid, .feature-grid, .project-grid, .focus-grid {
+			.feature-grid, .project-grid, .focus-grid {
 				grid-template-columns: repeat(2, minmax(0, 1fr));
 			}
 		}
 
 		@media (max-width: 736px) {
-			.stat-grid, .feature-grid, .project-grid, .focus-grid {
+			.feature-grid, .project-grid, .focus-grid {
 				grid-template-columns: 1fr;
 			}
 			#banner .content { gap: 1rem; }
@@ -218,11 +259,11 @@
 						<p id="hero-bio">IoT, otonom sistemler ve gömülü AI üzerine odaklanan bir mühendis adayıyım.</p>
 						<h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--text-strong);" data-tr="Yazılım Dilleri ve Teknolojiler" data-en="Programming Languages & Technologies">Yazılım Dilleri ve Teknolojiler</h4>
 						<ul class="banner-meta" id="hero-tags"></ul>
+						<div class="hero-divider"></div>
 						<ul class="actions">
 							<li><a href="projeler.html" class="button big" data-tr="Projelerimi İncele" data-en="View My Projects">Projelerimi İncele</a></li>
 							<li><a href="#about" class="button" data-tr="Hakkımda" data-en="About Me">Hakkımda</a></li>
 						</ul>
-						<div class="stat-grid" id="stat-grid"></div>
 					</div>
 					<span class="image object">
 						<div class="profile-frame">
@@ -373,13 +414,6 @@
 				}).join('');
 			}
 
-			const statGrid = document.getElementById('stat-grid');
-			if (statGrid && profile.stats) {
-				statGrid.innerHTML = profile.stats.map(function (stat) {
-					return `<article class="stat-card"><strong>${stat.value}</strong><span data-tr="${stat.label}" data-en="${stat.labelEn || stat.label}">${stat.label}</span></article>`;
-				}).join('');
-			}
-
 			const recentProjects = document.getElementById('recent-projects');
 			if (recentProjects && profile.articles) {
 				recentProjects.innerHTML = profile.articles.map(function (item, index) {
@@ -480,9 +514,9 @@
 			}, { root: null, rootMargin: '0px', threshold: 0.1 });
 
 			document.addEventListener('DOMContentLoaded', function () {
-				document.querySelectorAll('section, .stat-card, .project-card, .feature-grid article, .focus-card').forEach(function (el, idx) {
+				document.querySelectorAll('section, .project-card, .feature-grid article, .focus-card').forEach(function (el, idx) {
 					el.classList.add('reveal');
-					if (el.classList.contains('stat-card') || el.classList.contains('project-card')) {
+					if (el.classList.contains('project-card')) {
 						el.style.transitionDelay = (idx % 4) * 0.1 + 's';
 					}
 					obs.observe(el);
