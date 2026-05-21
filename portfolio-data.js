@@ -416,5 +416,67 @@ window.portfolioProfile = {
 		{ tr: 'İlgi Alanları: Robotik Otonomi, Gömülü Görüntü İşleme, Akıllı Şehirler', en: 'Interests: Robotic Autonomy, Embedded Vision, Smart Cities' }
 	],
 	contactText: 'Yeni proje fikirleri, iş birlikleri veya teknik görüşmeler için GitHub ya da LinkedIn üzerinden ulaşılabilir.',
-	contactTextEn: 'Available for new project ideas, collaborations, or technical discussions via GitHub or LinkedIn.'
+	contactTextEn: 'Available for new project ideas, collaborations, or technical discussions via GitHub or LinkedIn.',
+	references: [
+		{
+			name: 'Dr. Aytaç Uğur Yerden',
+			title: 'İstanbul Gedik Üniversitesi Yapay Zeka Mühendisliği A.B.D. Başkanı',
+			titleEn: 'Head of Artificial Intelligence Engineering Department, Istanbul Gedik University',
+			url: 'https://www.linkedin.com/in/aytaç-uğur-yerden/',
+			category: 'academic',
+			categoryTr: 'Akademik Referans',
+			categoryEn: 'Academic Reference',
+			icon: 'fas fa-university'
+		},
+		{
+			name: 'Dr. Mücahit Ege',
+			title: 'İstanbul Gedik Üniversitesi Yazılım Mühendisliği A.B.D. Başkanı',
+			titleEn: 'Head of Software Engineering Department, Istanbul Gedik University',
+			url: 'https://www.linkedin.com/in/mücahit-ege-5901aa25/?skipRedirect=true',
+			category: 'academic',
+			categoryTr: 'Akademik Referans',
+			categoryEn: 'Academic Reference',
+			icon: 'fas fa-university'
+		},
+		{
+			name: 'Ali Köse',
+			title: 'İstanbul Gedik Üniversitesi Yapay Zeka Operatörlüğü Program Başkanı',
+			titleEn: 'Head of Artificial Intelligence Operations Program, Istanbul Gedik University',
+			url: 'https://www.linkedin.com/in/ali-köse-b34809139/',
+			category: 'academic',
+			categoryTr: 'Akademik Referans',
+			categoryEn: 'Academic Reference',
+			icon: 'fas fa-university'
+		},
+		{
+			name: 'Faik Mert Birdal',
+			title: 'İstanbul Gedik Üniversitesi IT Sorumlusu',
+			titleEn: 'IT Administrator, Istanbul Gedik University',
+			url: 'https://www.linkedin.com/in/faikmertbirdal/',
+			category: 'academic',
+			categoryTr: 'Akademik Referans',
+			categoryEn: 'Academic Reference',
+			icon: 'fas fa-laptop-code'
+		},
+		{
+			name: 'Adil Evren Günay',
+			title: 'CTO - ARI Drones Teknoloji LTD. ŞTİ.',
+			titleEn: 'CTO, ARI Drones Technology Ltd. Co.',
+			url: 'https://www.linkedin.com/in/aegunay/',
+			category: 'industry',
+			categoryTr: 'Sektörel Referans',
+			categoryEn: 'Industry Reference',
+			icon: 'fas fa-helicopter'
+		},
+		{
+			name: 'Doğuhan Hazar Cengiz',
+			title: 'Co-Founder - ARI Drones Teknoloji LTD. ŞTİ. / Founder - DNA Marin',
+			titleEn: 'Co-Founder, ARI Drones Technology Ltd. Co. & Founder, DNA Marin',
+			url: 'https://www.linkedin.com/in/dhcengiz/',
+			category: 'industry',
+			categoryTr: 'Sektörel Referans',
+			categoryEn: 'Industry Reference',
+			icon: 'fas fa-ship'
+		}
+	]
 };
