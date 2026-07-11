@@ -3,10 +3,10 @@ window.portfolioProfile = {
 	displayName: 'Yusuf İslam Budak',
 	headline: '',
 	headlineEn: '',
-	intro: 'Donanım ve yazılımın kesişim noktasında, otonom sistemler ve IoT çözümleri geliştiriyorum.',
-	introEn: 'Developing autonomous systems and IoT solutions at the intersection of hardware and software.',
-	bio: 'Gömülü sistemler, IoT ve yapay zeka alanlarında detaylı teknik bilgilere ve tecrübeye sahip bir Mühendis Adayıyım. Arı Drones bünyesinde otonom uçuş yazılımları ve sensör sistemleri geliştirme tecrübesine sahibim. TEKNOFEST ve TÜBİTAK projelerinde sergilediğim başarılarla; C++, Python ve C# dillerinde yüksek performanslı sensör füzyonu ve kontrol sistemleri mimarileri inşa etmekteyim. Teknolojiyi sınırlarına zorlayan projelerde aktif rol alarak, otonom geleceği tasarlamayı hedefliyorum.',
-	bioEn: 'I am an Engineering Candidate with detailed technical knowledge and experience in embedded systems, IoT, and artificial intelligence. I have extensive experience developing autonomous flight software and sensor systems at Arı Drones. Through successes in TEKNOFEST and TÜBİTAK projects, I build high-performance sensor fusion and control system architectures using C++, Python, and C#. I aim to design the autonomous future by taking active roles in projects that push the boundaries of technology.',
+	intro: 'Arı Drones\'ta gömülü yazılım mühendisliği ve otonom sistemler üzerinde çalışıyorum.',
+	introEn: 'I work on embedded software engineering and autonomous systems at Arı Drones.',
+	bio: 'Gömülü sistemler, IoT ve yapay zeka alanlarında teknik deneyime sahip bir bilgisayar mühendisiyim. Haziran 2026\'dan beri Arı Drones\'ta Gömülü Yazılım Mühendisi olarak otonom uçuş yazılımları, sensör entegrasyonu ve kontrol sistemleri üzerinde çalışıyorum. TEKNOFEST ve TÜBİTAK projelerinde geliştirdiğim C++, Python ve C# çözümleriyle yüksek performanslı sistemler inşa etmeye devam ediyorum.',
+	bioEn: 'I am a computer engineer with technical experience in embedded systems, IoT, and artificial intelligence. Since June 2026, I have been working at Arı Drones as an Embedded Software Engineer on autonomous flight software, sensor integration, and control systems. I continue building high-performance systems through C++, Python, and C# solutions developed in TEKNOFEST and TÜBİTAK projects.',
 	avatar: 'images/PP.jpg',
 	githubUrl: 'https://github.com/YusufIslamBudak',
 	linkedinUrl: 'https://www.linkedin.com/in/yusuf-islam-budak/',
@@ -14,7 +14,7 @@ window.portfolioProfile = {
 	contributionCount: 28,
 	summaryPoints: [
 		{ tr: 'Gömülü AI ve otonom sistem mimarileri üzerine odaklı çalışmalar.', en: 'Focused studies on embedded AI and autonomous system architectures.' },
-		{ tr: 'Arı Drones bünyesinde otonom uçuş yazılımları ve sensör sistemleri geliştirme tecrübesi.', en: 'Experience developing autonomous flight software and sensor systems at Arı Drones.' },
+		{ tr: 'Haziran 2026\'dan beri Arı Drones\'ta gömülü yazılım mühendisi olarak görev.', en: 'Embedded software engineer at Arı Drones since June 2026.' },
 		{ tr: 'TEKNOFEST ve TÜBİTAK projelerinde yüksek hassasiyetli sensör füzyonu ve kontrol sistemleri tasarımı.', en: 'Design of high-precision sensor fusion and control systems in TEKNOFEST and TÜBİTAK projects.' }
 	],
 	skills: [
@@ -282,14 +282,24 @@ window.portfolioProfile = {
 			company: 'Arı Drones',
 			logo: 'Logolar/arı drones.jpg',
 			emoji: '🚁',
-			role: 'Yazılım ve IoT Stajyeri / Aday Mühendis', roleEn: 'Software & IoT Intern / Candidate Engineer',
-			date: 'Mayıs 2025 - Günümüz', dateEn: 'May 2025 - Present',
+			role: 'Gömülü Yazılım Mühendisi', roleEn: 'Embedded Software Engineer',
+			date: 'Haziran 2026 - Günümüz', dateEn: 'Jun 2026 - Present',
 			location: 'İstanbul, Türkiye', locationEn: 'Istanbul, Turkey',
-			description: 'Otonom drone yazılımı ve sensör verisi işleme üzerine çalışmalar yapmaktayım. C# ve C++ kullanarak uçuş verilerini analiz eden modüller geliştiriyor, donanım ve yazılım entegrasyonu süreçlerinde yer alıyorum.',
-			descriptionEn: 'Working on autonomous drone software and sensor data processing. Developing modules to analyze flight data using C# and C++, and participating in hardware and software integration processes.',
+			description: 'Arı Drones\'ta gömülü yazılım geliştirme, sensör entegrasyonu ve otonom uçuş bileşenleri üzerinde çalışıyorum. C# ve C++ kullanarak uçuş verilerini analiz eden ve sistem kararlılığını destekleyen modüller geliştiriyor, donanım-yazılım entegrasyon süreçlerinde aktif rol alıyorum.',
+			descriptionEn: 'At Arı Drones, I work on embedded software development, sensor integration, and autonomous flight components. I develop modules in C# and C++ that analyze flight data and support system stability, while taking an active role in hardware-software integration processes.',
 			images: [
 				{ src: 'Resimler/Arı Drones/16.jpeg', caption: 'IDEF 2025 Savunma Fuarı — Arı Drones standında ekibimizle birlikte.', captionEn: 'IDEF 2025 Defense Fair — With our team at the Arı Drones booth.' }
 			]
+		},
+		{
+			company: 'Arı Drones',
+			logo: 'Logolar/arı drones.jpg',
+			emoji: '🛠️',
+			role: 'Yazılım ve IoT Stajyeri', roleEn: 'Software and IoT Intern',
+			date: 'Mayıs 2025 - Haziran 2026', dateEn: 'May 2025 - Jun 2026',
+			location: 'İstanbul, Türkiye', locationEn: 'Istanbul, Turkey',
+			description: 'Arı Drones\'ta otonom drone yazılımı ve sensör verisi işleme üzerine staj yaptım. C# ve C++ kullanarak uçuş verilerini analiz eden modüller geliştirdim, takım içi proje planlaması ve test süreçlerinde aktif rol aldım ve donanım-yazılım entegrasyonu süreçlerinde mühendislik ekibiyle çalıştım.',
+			descriptionEn: 'At Arı Drones, I completed an internship focused on autonomous drone software and sensor data processing. I developed modules in C# and C++ that analyze flight data, took an active role in team project planning and testing, and worked with the engineering team on hardware-software integration processes.'
 		},
 		{
 			company: 'Gedik Robotics Team',
